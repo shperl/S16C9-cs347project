@@ -1,0 +1,1035 @@
+2016-01-25 21:26:31.469 UTC INFO [admin1] Initializing PRIMARY Admin for store: kvstore
+2016-01-25 21:26:31.471 UTC INFO [admin1] Created new admin environment dir: ./kvroot/kvstore/sn1/admin1/env
+2016-01-25 21:26:31.471 UTC INFO [admin1] JVM Runtime maxMemory (bytes): 3817865216
+2016-01-25 21:26:31.504 UTC INFO [admin1] Non-default JE properties for environment: {je.rep.vlsn.logCacheSize=128, je.rep.envUnknownStateTimeout=10 s, je.log.faultReadSize=4096, je.rep.vlsn.distance=1000000, je.rep.replicaTimeout=10 s, je.env.runEvictor=true, je.cleaner.minUtilization=40, je.rep.replicaAckTimeout=5 s, je.lock.nLockTables=97, je.cleaner.threads=2, je.rep.replayMaxOpenDbHandles=100, je.log.writeQueueSize=2097152, je.evictor.criticalPercentage=20, je.log.iteratorReadSize=1048576, je.log.numBuffers=16, je.rep.feederTimeout=10 s, je.nodeMaxEntries=128, je.lock.timeout=10 s, je.rep.bindInaddrAny=true, je.rep.preHeartbeatTimeoutMs=5000000000, je.rep.consistencyPolicy=NoConsistencyRequiredPolicy, je.checkpointer.bytesInterval=500000000, je.txn.durability=write_no_sync,write_no_sync,simple_majority, je.cleaner.readSize=1048576, je.rep.ignoreSecondaryNodeId=true, je.rep.txnRollbackLimit=10, je.log.fileCacheSize=2000, je.log.fileMax=1073741824}
+2016-01-25 21:26:31.512 UTC INFO [admin1] DataChannelFactory: basic
+2016-01-25 21:26:31.515 UTC INFO [admin1] AdminStateTracker thread start: admin1
+2016-01-25 21:26:31.761 UTC INFO [admin1] JE recovery: POPULATE_UTILIZATION_PROFILE
+2016-01-25 21:26:31.779 UTC INFO [admin1] JE recovery: REMOVE_TEMP_DBS
+2016-01-25 21:26:31.794 UTC INFO [admin1] JE recovery: CKPT
+2016-01-25 21:26:31.811 UTC INFO [admin1] JE recovery: RECOVERY_FINISHED
+2016-01-25 21:26:31.836 UTC INFO [admin1] JE: Started ServiceDispatcher. HostPort=AUS2M-SPERL:5005
+2016-01-25 21:26:31.836 UTC INFO [admin1] JE: DataChannel factory: com.sleepycat.je.rep.utilint.net.SimpleChannelFactory
+2016-01-25 21:26:31.875 UTC INFO [admin1] JE: Current group size: 0
+2016-01-25 21:26:31.876 UTC INFO [admin1] JE: New node 1(-1) unknown to rep group
+2016-01-25 21:26:31.876 UTC INFO [admin1] JE: Master changed to 1
+2016-01-25 21:26:31.876 UTC INFO [admin1] JE: Nascent group. 1 is master by virtue of being the first node.
+2016-01-25 21:26:31.892 UTC INFO [admin1] JE: Successfully added node:1(1) HostPort = AUS2M-SPERL: 5005 [ELECTABLE]
+2016-01-25 21:26:31.894 UTC INFO [admin1] JE: Refreshed 0 monitors.
+2016-01-25 21:26:31.897 UTC INFO [admin1] JE recovery: BECOME_CONSISTENT
+2016-01-25 21:26:31.897 UTC INFO [admin1] JE: Node 1 started
+2016-01-25 21:26:31.897 UTC INFO [admin1] JE: Feeder manager accepting requests.
+2016-01-25 21:26:31.898 UTC INFO [admin1] JE: Joining group as master
+2016-01-25 21:26:31.899 UTC INFO [admin1] JE: Refreshed 0 monitors.
+2016-01-25 21:26:31.900 UTC INFO [admin1] State change event: Mon Jan 25 15:26:31 CST 2016, State: MASTER, Type: PRIMARY, Master: 1
+2016-01-25 21:26:31.900 UTC INFO [admin1] AdminStateTracker queue added:MASTER
+2016-01-25 21:26:31.906 UTC INFO [admin1] Initializing Admin Schema to schema version 4/NoSQL DB 12cR1.3.5.2 2015-12-03 08:36:49 UTC  Build id: 0c693aa1a5a0
+2016-01-25 21:26:31.978 UTC INFO [admin1] Open Admin entity DB: AdminPlanDatabase
+2016-01-25 21:26:31.979 UTC INFO [admin1] Admin plan database initialized
+2016-01-25 21:26:31.979 UTC INFO [admin1] Initialized plan store to PlanDatabaseStore
+2016-01-25 21:26:31.979 UTC FINE Closing StorewideLoggingView
+2016-01-25 21:26:32.026 UTC INFO [admin1] Initializing Admin database
+2016-01-25 21:26:32.076 UTC INFO [admin1] Admin database initialized
+2016-01-25 21:26:32.087 UTC INFO [admin1] Replicated environment handle established. Cache size: 2290719129, State: MASTER
+2016-01-25 21:26:32.088 UTC INFO [admin1] Configured Admin for store: kvstore
+2016-01-25 21:26:32.090 UTC INFO [admin1] Starting Web service on port 5001
+2016-01-25 21:26:32.138 UTC INFO [admin1] jetty-7.4.0.v20110414
+2016-01-25 21:26:32.182 UTC INFO [admin1] Extract jar:file:/Users/sperl/Desktop/Personal/cs347/kv-3.5.2/lib/kvstore.jar!/war/KVAdminUI/ to /Users/sperl/Desktop/Personal/cs347/kv-3.5.2/lib/kvroot/kvstore/sn1/admin1/webapp/webapp
+2016-01-25 21:26:34.205 UTC INFO [admin1] NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+2016-01-25 21:26:34.221 UTC INFO [admin1] started o.e.j.w.WebAppContext{/,file:/Users/sperl/Desktop/Personal/cs347/kv-3.5.2/lib/kvroot/kvstore/sn1/admin1/webapp/webapp/},jar:file:/Users/sperl/Desktop/Personal/cs347/kv-3.5.2/lib/kvstore.jar!/war/KVAdminUI
+2016-01-25 21:26:34.247 UTC INFO [admin1] Started SelectChannelConnector@0.0.0.0:5001 STARTING
+2016-01-25 21:26:34.293 UTC INFO [admin1] PlanStateChange [id=1 name=Deploy KVLite state=APPROVED at 2016-01-25 21:26:34 UTC numAttempts=0 : approval requested]
+2016-01-25 21:26:34.295 UTC INFO [admin1] Plan 1[Deploy KVLite] approved
+2016-01-25 21:26:34.338 UTC INFO [admin1] PlanStateChange [id=1 name=Deploy KVLite state=RUNNING at 2016-01-25 21:26:34 UTC numAttempts=1 : Plan is starting]
+2016-01-25 21:26:34.338 UTC INFO [admin1] Plan 1[Deploy KVLite]: started, 1 tasks
+2016-01-25 21:26:34.360 UTC INFO [admin1] Plan 1[Deploy KVLite]: task 1 [DeployDatacenter zone=KVLite] started
+2016-01-25 21:26:34.365 UTC INFO [admin1] Plan 1[Deploy KVLite]: task 1 [DeployDatacenter zone=KVLite] ended, state=SUCCEEDED
+2016-01-25 21:26:34.367 UTC INFO [admin1] PlanStateChange [id=1 name=Deploy KVLite state=SUCCEEDED at 2016-01-25 21:26:34 UTC numAttempts=1 : Plan finished.]
+2016-01-25 21:26:34.369 UTC INFO [admin1] Plan 1[Deploy KVLite]: ended, state=SUCCEEDED
+2016-01-25 21:26:34.370 UTC INFO [admin1] Waiting for Plan 1[Deploy KVLite] ended, state=SUCCEEDED
+2016-01-25 21:26:34.394 UTC INFO [admin1] PlanStateChange [id=2 name=Deploy Storage Node state=APPROVED at 2016-01-25 21:26:34 UTC numAttempts=0 : approval requested]
+2016-01-25 21:26:34.402 UTC INFO [admin1] Plan 2[Deploy Storage Node] approved
+2016-01-25 21:26:34.403 UTC INFO [admin1] PlanStateChange [id=2 name=Deploy Storage Node state=RUNNING at 2016-01-25 21:26:34 UTC numAttempts=1 : Plan is starting]
+2016-01-25 21:26:34.403 UTC INFO [admin1] Plan 2[Deploy Storage Node]: started, 1 tasks
+2016-01-25 21:26:34.411 UTC INFO [admin1] Plan 2[Deploy Storage Node]: task 1 [DeploySN sn1(AUS2M-SPERL:5000)] started
+2016-01-25 21:26:34.512 UTC INFO [admin1] Monitor collector: adding sn1 to monitoring
+2016-01-25 21:26:34.521 UTC INFO [admin1] Plan 2[Deploy Storage Node]: task 1 [DeploySN sn1(AUS2M-SPERL:5000)] ended, state=SUCCEEDED
+2016-01-25 21:26:34.522 UTC INFO [admin1] PlanStateChange [id=2 name=Deploy Storage Node state=SUCCEEDED at 2016-01-25 21:26:34 UTC numAttempts=1 : Plan finished.]
+2016-01-25 21:26:34.453 UTC INFO [sn1] Starting StorageNodeAgent for kvstore
+2016-01-25 21:26:34.469 UTC INFO [sn1] Started MasterRebalanceThread
+2016-01-25 21:26:34.488 UTC INFO [sn1] Starting MonitorAgent.  Server socket factory:<ClearServerSocketFactory name=main backlog=0 port range=0,0> Client socket factory:<ClientSocketFactory name=kvstore|sn|monitor id=-1262029023 connectMs=10000 readMs=5000>
+2016-01-25 21:26:34.493 UTC INFO [sn1] Successfully created secure proxy for the storage node agent
+2016-01-25 21:26:34.497 UTC INFO [sn1] Rebound to registry port 5000 using name sn1 with SSF:<ClearServerSocketFactory name=main backlog=0 port range=0,0>
+2016-01-25 21:26:34.497 UTC INFO [sn1] Service status changed from STARTING to RUNNING
+2016-01-25 21:26:34.524 UTC INFO [admin1] [sn1] Service status: RUNNING 2016-01-25 21:26:34 UTC
+2016-01-25 21:26:34.525 UTC INFO [admin1] Plan 2[Deploy Storage Node]: ended, state=SUCCEEDED
+2016-01-25 21:26:34.497 UTC INFO [sn1] Started StorageNodeAgent for kvstore
+2016-01-25 21:26:34.525 UTC INFO [admin1] Waiting for Plan 2[Deploy Storage Node] ended, state=SUCCEEDED
+2016-01-25 21:26:34.553 UTC INFO [admin1] PlanStateChange [id=3 name=Deploy Admin Service state=APPROVED at 2016-01-25 21:26:34 UTC numAttempts=0 : approval requested]
+2016-01-25 21:26:34.555 UTC INFO [admin1] Plan 3[Deploy Admin Service] approved
+2016-01-25 21:26:34.556 UTC INFO [admin1] PlanStateChange [id=3 name=Deploy Admin Service state=RUNNING at 2016-01-25 21:26:34 UTC numAttempts=1 : Plan is starting]
+2016-01-25 21:26:34.557 UTC INFO [admin1] Plan 3[Deploy Admin Service]: started, 2 tasks
+2016-01-25 21:26:34.566 UTC INFO [admin1] Plan 3[Deploy Admin Service]: task 1 [DeployAdmin AdminId[admin1] on SNId[sn1]] started
+2016-01-25 21:26:34.591 UTC INFO [admin1] newParameters called for Monitor
+2016-01-25 21:26:34.595 UTC INFO [admin1] Plan 3[Deploy Admin Service]: task 1 [DeployAdmin AdminId[admin1] on SNId[sn1]] ended, state=SUCCEEDED
+2016-01-25 21:26:34.596 UTC INFO [admin1] Plan 3[Deploy Admin Service]: task 2 [WaitForAdminState waits for Admin admin1 to reach RUNNING state] started
+2016-01-25 21:26:34.601 UTC INFO [admin1] Plan 3[Deploy Admin Service]: task 2 [WaitForAdminState waits for Admin admin1 to reach RUNNING state] ended, state=SUCCEEDED
+2016-01-25 21:26:34.601 UTC INFO [admin1] PlanStateChange [id=3 name=Deploy Admin Service state=SUCCEEDED at 2016-01-25 21:26:34 UTC numAttempts=1 : Plan finished.]
+2016-01-25 21:26:34.603 UTC INFO [admin1] Plan 3[Deploy Admin Service]: ended, state=SUCCEEDED
+2016-01-25 21:26:34.604 UTC INFO [admin1] Waiting for Plan 3[Deploy Admin Service] ended, state=SUCCEEDED
+2016-01-25 21:26:34.608 UTC INFO [admin1] Created Storage Node Pool: KVLitePool
+2016-01-25 21:26:34.613 UTC INFO [admin1] Added Storage Node sn1 to pool: KVLitePool
+2016-01-25 21:26:34.626 UTC INFO [admin1] oracle.kv.impl.admin.topo.TopologyCandidate@406a5b4d has nothing to rebalance
+2016-01-25 21:26:34.717 UTC INFO [admin1] PlanStateChange [id=4 name=Deploy KVStore state=APPROVED at 2016-01-25 21:26:34 UTC numAttempts=0 : approval requested]
+2016-01-25 21:26:34.720 UTC INFO [admin1] Plan 4[Deploy KVStore] approved
+2016-01-25 21:26:34.723 UTC INFO [admin1] Plan 4[Deploy KVStore] deploying topology candidate KVLite.
+2016-01-25 21:26:34.726 UTC INFO [admin1] Current topology: store=kvstore  numPartitions=0 sequence=2
+  zn: id=zn1 name=KVLite repFactor=1 type=PRIMARY
+
+  sn=[sn1] zn:[id=zn1 name=KVLite] AUS2M-SPERL:5000
+
+
+2016-01-25 21:26:34.727 UTC INFO [admin1] Preview of changes to be executed by Plan 4[Deploy KVStore]:
+Topology transformation from current deployed topology to KVLite:
+Create 1 shard 
+Create 1 RN 
+Create 10 partitions 
+
+shard rg1
+  1 new RN : rg1-rn1 
+  10 new partitions 
+
+2016-01-25 21:26:34.727 UTC INFO [admin1] Target topology candidate: KVLite
+store=kvstore  numPartitions=10 sequence=14
+  zn: id=zn1 name=KVLite repFactor=1 type=PRIMARY
+
+  sn=[sn1] zn:[id=zn1 name=KVLite] AUS2M-SPERL:5000
+    [rg1-rn1]
+
+  shard=[rg1] num partitions=10
+    [rg1-rn1] sn=sn1
+
+2016-01-25 21:26:34.728 UTC INFO [admin1] PlanStateChange [id=4 name=Deploy KVStore state=RUNNING at 2016-01-25 21:26:34 UTC numAttempts=1 : Plan is starting]
+2016-01-25 21:26:34.728 UTC INFO [admin1] Plan 4[Deploy KVStore]: started, 8 tasks
+2016-01-25 21:26:34.730 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 1 [UpdateDatacenterV2 zone=zn1] started
+2016-01-25 21:26:34.734 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 1 [UpdateDatacenterV2 zone=zn1] ended, state=SUCCEEDED
+2016-01-25 21:26:34.734 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 2 [DeployShard on [sn1] zn:[id=zn1 name=KVLite] AUS2M-SPERL:5000 ] started
+2016-01-25 21:26:34.744 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 2 [DeployShard rg1 on [sn1] zn:[id=zn1 name=KVLite] AUS2M-SPERL:5000 ] ended, state=SUCCEEDED
+2016-01-25 21:26:34.745 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 3 [DeployNewRN on sn1(AUS2M-SPERL:5000)] started
+2016-01-25 21:26:34.749 UTC INFO [admin1] Creating rg1-rn1 on sn1 haPort=AUS2M-SPERL:5,006 helpers=AUS2M-SPERL:5006 storage directory=null heapMB=unspecified cacheSize=unspecified -XX:ParallelGCThreads=4
+2016-01-25 21:26:35.867 UTC INFO [admin1] Monitor collector: adding rg1-rn1 to monitoring
+2016-01-25 21:26:35.870 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 3 [DeployNewRN rg1-rn1 on sn1(AUS2M-SPERL:5000)] ended, state=SUCCEEDED
+2016-01-25 21:26:35.871 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 4 [UpdateNthRNHelperHost] started
+2016-01-25 21:26:35.874 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 4 [UpdateNthRNHelperHost] ended, state=SUCCEEDED
+2016-01-25 21:26:35.875 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 5 [NewNthRNParameters] started
+2016-01-25 21:26:34.818 UTC INFO [rg1-rn1] Thread[KV_rg1-rn1_RepNodeStateUpdateThread,5,RMI Runtime] started
+2016-01-25 21:26:34.835 UTC INFO [rg1-rn1] NoSQL version:12cR1.3.5.2 2015-12-03 08:36:49 UTC  Build id: 0c693aa1a5a0 JE version:6.4.15 Java version:1.8.0_51
+2016-01-25 21:26:34.835 UTC INFO [rg1-rn1] JVM Runtime maxMemory:3,728,384 kB JE cache size:0 kB Max Offheap cache size:0 kB
+2016-01-25 21:26:34.835 UTC INFO [rg1-rn1] Non-default JE properties for environment: {je.rep.vlsn.logCacheSize=128, je.rep.envUnknownStateTimeout=10 s, je.log.faultReadSize=4096, je.rep.vlsn.distance=1000000, je.rep.replicaTimeout=10 s, je.env.runEvictor=true, je.cleaner.minUtilization=40, je.rep.replicaAckTimeout=5 s, je.lock.nLockTables=97, je.cleaner.threads=2, je.rep.replayMaxOpenDbHandles=100, je.log.writeQueueSize=2097152, je.evictor.criticalPercentage=20, je.log.iteratorReadSize=1048576, je.log.numBuffers=16, je.rep.feederTimeout=10 s, je.nodeMaxEntries=128, je.lock.timeout=10 s, je.rep.preHeartbeatTimeoutMs=5000000000, je.rep.consistencyPolicy=NoConsistencyRequiredPolicy, je.checkpointer.bytesInterval=500000000, je.txn.durability=write_no_sync,write_no_sync,simple_majority, je.cleaner.readSize=1048576, je.rep.ignoreSecondaryNodeId=true, je.rep.txnRollbackLimit=10, je.log.fileCacheSize=2000, je.log.fileMax=1073741824}
+2016-01-25 21:26:34.836 UTC INFO [rg1-rn1] DataChannelFactory: basic
+2016-01-25 21:26:34.836 UTC INFO [rg1-rn1] Created new environment dir: ./kvroot/kvstore/sn1/rg1-rn1/env
+2016-01-25 21:26:34.842 UTC INFO [rg1-rn1] Table manager created
+2016-01-25 21:26:34.845 UTC INFO [rg1-rn1] Partition database cache mode: EVICT_LN
+2016-01-25 21:26:34.857 UTC INFO [rg1-rn1] Thread[KV_rg1-rn1_MetadataUpdateThread,5,RMI Runtime] started
+2016-01-25 21:26:34.864 UTC INFO [rg1-rn1] Starting RepNodeService
+2016-01-25 21:26:34.865 UTC INFO [rg1-rn1] Starting RN MonitorAgent.  Server socket factory:<ClearServerSocketFactory name=monitor backlog=0 port range=0,0> Client socket connect factory: <ClientSocketFactory name=kvstore|rn|monitor id=-751665336 connectMs=10000 readMs=10000>
+2016-01-25 21:26:34.876 UTC INFO [rg1-rn1] Starting MonitorAgent
+2016-01-25 21:26:34.889 UTC INFO [rg1-rn1] Successfully created secure proxy for the repnode admin
+2016-01-25 21:26:34.904 UTC INFO [rg1-rn1] RepNodeAdmin registered
+2016-01-25 21:26:34.943 UTC INFO [rg1-rn1] JE recovery: POPULATE_UTILIZATION_PROFILE
+2016-01-25 21:26:34.944 UTC INFO [rg1-rn1] JE recovery: REMOVE_TEMP_DBS
+2016-01-25 21:26:34.945 UTC INFO [rg1-rn1] JE recovery: CKPT
+2016-01-25 21:26:34.953 UTC INFO [rg1-rn1] JE recovery: RECOVERY_FINISHED
+2016-01-25 21:26:34.963 UTC INFO [rg1-rn1] JE: Started ServiceDispatcher. HostPort=AUS2M-SPERL:5006
+2016-01-25 21:26:34.965 UTC INFO [rg1-rn1] JE: Current group size: 0
+2016-01-25 21:26:34.965 UTC INFO [rg1-rn1] JE: New node rg1-rn1(-1) unknown to rep group
+2016-01-25 21:26:34.965 UTC INFO [rg1-rn1] JE: Master changed to rg1-rn1
+2016-01-25 21:26:34.966 UTC INFO [rg1-rn1] JE: Nascent group. rg1-rn1 is master by virtue of being the first node.
+2016-01-25 21:26:34.965 UTC INFO [rg1-rn1] JE: DataChannel factory: com.sleepycat.je.rep.utilint.net.SimpleChannelFactory
+2016-01-25 21:26:34.977 UTC INFO [rg1-rn1] JE: Successfully added node:rg1-rn1(1) HostPort = AUS2M-SPERL: 5006 [ELECTABLE]
+2016-01-25 21:26:34.977 UTC INFO [rg1-rn1] JE: Refreshed 0 monitors.
+2016-01-25 21:26:34.979 UTC INFO [rg1-rn1] JE: Node rg1-rn1 started
+2016-01-25 21:26:34.980 UTC INFO [rg1-rn1] JE recovery: BECOME_CONSISTENT
+2016-01-25 21:26:34.980 UTC INFO [rg1-rn1] JE: Feeder manager accepting requests.
+2016-01-25 21:26:34.981 UTC INFO [rg1-rn1] JE: Joining group as master
+2016-01-25 21:26:34.981 UTC INFO [rg1-rn1] JE: Refreshed 0 monitors.
+2016-01-25 21:26:34.981 UTC INFO [rg1-rn1] Opened JE environment: 6.4.15 JVM max heap: 3,817,865,216 JE properties: allowCreate=true
+cacheSize=2290719129
+txnNoSync=false
+txnWriteNoSync=false
+{je.lock.timeout=10 s, je.cleaner.readSize=1048576, je.log.faultReadSize=4096, je.rep.consistencyPolicy=NoConsistencyRequiredPolicy, je.log.fileMax=1073741824, je.rep.feederTimeout=10 s, je.rep.nodeName=rg1-rn1, je.nodeMaxEntries=128, je.log.writeQueueSize=2097152, je.evictor.criticalPercentage=20, je.rep.electableGroupSizeOverride=0, je.env.runEvictor=true, je.log.iteratorReadSize=1048576, je.txn.durability=WRITE_NO_SYNC,WRITE_NO_SYNC,SIMPLE_MAJORITY, je.maxOffHeapMemory=0, je.checkpointer.bytesInterval=500000000, je.log.numBuffers=16, je.rep.nodeHostPort=AUS2M-SPERL:5006, je.rep.vlsn.distance=1000000, je.rep.txnRollbackLimit=10, je.rep.replayMaxOpenDbHandles=100, je.rep.ignoreSecondaryNodeId=true, je.maxMemory=0, je.cleaner.minUtilization=40, je.env.isTransactional=true, je.log.fileCacheSize=2000, je.rep.helperHosts=AUS2M-SPERL:5006, je.rep.preHeartbeatTimeoutMs=5000000000, je.rep.vlsn.logCacheSize=128, je.rep.replicaTimeout=10 s, je.lock.nLockTables=97, je.rep.nodeType=ELECTABLE, je.rep.envUnknownStateTimeout=10 s, je.rep.preserveRecordVersion=true, je.rep.groupName=rg1, je.rep.replicaAckTimeout=5 s, je.cleaner.threads=2}
+
+2016-01-25 21:26:34.985 UTC INFO [rg1-rn1] Local Environment version updated to: 12cR1.3.5.2 2015-12-03 08:36:49 UTC  Build id: 0c693aa1a5a0 Previous version:  none
+2016-01-25 21:26:34.987 UTC INFO [rg1-rn1] State change event: Mon Jan 25 15:26:34 CST 2016, State: MASTER, Type: ELECTABLE, Master: rg1-rn1
+2016-01-25 21:26:34.987 UTC INFO [rg1-rn1] MigrationStateTracker queue added:MASTER
+2016-01-25 21:26:34.987 UTC INFO [rg1-rn1] TableManagerStateTracker queue added:MASTER
+2016-01-25 21:26:34.987 UTC INFO [rg1-rn1] MasterBalanceStateTracker queue added:MASTER
+2016-01-25 21:26:34.987 UTC INFO [rg1-rn1] Replicated environment handle established. Cache size: 2290719129, State: MASTER
+2016-01-25 21:26:34.988 UTC INFO [rg1-rn1] Environment does not contain topology store.
+2016-01-25 21:26:34.988 UTC INFO [rg1-rn1] MasterBalanceStateTracker thread start: rg1-rn1
+2016-01-25 21:26:34.992 UTC INFO [rg1-rn1] Topology needs to be pushed to this node.
+2016-01-25 21:26:34.989 UTC INFO [rg1-rn1] TableManagerStateTracker thread start: rg1-rn1
+2016-01-25 21:26:34.989 UTC INFO [rg1-rn1] MigrationStateTracker thread start: null
+2016-01-25 21:26:34.993 UTC INFO [rg1-rn1] Table manager change state to MASTER
+2016-01-25 21:26:34.993 UTC INFO [rg1-rn1] Migration manager change state to MASTER.
+2016-01-25 21:26:35.001 UTC INFO [rg1-rn1] Migration service accepting requests.
+2016-01-25 21:26:35.006 UTC INFO [rg1-rn1] No RN Login configured. 
+2016-01-25 21:26:35.007 UTC INFO [rg1-rn1] Service status changed from STARTING to RUNNING
+2016-01-25 21:26:35.879 UTC INFO [admin1] [rg1-rn1] Service status: RUNNING 2016-01-25 21:26:35 UTC
+2016-01-25 21:26:35.011 UTC INFO [rg1-rn1] Topology not immediately available - waiting
+2016-01-25 21:26:35.011 UTC INFO [rg1-rn1] Started RepNodeService
+2016-01-25 21:26:35.808 UTC INFO [rg1-rn1] Topology updated from seq#: 0 to 4
+2016-01-25 21:26:35.814 UTC INFO [rg1-rn1] Environment changed, ignoring trigger for SecurityMetadata
+2016-01-25 21:26:35.814 UTC INFO [rg1-rn1] Open SecurityMetadata DB
+2016-01-25 21:26:35.816 UTC INFO [rg1-rn1] Environment changed, ignoring trigger for TableMetadata
+2016-01-25 21:26:35.816 UTC INFO [rg1-rn1] Open TableMetadata DB
+2016-01-25 21:26:35.817 UTC INFO [rg1-rn1] Established 0 partition database handles, topology seq#: 4
+2016-01-25 21:26:35.821 UTC INFO [rg1-rn1] Found 0 indexes and 0 tables marked for deletion in TableMetadata[0, 0, 0]
+2016-01-25 21:26:35.822 UTC INFO [rg1-rn1] Established 0 secondary database handles
+2016-01-25 21:26:35.866 UTC INFO [rg1-rn1] Topology stored seq#: 4
+2016-01-25 21:26:35.889 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 5 [NewNthRNParameters] ended, state=SUCCEEDED
+2016-01-25 21:26:35.890 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 6 [BroadcastTopo] started
+2016-01-25 21:26:35.890 UTC INFO [admin1] Broadcasting topology seq# 4, changes for BroadcastTopo
+2016-01-25 21:26:35.910 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 6 [BroadcastTopo] ended, state=SUCCEEDED
+2016-01-25 21:26:35.911 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 7 [BroadcastMetadata] started
+2016-01-25 21:26:35.913 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 7 [BroadcastMetadata] ended, state=SUCCEEDED
+2016-01-25 21:26:35.914 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 8 [AddPartitions totalPartitions = 10] started
+2016-01-25 21:26:35.921 UTC INFO [admin1] Broadcasting topology seq# 14, changes for Initializing new partitions
+2016-01-25 21:26:35.959 UTC INFO [admin1] Plan 4[Deploy KVStore]: task 8 [AddPartitions totalPartitions = 10] ended, state=SUCCEEDED
+2016-01-25 21:26:35.959 UTC INFO [admin1] PlanStateChange [id=4 name=Deploy KVStore state=SUCCEEDED at 2016-01-25 21:26:35 UTC numAttempts=1 : Plan finished.]
+2016-01-25 21:26:35.961 UTC INFO [admin1] Plan 4[Deploy KVStore]: ended, state=SUCCEEDED
+2016-01-25 21:26:35.962 UTC INFO [admin1] Waiting for Plan 4[Deploy KVStore] ended, state=SUCCEEDED
+2016-01-25 21:26:34.575 UTC INFO [sn1] admin1: Creating AdminService
+2016-01-25 21:26:34.592 UTC INFO [sn1] admin1: Created AdminService
+2016-01-25 21:26:34.767 UTC INFO [sn1] rg1-rn1: Creating RepNode
+2016-01-25 21:26:34.782 UTC INFO [sn1] rg1-rn1: Starting RepNode
+2016-01-25 21:26:34.783 UTC INFO [sn1] rg1-rn1: Started RepNode
+2016-01-25 21:26:34.783 UTC INFO [sn1] rg1-rn1: Configuring RepNode
+2016-01-25 21:26:35.011 UTC INFO [sn1] Thread returning for service rg1-rn1
+2016-01-25 21:26:35.867 UTC INFO [sn1] rg1-rn1: Created RepNode
+2016-01-25 21:26:36.006 UTC INFO [sn1] noteState called
+2016-01-25 21:26:36.007 UTC INFO [sn1] added:State RN:rg1-rn1 state: MASTER top seq num: 14
+2016-01-25 21:26:36.008 UTC INFO [sn1] sn: sn1 state transition: State RN:rg1-rn1 state: MASTER top seq num: 14 active masters:[rg1-rn1] active replicas:0 replica leases:0
+2016-01-25 21:26:36.008 UTC INFO [sn1] Acquiring initial topology from RNs
+2016-01-25 21:26:36.012 UTC INFO [sn1] Topology acquired from RN: rg1-rn1 Topo seq#: 14
+2016-01-25 21:26:35.887 UTC INFO [rg1-rn1] newParameters are identical to old parameters
+2016-01-25 21:26:35.929 UTC INFO [rg1-rn1] Topology incrementally updated from seq#: 4 to 14
+2016-01-25 21:26:35.934 UTC INFO [rg1-rn1] Found 0 indexes and 0 tables marked for deletion in TableMetadata[0, 0, 0]
+2016-01-25 21:26:35.934 UTC INFO [rg1-rn1] Established 0 secondary database handles
+2016-01-25 21:26:35.946 UTC INFO [rg1-rn1] Established 10 partition database handles, topology seq#: 14
+2016-01-25 21:26:35.956 UTC INFO [rg1-rn1] Topology stored seq#: 14
+2016-01-25 21:26:36.030 UTC INFO [rg1-rn1] Establishing RMI connection for admin DDL
+2016-01-25 21:26:36.038 UTC INFO [rg1-rn1] Establishing RMI connection for admin DDL
+2016-01-25 21:26:36.040 UTC INFO [rg1-rn1] Establishing RMI connection for admin DDL
+2016-01-25 21:55:43.718 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.33.230.177 to 127.0.0.1
+2016-01-25 21:55:43.719 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-25 21:55:43.789 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.33.230.177 to 127.0.0.1
+2016-01-25 21:55:43.790 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/127.0.0.1,localport=5006]
+2016-01-25 21:55:44.718 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@184a74d5 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@184a74d5
+2016-01-25 21:56:06.725 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.33.230.177,port=53791,localport=53792] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-25 21:56:13.791 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 127.0.0.1 to 10.147.88.42
+2016-01-25 21:56:13.792 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-25 21:56:13.878 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 127.0.0.1 to 10.147.88.42
+2016-01-25 21:56:13.879 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.147.88.42,localport=5006]
+2016-01-25 22:36:49.180 UTC INFO [admin1] [admin1] sn1: Service status: UNREACHABLE 2016-01-25 22:36:49 UTC
+2016-01-26 00:04:26.899 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.147.88.42 to fe80:0:0:0:6c0d:28ff:fe98:e9ff%10
+2016-01-26 00:04:26.899 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-26 00:04:56.990 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:6c0d:28ff:fe98:e9ff%10 to 192.168.1.82
+2016-01-26 00:04:56.990 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-26 00:04:26.899 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.147.88.42 to fe80:0:0:0:6c0d:28ff:fe98:e9ff%10
+2016-01-26 00:04:26.899 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:6c0d:28ff:fe98:e9ff%10,localport=5006]
+2016-01-26 00:04:47.813 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@5a335171 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@5a335171
+2016-01-26 00:04:49.812 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-26 00:04:52.821 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-26 00:04:56.826 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-26 00:04:56.990 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:6c0d:28ff:fe98:e9ff%10 to 192.168.1.82
+2016-01-26 00:04:56.990 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/192.168.1.82,localport=5006]
+2016-01-26 00:04:59.838 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-26 03:08:18.818 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@77ecc715 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@77ecc715
+2016-01-26 14:56:17.661 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 192.168.1.82 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-26 14:56:17.663 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-26 14:55:42.452 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@460aac00 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@460aac00
+2016-01-26 14:56:17.662 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 192.168.1.82 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-26 14:56:17.663 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:a65e:60ff:fecc:a593%4,localport=5006]
+2016-01-26 14:56:18.477 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/192.168.1.82,port=53785,localport=59271] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-26 14:56:19.477 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/192.168.1.82,port=5000,localport=59272] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-26 14:56:19.477 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/192.168.1.82,port=5000,localport=59273] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-26 14:56:47.834 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.17.16.45
+2016-01-26 14:56:47.834 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-26 14:56:39.583 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/192.168.1.82,port=53791,localport=59274] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-26 14:56:39.584 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.UnmarshalException Problem:java.rmi.UnmarshalException: Error unmarshaling return header; nested exception is: 
+	java.net.SocketTimeoutException: Read interrupted after stream transferred 19 bytes because inactive socket Socket[addr=AUS2M-SPERL/192.168.1.82,port=53791,localport=59274] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-26 14:56:47.834 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.17.16.45
+2016-01-26 14:56:47.834 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.16.45,localport=5006]
+2016-01-26 15:12:20.902 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.16.45 to 10.17.244.217
+2016-01-26 15:12:20.902 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-26 15:12:13.691 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.16.45,port=53779,localport=59535] timed out and was forcibly closed, timeout: 5000 ms
+2016-01-26 15:12:15.697 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.16.45,port=53785,localport=59534] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-26 15:12:20.902 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.16.45 to 10.17.244.217
+2016-01-26 15:12:20.902 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.244.217,localport=5006]
+2016-01-26 15:32:55.078 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.244.217,port=53785,localport=60317] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-26 19:44:31.795 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.244.217 to 10.17.16.45
+2016-01-26 19:44:31.795 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-26 19:44:33.729 UTC INFO [admin1] [admin1] rg1-rn1: Service status: UNREACHABLE 2016-01-26 19:44:33 UTC
+2016-01-26 19:44:03.982 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.244.217,port=5000,localport=65108] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-26 19:44:03.982 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.UpdateThread$ResolveHandler@5199850f execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.UpdateThread$ResolveHandler@5199850f
+2016-01-26 19:44:31.795 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.244.217 to 10.17.16.45
+2016-01-26 19:44:31.795 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.16.45,localport=5006]
+2016-01-26 19:44:50.731 UTC INFO [admin1] [rg1-rn1] Service status: RUNNING 2016-01-26 19:44:50 UTC
+2016-01-26 19:56:03.659 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.16.45 to 10.17.0.108
+2016-01-26 19:56:03.659 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-26 19:56:03.659 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.16.45 to 10.17.0.108
+2016-01-26 19:56:03.659 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.0.108,localport=5006]
+2016-01-26 19:56:05.890 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@551f3365 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@551f3365
+2016-01-26 19:56:33.747 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 10.17.16.45
+2016-01-26 19:56:33.747 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-26 19:57:03.824 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.16.45 to 10.17.244.217
+2016-01-26 19:57:03.824 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-26 19:56:33.747 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 10.17.16.45
+2016-01-26 19:56:33.747 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.16.45,localport=5006]
+2016-01-26 19:56:49.982 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.16.45,port=5000,localport=65497] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-26 19:57:01.002 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.16.45,port=53791,localport=65476] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-26 19:57:03.824 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.16.45 to 10.17.244.217
+2016-01-26 19:57:03.824 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.244.217,localport=5006]
+2016-01-26 19:57:04.009 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-26 20:41:49.472 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.244.217,port=5000,localport=49890] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-26 21:35:24.545 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.244.217 to 10.17.16.45
+2016-01-26 21:35:24.546 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-26 21:35:02.730 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.244.217,port=5000,localport=50937] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-26 21:35:05.734 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@41382a73 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@41382a73
+2016-01-26 21:35:24.545 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.244.217 to 10.17.16.45
+2016-01-26 21:35:24.546 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.16.45,localport=5006]
+2016-01-26 21:35:25.778 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.244.217,port=53791,localport=49781] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-27 00:31:17.910 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.16.45 to fe80:0:0:0:6c0d:28ff:fe98:e9ff%10
+2016-01-27 00:31:17.910 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 00:31:42.392 UTC INFO [admin1] [admin1] rg1-rn1: Service status: UNREACHABLE 2016-01-27 00:31:42 UTC
+2016-01-27 00:31:47.987 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:6c0d:28ff:fe98:e9ff%10 to 10.0.121.49
+2016-01-27 00:31:47.988 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 00:31:17.910 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.16.45 to fe80:0:0:0:6c0d:28ff:fe98:e9ff%10
+2016-01-27 00:31:17.910 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:6c0d:28ff:fe98:e9ff%10,localport=5006]
+2016-01-27 00:31:18.996 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@13c03e4d execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@13c03e4d
+2016-01-27 00:31:18.996 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.16.45,port=5000,localport=52764] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-27 00:31:20.001 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.16.45,port=53785,localport=54988] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-27 00:31:41.052 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.16.45,port=53791,localport=52704] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-27 00:31:44.058 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 00:31:47.987 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:6c0d:28ff:fe98:e9ff%10 to 10.0.121.49
+2016-01-27 00:31:47.988 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.0.121.49,localport=5006]
+2016-01-27 00:31:48.064 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 00:31:59.394 UTC INFO [admin1] [rg1-rn1] Service status: RUNNING 2016-01-27 00:31:59 UTC
+2016-01-27 02:25:42.479 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.0.121.49 to 192.168.1.82
+2016-01-27 02:25:42.479 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 02:25:23.490 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@6f7f07b3 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@6f7f07b3
+2016-01-27 02:25:42.479 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.0.121.49 to 192.168.1.82
+2016-01-27 02:25:42.479 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/192.168.1.82,localport=5006]
+2016-01-27 02:25:43.480 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.0.121.49,port=53791,localport=55034] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-27 08:26:41.949 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 192.168.1.82 to fe80:0:0:0:6c0d:28ff:fe98:e9ff%10
+2016-01-27 08:26:41.951 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 15:35:14.549 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:6c0d:28ff:fe98:e9ff%10 to 192.168.1.82
+2016-01-27 15:35:15.152 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 15:35:25.424 UTC INFO [admin1] [admin1] rg1-rn1: Service status: UNREACHABLE 2016-01-27 15:35:25 UTC
+2016-01-27 15:35:45.218 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 192.168.1.82 to 10.17.0.108
+2016-01-27 15:35:45.218 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 15:35:15.280 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@7aaafc5a execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@7aaafc5a
+2016-01-27 15:35:20.397 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/192.168.1.82,port=53779,localport=58014] timed out and was forcibly closed, timeout: 5000 ms
+2016-01-27 15:35:25.419 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/192.168.1.82,port=53785,localport=58011] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-27 15:35:25.420 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/192.168.1.82,port=5000,localport=58012] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-27 15:35:44.644 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 192.168.1.82 to 10.17.0.108
+2016-01-27 15:35:44.645 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.0.108,localport=5006]
+2016-01-27 15:35:45.470 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/192.168.1.82,port=53791,localport=58013] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-27 15:35:45.471 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.UnmarshalException Problem:java.rmi.UnmarshalException: Error unmarshaling return header; nested exception is: 
+	java.net.SocketTimeoutException: Read interrupted after stream transferred 19 bytes because inactive socket Socket[addr=AUS2M-SPERL/192.168.1.82,port=53791,localport=58013] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-27 15:35:51.403 UTC INFO [admin1] [rg1-rn1] Service status: RUNNING 2016-01-27 15:35:51 UTC
+2016-01-27 15:36:15.324 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 10.17.17.214
+2016-01-27 15:36:15.325 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 15:36:14.767 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 10.17.17.214
+2016-01-27 15:36:14.767 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.17.214,localport=5006]
+2016-01-27 16:55:18.079 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@1ec24577 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@1ec24577
+2016-01-27 16:55:37.508 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.0.108,port=53791,localport=58239] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-27 19:52:28.978 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.17.214 to 10.33.188.165
+2016-01-27 19:52:28.979 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 19:52:09.038 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@52ffbbc1 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@52ffbbc1
+2016-01-27 19:52:28.405 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.17.214,port=53791,localport=59248] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-27 19:52:28.578 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.17.214 to 10.33.188.165
+2016-01-27 19:52:28.579 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.33.188.165,localport=5006]
+2016-01-27 19:53:29.149 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.33.188.165 to 172.16.0.112
+2016-01-27 19:53:29.149 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 19:53:28.755 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.33.188.165 to 172.16.0.112
+2016-01-27 19:53:28.755 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/172.16.0.112,localport=5006]
+2016-01-27 19:53:31.245 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@5ea4b3f7 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@5ea4b3f7
+2016-01-27 19:53:50.630 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.33.188.165,port=53791,localport=59613] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-27 21:08:23.331 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 172.16.0.112 to 10.147.192.82
+2016-01-27 21:08:23.332 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 21:08:04.281 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@4f2874f6 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@4f2874f6
+2016-01-27 21:08:23.170 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 172.16.0.112 to 10.147.192.82
+2016-01-27 21:08:23.170 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.147.192.82,localport=5006]
+2016-01-27 21:08:23.888 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/172.16.0.112,port=53791,localport=59772] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-27 21:20:58.736 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.147.192.82 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-27 21:20:58.737 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 21:20:39.652 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@3a90104f execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@3a90104f
+2016-01-27 21:20:43.006 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.147.192.82,port=5000,localport=60902] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-27 21:20:45.013 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.147.192.82,port=53785,localport=61107] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-27 21:20:58.567 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.147.192.82 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-27 21:20:58.567 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:a65e:60ff:fecc:a593%4,localport=5006]
+2016-01-27 21:20:59.039 UTC INFO [rg1-rn1] Inactive socket Socket[addr=AUS2M-SPERL/10.147.192.82,port=53791,localport=60901] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-27 21:21:28.804 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.147.192.82
+2016-01-27 21:21:28.805 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-27 21:21:28.654 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.147.192.82
+2016-01-27 21:21:28.654 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.147.192.82,localport=5006]
+2016-01-27 21:22:27.288 UTC INFO [admin1] [admin1] rg1-rn1: Service status: UNREACHABLE 2016-01-27 21:22:27 UTC
+2016-01-27 21:22:20.922 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@6d8645e9 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@6d8645e9
+2016-01-27 21:22:22.919 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:25.928 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:28.937 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:31.943 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:34.950 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:37.957 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:41.967 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:44.976 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:47.984 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:51.990 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:54.994 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:22:59.002 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:02.014 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:05.022 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:09.027 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:12.038 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:15.047 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:18.053 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:21.066 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:22.073 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@19896952 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@19896952
+2016-01-27 21:23:24.078 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:27.085 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:30.098 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:34.101 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:37.109 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:41.111 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:44.118 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:47.126 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:50.132 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:53.141 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:23:57.144 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:00.151 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:03.162 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:07.163 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:10.177 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:13.188 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:16.196 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:19.209 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:22.218 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:22.219 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@5e2c56ee execute() ignored for service rg1-rn1 since it already had an outstanding task: null
+2016-01-27 21:24:26.227 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:29.239 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:32.251 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:35.263 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:38.266 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:41.280 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:44.287 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:47.298 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:50.305 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:54.308 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:24:57.316 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:25:00.323 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:25:03.335 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:25:06.345 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:25:09.361 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:25:13.364 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:25:17.373 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:25:21.382 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-27 21:25:22.387 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@34ff6e17 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@34ff6e17
+2016-01-27 21:25:24.292 UTC INFO [admin1] [rg1-rn1] Service status: RUNNING 2016-01-27 21:25:24 UTC
+2016-01-27 22:18:31.886 UTC INFO [admin1] Initializing PRIMARY Admin for store: kvstore
+2016-01-27 22:18:31.889 UTC INFO [admin1] JVM Runtime maxMemory (bytes): 3817865216
+2016-01-27 22:18:31.890 UTC INFO [admin1] Non-default JE properties for environment: {je.rep.vlsn.logCacheSize=128, je.rep.envUnknownStateTimeout=10 s, je.log.faultReadSize=4096, je.rep.vlsn.distance=1000000, je.rep.replicaTimeout=10 s, je.env.runEvictor=true, je.cleaner.minUtilization=40, je.rep.replicaAckTimeout=5 s, je.lock.nLockTables=97, je.cleaner.threads=2, je.rep.replayMaxOpenDbHandles=100, je.log.writeQueueSize=2097152, je.evictor.criticalPercentage=20, je.log.iteratorReadSize=1048576, je.log.numBuffers=16, je.rep.feederTimeout=10 s, je.nodeMaxEntries=128, je.lock.timeout=10 s, je.rep.bindInaddrAny=true, je.rep.preHeartbeatTimeoutMs=5000000000, je.rep.consistencyPolicy=NoConsistencyRequiredPolicy, je.checkpointer.bytesInterval=500000000, je.txn.durability=write_no_sync,write_no_sync,simple_majority, je.cleaner.readSize=1048576, je.rep.ignoreSecondaryNodeId=true, je.rep.txnRollbackLimit=10, je.log.fileCacheSize=2000, je.log.fileMax=1073741824}
+2016-01-27 22:18:31.919 UTC INFO [admin1] DataChannelFactory: basic
+2016-01-27 22:18:31.938 UTC INFO [admin1] AdminStateTracker thread start: admin1
+2016-01-27 22:18:32.484 UTC INFO [admin1] JE recovery: FIND_END_OF_LOG
+2016-01-27 22:18:32.542 UTC INFO [admin1] JE recovery: FIND_LAST_CKPT
+2016-01-27 22:18:32.549 UTC INFO [admin1] JE recovery: READ_DBMAP_INFO
+2016-01-27 22:18:32.581 UTC INFO [admin1] JE recovery: REDO_DBMAP_INFO
+2016-01-27 22:18:32.583 UTC INFO [admin1] JE recovery: UNDO_DBMAP_RECORDS
+2016-01-27 22:18:32.586 UTC INFO [admin1] JE recovery: REDO_DBMAP_RECORDS
+2016-01-27 22:18:32.591 UTC INFO [admin1] JE recovery: READ_DATA_INFO
+2016-01-27 22:18:32.606 UTC INFO [admin1] JE recovery: REDO_DATA_INFO
+2016-01-27 22:18:32.610 UTC INFO [admin1] JE recovery: UNDO_DATA_RECORDS
+2016-01-27 22:18:32.613 UTC INFO [admin1] JE recovery: REDO_DATA_RECORDS
+2016-01-27 22:18:32.644 UTC INFO [admin1] JE recovery: POPULATE_UTILIZATION_PROFILE
+2016-01-27 22:18:32.646 UTC INFO [admin1] JE recovery: REMOVE_TEMP_DBS
+2016-01-27 22:18:32.658 UTC INFO [admin1] JE recovery: CKPT
+2016-01-27 22:18:32.682 UTC INFO [admin1] JE recovery: RECOVERY_FINISHED
+2016-01-27 22:18:32.758 UTC INFO [admin1] JE: Started ServiceDispatcher. HostPort=AUS2M-SPERL:5005
+2016-01-27 22:18:32.758 UTC INFO [admin1] JE: DataChannel factory: com.sleepycat.je.rep.utilint.net.SimpleChannelFactory
+2016-01-27 22:18:32.844 UTC INFO [admin1] JE: Current group size: 1
+2016-01-27 22:18:32.844 UTC INFO [admin1] JE: Current group size: 1
+2016-01-27 22:18:32.844 UTC INFO [admin1] JE: Existing node 1 querying for a current master.
+2016-01-27 22:18:32.844 UTC INFO [admin1] JE: Existing node 1 querying for a current master.
+2016-01-27 22:18:32.882 UTC INFO [admin1] JE recovery: BECOME_CONSISTENT
+2016-01-27 22:18:32.883 UTC INFO [admin1] JE: Node 1 started
+2016-01-27 22:18:32.883 UTC INFO [admin1] JE: Node 1 started
+2016-01-27 22:18:32.884 UTC INFO [admin1] JE: Election initiated; election #1
+2016-01-27 22:18:32.884 UTC INFO [admin1] JE: Election initiated; election #1
+2016-01-27 22:18:32.885 UTC INFO [admin1] JE: Started election thread Wed Jan 27 16:18:32 CST 2016
+2016-01-27 22:18:32.885 UTC INFO [admin1] JE: Started election thread Wed Jan 27 16:18:32 CST 2016
+2016-01-27 22:18:34.900 UTC INFO [admin1] JE: Winning proposal: Proposal(00000152852ab605:9a464cf4864f67e3d0cce04a4b3a3a7c:00000001) Value: Value:AUS2M-SPERL$$$5005$$$1$$$1
+2016-01-27 22:18:34.901 UTC INFO [admin1] JE: Winning proposal: Proposal(00000152852ab605:9a464cf4864f67e3d0cce04a4b3a3a7c:00000001) Value: Value:AUS2M-SPERL$$$5005$$$1$$$1
+2016-01-27 22:18:34.904 UTC INFO [admin1] JE: Master changed to 1
+2016-01-27 22:18:34.904 UTC INFO [admin1] JE: Master changed to 1
+2016-01-27 22:18:34.904 UTC INFO [admin1] JE: Election finished. Elapsed time: 2021ms
+2016-01-27 22:18:34.904 UTC INFO [admin1] JE: Election finished. Elapsed time: 2021ms
+2016-01-27 22:18:34.905 UTC INFO [admin1] JE: Election thread exited. Group master: 1(1)
+2016-01-27 22:18:34.905 UTC INFO [admin1] JE: Feeder manager accepting requests.
+2016-01-27 22:18:34.905 UTC INFO [admin1] JE: Election thread exited. Group master: 1(1)
+2016-01-27 22:18:34.905 UTC INFO [admin1] JE: Feeder manager accepting requests.
+2016-01-27 22:18:34.912 UTC INFO [admin1] JE: Joining group as master
+2016-01-27 22:18:34.913 UTC INFO [admin1] JE: Joining group as master
+2016-01-27 22:18:34.914 UTC INFO [admin1] JE: Refreshed 0 monitors.
+2016-01-27 22:18:34.914 UTC INFO [admin1] JE: Refreshed 0 monitors.
+2016-01-27 22:18:34.917 UTC INFO [admin1] State change event: Wed Jan 27 16:18:34 CST 2016, State: MASTER, Type: PRIMARY, Master: 1
+2016-01-27 22:18:34.917 UTC INFO [admin1] AdminStateTracker queue added:MASTER
+2016-01-27 22:18:35.097 UTC INFO [admin1] Open Admin entity DB: AdminPlanDatabase
+2016-01-27 22:18:35.097 UTC INFO [admin1] Admin plan database initialized
+2016-01-27 22:18:35.098 UTC INFO [admin1] Initialized plan store to PlanDatabaseStore
+2016-01-27 22:18:35.102 UTC FINE Closing StorewideLoggingView
+2016-01-27 22:18:35.229 UTC INFO [admin1] Using existing Admin database
+2016-01-27 22:18:35.246 UTC INFO [admin1] Monitor collector: adding sn1 to monitoring
+2016-01-27 22:18:35.261 UTC INFO [admin1] Monitor collector: adding rg1-rn1 to monitoring
+2016-01-27 22:18:30.721 UTC INFO [sn1] Starting StorageNodeAgent for kvstore
+2016-01-27 22:18:30.724 UTC INFO [sn1] Creating a Registry on port AUS2M-SPERL:5000 server socket factory:<ClearServerSocketFactory name=registry backlog=1024 port range=0,0>
+2016-01-27 22:18:30.855 UTC INFO [sn1] Using mgmt class oracle.kv.impl.mgmt.NoOpAgent
+2016-01-27 22:18:31.715 UTC INFO [sn1] Started MasterRebalanceThread
+2016-01-27 22:18:31.718 UTC INFO [sn1] rg1-rn1: Starting RepNode
+2016-01-27 22:18:31.720 UTC INFO [sn1] rg1-rn1: Started RepNode
+2016-01-27 22:18:31.725 UTC INFO [sn1] admin1: Starting AdminService
+2016-01-27 22:18:31.725 UTC INFO [sn1] admin1: Started AdminService
+2016-01-27 22:18:31.846 UTC INFO [sn1] Starting MonitorAgent.  Server socket factory:<ClearServerSocketFactory name=main backlog=0 port range=0,0> Client socket factory:<ClientSocketFactory name=kvstore|sn|monitor id=1948795260 connectMs=10000 readMs=5000>
+2016-01-27 22:18:31.944 UTC INFO [sn1] Successfully created secure proxy for the storage node agent
+2016-01-27 22:18:31.955 UTC INFO [sn1] Rebound to registry port 5000 using name sn1 with SSF:<ClearServerSocketFactory name=main backlog=0 port range=0,0>
+2016-01-27 22:18:31.955 UTC INFO [sn1] Service status changed from STARTING to RUNNING
+2016-01-27 22:18:31.910 UTC INFO [rg1-rn1] Thread[KV_rg1-rn1_RepNodeStateUpdateThread,5,main] started
+2016-01-27 22:18:31.973 UTC INFO [rg1-rn1] NoSQL version:12cR1.3.5.2 2015-12-03 08:36:49 UTC  Build id: 0c693aa1a5a0 JE version:6.4.15 Java version:1.8.0_51
+2016-01-27 22:18:31.981 UTC INFO [rg1-rn1] JVM Runtime maxMemory:3,728,384 kB JE cache size:0 kB Max Offheap cache size:0 kB
+2016-01-27 22:18:31.981 UTC INFO [rg1-rn1] Non-default JE properties for environment: {je.rep.vlsn.logCacheSize=128, je.rep.envUnknownStateTimeout=10 s, je.log.faultReadSize=4096, je.rep.vlsn.distance=1000000, je.rep.replicaTimeout=10 s, je.env.runEvictor=true, je.cleaner.minUtilization=40, je.rep.replicaAckTimeout=5 s, je.lock.nLockTables=97, je.cleaner.threads=2, je.rep.replayMaxOpenDbHandles=100, je.log.writeQueueSize=2097152, je.evictor.criticalPercentage=20, je.log.iteratorReadSize=1048576, je.log.numBuffers=16, je.rep.feederTimeout=10 s, je.nodeMaxEntries=128, je.lock.timeout=10 s, je.rep.preHeartbeatTimeoutMs=5000000000, je.rep.consistencyPolicy=NoConsistencyRequiredPolicy, je.checkpointer.bytesInterval=500000000, je.txn.durability=write_no_sync,write_no_sync,simple_majority, je.cleaner.readSize=1048576, je.rep.ignoreSecondaryNodeId=true, je.rep.txnRollbackLimit=10, je.log.fileCacheSize=2000, je.log.fileMax=1073741824}
+2016-01-27 22:18:31.982 UTC INFO [rg1-rn1] DataChannelFactory: basic
+2016-01-27 22:18:32.021 UTC INFO [rg1-rn1] Table manager created
+2016-01-27 22:18:32.039 UTC INFO [rg1-rn1] Partition database cache mode: EVICT_LN
+2016-01-27 22:18:32.066 UTC INFO [rg1-rn1] Thread[KV_rg1-rn1_MetadataUpdateThread,5,main] started
+2016-01-27 22:18:32.082 UTC INFO [rg1-rn1] Starting RepNodeService
+2016-01-27 22:18:32.082 UTC INFO [rg1-rn1] Starting RN MonitorAgent.  Server socket factory:<ClearServerSocketFactory name=monitor backlog=0 port range=0,0> Client socket connect factory: <ClientSocketFactory name=kvstore|rn|monitor id=-1835808349 connectMs=10000 readMs=10000>
+2016-01-27 22:18:32.091 UTC INFO [rg1-rn1] Starting MonitorAgent
+2016-01-27 22:18:32.119 UTC INFO [rg1-rn1] Successfully created secure proxy for the repnode admin
+2016-01-27 22:18:32.139 UTC INFO [rg1-rn1] RepNodeAdmin registered
+2016-01-27 22:18:32.493 UTC INFO [rg1-rn1] JE recovery: FIND_END_OF_LOG
+2016-01-27 22:18:32.542 UTC INFO [rg1-rn1] JE recovery: FIND_LAST_CKPT
+2016-01-27 22:18:32.549 UTC INFO [rg1-rn1] JE recovery: READ_DBMAP_INFO
+2016-01-27 22:18:32.575 UTC INFO [rg1-rn1] JE recovery: REDO_DBMAP_INFO
+2016-01-27 22:18:32.577 UTC INFO [rg1-rn1] JE recovery: UNDO_DBMAP_RECORDS
+2016-01-27 22:18:32.581 UTC INFO [rg1-rn1] JE recovery: REDO_DBMAP_RECORDS
+2016-01-27 22:18:32.597 UTC INFO [rg1-rn1] JE recovery: READ_DATA_INFO
+2016-01-27 22:18:32.604 UTC INFO [rg1-rn1] JE recovery: REDO_DATA_INFO
+2016-01-27 22:18:32.607 UTC INFO [rg1-rn1] JE recovery: UNDO_DATA_RECORDS
+2016-01-27 22:18:32.609 UTC INFO [rg1-rn1] JE recovery: REDO_DATA_RECORDS
+2016-01-27 22:18:32.625 UTC INFO [rg1-rn1] JE recovery: POPULATE_UTILIZATION_PROFILE
+2016-01-27 22:18:32.638 UTC INFO [rg1-rn1] JE recovery: REMOVE_TEMP_DBS
+2016-01-27 22:18:32.658 UTC INFO [rg1-rn1] JE recovery: CKPT
+2016-01-27 22:18:32.679 UTC INFO [rg1-rn1] JE recovery: RECOVERY_FINISHED
+2016-01-27 22:18:32.758 UTC INFO [rg1-rn1] JE: Started ServiceDispatcher. HostPort=AUS2M-SPERL:5006
+2016-01-27 22:18:32.758 UTC INFO [rg1-rn1] JE: DataChannel factory: com.sleepycat.je.rep.utilint.net.SimpleChannelFactory
+2016-01-27 22:18:32.844 UTC INFO [rg1-rn1] JE: Current group size: 1
+2016-01-27 22:18:32.844 UTC INFO [rg1-rn1] JE: Current group size: 1
+2016-01-27 22:18:32.844 UTC INFO [rg1-rn1] JE: Existing node rg1-rn1 querying for a current master.
+2016-01-27 22:18:32.844 UTC INFO [rg1-rn1] JE: Existing node rg1-rn1 querying for a current master.
+2016-01-27 22:18:32.880 UTC INFO [rg1-rn1] JE recovery: BECOME_CONSISTENT
+2016-01-27 22:18:32.880 UTC INFO [rg1-rn1] JE: Node rg1-rn1 started
+2016-01-27 22:18:32.881 UTC INFO [rg1-rn1] JE: Node rg1-rn1 started
+2016-01-27 22:18:32.881 UTC INFO [rg1-rn1] JE: Election initiated; election #1
+2016-01-27 22:18:32.881 UTC INFO [rg1-rn1] JE: Election initiated; election #1
+2016-01-27 22:18:32.885 UTC INFO [rg1-rn1] JE: Started election thread Wed Jan 27 16:18:32 CST 2016
+2016-01-27 22:18:32.885 UTC INFO [rg1-rn1] JE: Started election thread Wed Jan 27 16:18:32 CST 2016
+2016-01-27 22:18:34.900 UTC INFO [rg1-rn1] JE: Winning proposal: Proposal(00000152852ab605:9a464cf4864f67e3d0cce04a4b3a3a7c:00000002) Value: Value:AUS2M-SPERL$$$5006$$$rg1-rn1$$$1
+2016-01-27 22:18:34.901 UTC INFO [rg1-rn1] JE: Winning proposal: Proposal(00000152852ab605:9a464cf4864f67e3d0cce04a4b3a3a7c:00000002) Value: Value:AUS2M-SPERL$$$5006$$$rg1-rn1$$$1
+2016-01-27 22:18:34.904 UTC INFO [rg1-rn1] JE: Master changed to rg1-rn1
+2016-01-27 22:18:34.904 UTC INFO [rg1-rn1] JE: Master changed to rg1-rn1
+2016-01-27 22:18:34.904 UTC INFO [rg1-rn1] JE: Election finished. Elapsed time: 2023ms
+2016-01-27 22:18:34.904 UTC INFO [rg1-rn1] JE: Election finished. Elapsed time: 2023ms
+2016-01-27 22:18:34.904 UTC INFO [rg1-rn1] JE: Election thread exited. Group master: rg1-rn1(1)
+2016-01-27 22:18:34.905 UTC INFO [rg1-rn1] JE: Election thread exited. Group master: rg1-rn1(1)
+2016-01-27 22:18:34.905 UTC INFO [rg1-rn1] JE: Feeder manager accepting requests.
+2016-01-27 22:18:34.905 UTC INFO [rg1-rn1] JE: Feeder manager accepting requests.
+2016-01-27 22:18:34.912 UTC INFO [rg1-rn1] JE: Joining group as master
+2016-01-27 22:18:34.912 UTC INFO [rg1-rn1] JE: Joining group as master
+2016-01-27 22:18:34.914 UTC INFO [rg1-rn1] JE: Refreshed 0 monitors.
+2016-01-27 22:18:34.914 UTC INFO [rg1-rn1] JE: Refreshed 0 monitors.
+2016-01-27 22:18:34.915 UTC INFO [rg1-rn1] Opened JE environment: 6.4.15 JVM max heap: 3,817,865,216 JE properties: allowCreate=true
+cacheSize=2290719129
+txnNoSync=false
+txnWriteNoSync=false
+{je.lock.timeout=10 s, je.cleaner.readSize=1048576, je.log.faultReadSize=4096, je.rep.consistencyPolicy=NoConsistencyRequiredPolicy, je.log.fileMax=1073741824, je.rep.feederTimeout=10 s, je.rep.nodeName=rg1-rn1, je.nodeMaxEntries=128, je.log.writeQueueSize=2097152, je.evictor.criticalPercentage=20, je.rep.electableGroupSizeOverride=0, je.env.runEvictor=true, je.log.iteratorReadSize=1048576, je.txn.durability=WRITE_NO_SYNC,WRITE_NO_SYNC,SIMPLE_MAJORITY, je.maxOffHeapMemory=0, je.checkpointer.bytesInterval=500000000, je.log.numBuffers=16, je.rep.nodeHostPort=AUS2M-SPERL:5006, je.rep.vlsn.distance=1000000, je.rep.txnRollbackLimit=10, je.rep.replayMaxOpenDbHandles=100, je.rep.ignoreSecondaryNodeId=true, je.maxMemory=0, je.cleaner.minUtilization=40, je.env.isTransactional=true, je.log.fileCacheSize=2000, je.rep.helperHosts=AUS2M-SPERL:5006, je.rep.preHeartbeatTimeoutMs=5000000000, je.rep.vlsn.logCacheSize=128, je.rep.replicaTimeout=10 s, je.lock.nLockTables=97, je.rep.nodeType=ELECTABLE, je.rep.envUnknownStateTimeout=10 s, je.rep.preserveRecordVersion=true, je.rep.groupName=rg1, je.rep.replicaAckTimeout=5 s, je.cleaner.threads=2}
+
+2016-01-27 22:18:34.928 UTC INFO [rg1-rn1] State change event: Wed Jan 27 16:18:34 CST 2016, State: MASTER, Type: ELECTABLE, Master: rg1-rn1
+2016-01-27 22:18:34.928 UTC INFO [rg1-rn1] MigrationStateTracker queue added:MASTER
+2016-01-27 22:18:34.928 UTC INFO [rg1-rn1] TableManagerStateTracker queue added:MASTER
+2016-01-27 22:18:34.928 UTC INFO [rg1-rn1] MasterBalanceStateTracker queue added:MASTER
+2016-01-27 22:18:34.929 UTC INFO [rg1-rn1] Replicated environment handle established. Cache size: 2290719129, State: MASTER
+2016-01-27 22:18:35.144 UTC INFO [rg1-rn1] Topology updated from seq#: 0 to 14
+2016-01-27 22:18:35.150 UTC INFO [rg1-rn1] Open SecurityMetadata DB
+2016-01-27 22:18:35.154 UTC INFO [rg1-rn1] Open TableMetadata DB
+2016-01-27 22:18:35.231 UTC INFO [rg1-rn1] Established 10 partition database handles, topology seq#: 14
+2016-01-27 22:18:35.235 UTC INFO [rg1-rn1] Topology stored seq#: 14
+2016-01-27 22:18:35.238 UTC INFO [rg1-rn1] Found 0 indexes and 0 tables marked for deletion in TableMetadata[0, 0, 0]
+2016-01-27 22:18:35.238 UTC INFO [rg1-rn1] Established 0 secondary database handles
+2016-01-27 22:18:35.243 UTC INFO [rg1-rn1] Topology fetched sequence#: 14, updated topology seq# 14
+2016-01-27 22:18:35.244 UTC INFO [rg1-rn1] MasterBalanceStateTracker thread start: rg1-rn1
+2016-01-27 22:18:35.244 UTC INFO [rg1-rn1] TableManagerStateTracker thread start: rg1-rn1
+2016-01-27 22:18:35.244 UTC INFO [rg1-rn1] MigrationStateTracker thread start: null
+2016-01-27 22:18:35.244 UTC INFO [rg1-rn1] Table manager change state to MASTER
+2016-01-27 22:18:35.244 UTC INFO [rg1-rn1] Migration manager change state to MASTER.
+2016-01-27 22:18:35.250 UTC INFO [rg1-rn1] Migration service accepting requests.
+2016-01-27 22:18:35.258 UTC INFO [rg1-rn1] No RN Login configured. 
+2016-01-27 22:18:35.258 UTC INFO [rg1-rn1] Service status changed from STARTING to RUNNING
+2016-01-27 22:18:35.278 UTC INFO [admin1] [sn1] Service status: RUNNING 2016-01-27 22:18:31 UTC
+2016-01-27 22:18:31.955 UTC INFO [sn1] Started StorageNodeAgent for kvstore
+2016-01-27 22:18:35.264 UTC INFO [sn1] noteState called
+2016-01-27 22:18:35.265 UTC INFO [sn1] added:State RN:rg1-rn1 state: MASTER top seq num: 14
+2016-01-27 22:18:35.279 UTC INFO [admin1] [rg1-rn1] Service status: RUNNING 2016-01-27 22:18:35 UTC
+2016-01-27 22:18:35.395 UTC INFO [admin1] Replicated environment handle established. Cache size: 2290719129, State: MASTER
+2016-01-27 22:18:35.266 UTC INFO [sn1] sn: sn1 state transition: State RN:rg1-rn1 state: MASTER top seq num: 14 active masters:[rg1-rn1] active replicas:0 replica leases:0
+2016-01-27 22:18:35.267 UTC INFO [sn1] Acquiring initial topology from RNs
+2016-01-27 22:18:35.272 UTC INFO [sn1] Thread returning for service rg1-rn1
+2016-01-27 22:18:35.277 UTC INFO [sn1] Topology acquired from RN: rg1-rn1 Topo seq#: 14
+2016-01-27 22:18:38.288 UTC INFO [sn1] Thread returning for service admin1
+2016-01-27 22:18:35.271 UTC INFO [rg1-rn1] Started RepNodeService
+2016-01-27 22:18:35.315 UTC INFO [rg1-rn1] Establishing RMI connection for admin DDL
+2016-01-27 22:18:35.318 UTC INFO [rg1-rn1] Establishing RMI connection for admin DDL
+2016-01-27 22:18:35.318 UTC INFO [rg1-rn1] Establishing RMI connection for admin DDL
+2016-01-28 02:46:31.422 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.147.192.82 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-28 02:46:31.425 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.147.192.82,port=62887,localport=64400] timed out and was forcibly closed, timeout: 5000 ms
+2016-01-28 02:46:31.429 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 02:46:31.254 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.147.192.82 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-28 02:46:34.437 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.147.192.82,port=62894,localport=64401] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-28 02:46:31.455 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:a65e:60ff:fecc:a593%4,localport=5006]
+2016-01-28 02:47:00.531 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 192.168.1.82
+2016-01-28 02:47:00.532 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 02:47:00.531 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 192.168.1.82
+2016-01-28 02:47:00.532 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/192.168.1.82,localport=5006]
+2016-01-28 02:51:53.224 UTC INFO [admin1] [admin1] sn1: Service status: UNREACHABLE 2016-01-28 02:51:53 UTC
+2016-01-28 15:04:59.483 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 192.168.1.82 to 10.17.0.108
+2016-01-28 15:04:59.486 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 15:04:59.494 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 192.168.1.82 to 10.17.0.108
+2016-01-28 15:04:59.495 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.0.108,localport=5006]
+2016-01-28 15:05:29.576 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 169.254.79.60
+2016-01-28 15:05:29.576 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 15:05:29.576 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 169.254.79.60
+2016-01-28 15:05:29.576 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/169.254.79.60,localport=5006]
+2016-01-28 15:54:07.869 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 169.254.79.60 to 10.17.0.108
+2016-01-28 15:54:07.870 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 15:54:07.869 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 169.254.79.60 to 10.17.0.108
+2016-01-28 15:54:07.870 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.0.108,localport=5006]
+2016-01-28 15:54:11.779 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/169.254.79.60,port=5000,localport=53360] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-28 15:54:37.936 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 10.17.18.109
+2016-01-28 15:54:37.936 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 15:54:37.936 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 10.17.18.109
+2016-01-28 15:54:37.936 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.18.109,localport=5006]
+2016-01-28 15:55:38.097 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.18.109 to 10.17.0.108
+2016-01-28 15:55:38.098 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 15:55:38.097 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.18.109 to 10.17.0.108
+2016-01-28 15:55:38.098 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.0.108,localport=5006]
+2016-01-28 15:56:08.172 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 169.254.79.60
+2016-01-28 15:56:08.172 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 15:56:08.172 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 169.254.79.60
+2016-01-28 15:56:08.172 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/169.254.79.60,localport=5006]
+2016-01-28 17:01:55.905 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@a651c35 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@a651c35
+2016-01-28 17:02:15.960 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.0.108,port=62910,localport=58129] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-28 17:03:12.132 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/169.254.79.60,port=5000,localport=58306] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-28 17:03:19.555 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 169.254.79.60 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-28 17:03:19.555 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 17:03:07.114 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@25719f8f execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@25719f8f
+2016-01-28 17:03:19.555 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 169.254.79.60 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-28 17:03:19.555 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:a65e:60ff:fecc:a593%4,localport=5006]
+2016-01-28 17:03:49.627 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.17.244.217
+2016-01-28 17:03:49.627 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 17:03:49.627 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.17.244.217
+2016-01-28 17:03:49.627 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.244.217,localport=5006]
+2016-01-28 17:03:57.234 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/169.254.79.60,port=62910,localport=60923] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-28 17:03:57.235 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.UnmarshalException Problem:java.rmi.UnmarshalException: Error unmarshaling return header; nested exception is: 
+	java.net.SocketTimeoutException: Read interrupted after stream transferred 559 bytes because inactive socket Socket[addr=AUS2M-SPERL/169.254.79.60,port=62910,localport=60923] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-28 17:09:49.236 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.244.217,port=62910,localport=61177] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-28 17:09:50.646 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.244.217 to 10.17.17.108
+2016-01-28 17:09:50.646 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 17:09:29.175 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@245e05f7 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@245e05f7
+2016-01-28 17:09:50.646 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.244.217 to 10.17.17.108
+2016-01-28 17:09:50.646 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.17.108,localport=5006]
+2016-01-28 17:09:52.244 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-28 17:10:20.729 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.17.108 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-28 17:10:20.730 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 17:10:20.729 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.17.108 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-28 17:10:20.730 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:a65e:60ff:fecc:a593%4,localport=5006]
+2016-01-28 17:10:29.337 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@21adcc8a execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@21adcc8a
+2016-01-28 17:10:43.381 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.17.108,port=62910,localport=61744] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-28 17:10:50.814 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.17.244.217
+2016-01-28 17:10:50.814 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 17:10:50.814 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.17.244.217
+2016-01-28 17:10:50.814 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.244.217,localport=5006]
+2016-01-28 17:30:45.946 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.244.217 to fe80:0:0:0:6c0d:28ff:fe98:e9ff%10
+2016-01-28 17:30:45.946 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 17:31:16.057 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:6c0d:28ff:fe98:e9ff%10 to 10.17.17.108
+2016-01-28 17:31:16.057 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 17:30:45.946 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.244.217 to fe80:0:0:0:6c0d:28ff:fe98:e9ff%10
+2016-01-28 17:30:45.946 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:6c0d:28ff:fe98:e9ff%10,localport=5006]
+2016-01-28 17:30:46.421 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@186435c6 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@186435c6
+2016-01-28 17:31:11.480 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-28 17:31:14.503 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-28 17:31:16.057 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:6c0d:28ff:fe98:e9ff%10 to 10.17.17.108
+2016-01-28 17:31:16.057 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.17.108,localport=5006]
+2016-01-28 17:31:17.528 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-28 17:32:28.635 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@d205d07 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@d205d07
+2016-01-28 18:58:24.857 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.17.108,port=5000,localport=62794] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-28 19:10:41.095 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.17.108,port=5000,localport=64027] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-28 19:10:54.339 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.17.108 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-28 19:10:54.340 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 19:10:55.145 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.17.108,port=62910,localport=62770] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-28 19:10:35.835 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@5e5973b7 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@5e5973b7
+2016-01-28 19:10:54.339 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.17.108 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-28 19:10:54.340 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:a65e:60ff:fecc:a593%4,localport=5006]
+2016-01-28 19:11:24.421 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.17.244.217
+2016-01-28 19:11:24.422 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 19:11:24.421 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.17.244.217
+2016-01-28 19:11:24.422 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.244.217,localport=5006]
+2016-01-28 19:17:55.476 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.244.217 to 10.17.0.108
+2016-01-28 19:17:55.476 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 19:17:55.476 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.244.217 to 10.17.0.108
+2016-01-28 19:17:55.477 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.0.108,localport=5006]
+2016-01-28 19:17:58.183 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@3d854d5a execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@3d854d5a
+2016-01-28 19:18:05.328 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.244.217,port=5000,localport=64882] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-28 19:18:17.359 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/fe80:0:0:0:a65e:60ff:fecc:a593%4,port=62910,localport=64512] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-28 20:03:49.189 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.0.108,port=5000,localport=49725] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-28 20:04:08.383 UTC INFO [admin1] [admin1] rg1-rn1: Service status: UNREACHABLE 2016-01-28 20:04:08 UTC
+2016-01-28 20:04:30.504 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 127.0.0.1
+2016-01-28 20:04:30.504 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 20:04:35.195 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.0.108,port=62910,localport=49792] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-28 20:03:58.191 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@70a37d61 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@70a37d61
+2016-01-28 20:04:30.504 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 127.0.0.1
+2016-01-28 20:04:30.504 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/127.0.0.1,localport=5006]
+2016-01-28 20:04:46.257 UTC INFO [admin1] [rg1-rn1] Service status: RUNNING 2016-01-28 20:04:46 UTC
+2016-01-28 20:10:31.550 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 127.0.0.1 to 10.17.17.108
+2016-01-28 20:10:31.551 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 20:10:31.550 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 127.0.0.1 to 10.17.17.108
+2016-01-28 20:10:31.551 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.17.108,localport=5006]
+2016-01-28 20:11:31.716 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.17.108 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-28 20:11:31.717 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 20:11:31.716 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.17.108 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-01-28 20:11:31.717 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:a65e:60ff:fecc:a593%4,localport=5006]
+2016-01-28 20:12:01.803 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 169.254.79.60
+2016-01-28 20:12:01.803 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 20:12:01.803 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 169.254.79.60
+2016-01-28 20:12:01.803 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/169.254.79.60,localport=5006]
+2016-01-28 20:19:33.058 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 169.254.79.60 to 10.17.17.108
+2016-01-28 20:19:33.058 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 20:19:33.058 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 169.254.79.60 to 10.17.17.108
+2016-01-28 20:19:33.058 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.17.108,localport=5006]
+2016-01-28 21:24:13.686 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.17.108,port=5000,localport=53378] timed out and was forcibly closed, timeout: 10000 ms
+2016-01-28 21:24:28.844 UTC INFO [admin1] [admin1] rg1-rn1: Service status: UNREACHABLE 2016-01-28 21:24:28 UTC
+2016-01-28 21:24:33.786 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.17.108 to 10.17.0.108
+2016-01-28 21:24:33.786 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 21:24:24.274 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@383b3dfb execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@383b3dfb
+2016-01-28 21:24:26.275 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-28 21:24:30.283 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-28 21:24:33.294 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-28 21:24:33.786 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.17.108 to 10.17.0.108
+2016-01-28 21:24:33.786 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.0.108,localport=5006]
+2016-01-28 21:24:36.304 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-01-28 21:24:45.843 UTC INFO [admin1] [rg1-rn1] Service status: RUNNING 2016-01-28 21:24:45 UTC
+2016-01-28 21:26:04.012 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 127.0.0.1
+2016-01-28 21:26:04.013 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 21:26:04.012 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 127.0.0.1
+2016-01-28 21:26:04.013 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/127.0.0.1,localport=5006]
+2016-01-28 21:26:07.535 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@7cccc015 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@7cccc015
+2016-01-28 21:26:51.112 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.0.108,port=62910,localport=54034] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-28 21:26:51.113 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.UnmarshalException Problem:java.rmi.UnmarshalException: Error unmarshaling return header; nested exception is: 
+	java.net.SocketTimeoutException: Read interrupted after stream transferred 1205 bytes because inactive socket Socket[addr=AUS2M-SPERL/10.17.0.108,port=62910,localport=54034] timed out and was forcibly closed, timeout: 30000 ms
+2016-01-28 21:27:34.266 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 127.0.0.1 to 10.17.0.108
+2016-01-28 21:27:34.267 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 21:27:34.266 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 127.0.0.1 to 10.17.0.108
+2016-01-28 21:27:34.267 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.0.108,localport=5006]
+2016-01-28 21:29:04.488 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 10.17.244.217
+2016-01-28 21:29:04.489 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-01-28 21:29:04.488 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.0.108 to 10.17.244.217
+2016-01-28 21:29:04.489 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.244.217,localport=5006]
+2016-01-28 21:48:28.878 UTC INFO [admin1] [admin1] rg1-rn1: Service status: UNREACHABLE 2016-01-28 21:48:28 UTC
+2016-02-03 22:40:06.191 UTC INFO [admin1] Initializing PRIMARY Admin for store: kvstore
+2016-02-03 22:40:06.195 UTC INFO [admin1] JVM Runtime maxMemory (bytes): 3817865216
+2016-02-03 22:40:06.196 UTC INFO [admin1] Non-default JE properties for environment: {je.rep.vlsn.logCacheSize=128, je.rep.envUnknownStateTimeout=10 s, je.log.faultReadSize=4096, je.rep.vlsn.distance=1000000, je.rep.replicaTimeout=10 s, je.env.runEvictor=true, je.cleaner.minUtilization=40, je.rep.replicaAckTimeout=5 s, je.lock.nLockTables=97, je.cleaner.threads=2, je.rep.replayMaxOpenDbHandles=100, je.log.writeQueueSize=2097152, je.evictor.criticalPercentage=20, je.log.iteratorReadSize=1048576, je.log.numBuffers=16, je.rep.feederTimeout=10 s, je.nodeMaxEntries=128, je.lock.timeout=10 s, je.rep.bindInaddrAny=true, je.rep.preHeartbeatTimeoutMs=5000000000, je.rep.consistencyPolicy=NoConsistencyRequiredPolicy, je.checkpointer.bytesInterval=500000000, je.txn.durability=write_no_sync,write_no_sync,simple_majority, je.cleaner.readSize=1048576, je.rep.ignoreSecondaryNodeId=true, je.rep.txnRollbackLimit=10, je.log.fileCacheSize=2000, je.log.fileMax=1073741824}
+2016-02-03 22:40:06.226 UTC INFO [admin1] DataChannelFactory: basic
+2016-02-03 22:40:06.227 UTC INFO [admin1] AdminStateTracker thread start: admin1
+2016-02-03 22:40:06.640 UTC INFO [admin1] JE recovery: FIND_END_OF_LOG
+2016-02-03 22:40:06.696 UTC INFO [admin1] JE recovery: FIND_LAST_CKPT
+2016-02-03 22:40:06.703 UTC INFO [admin1] JE recovery: READ_DBMAP_INFO
+2016-02-03 22:40:06.725 UTC INFO [admin1] JE recovery: REDO_DBMAP_INFO
+2016-02-03 22:40:06.727 UTC INFO [admin1] JE recovery: UNDO_DBMAP_RECORDS
+2016-02-03 22:40:06.731 UTC INFO [admin1] JE recovery: REDO_DBMAP_RECORDS
+2016-02-03 22:40:06.737 UTC INFO [admin1] JE recovery: READ_DATA_INFO
+2016-02-03 22:40:06.755 UTC INFO [admin1] JE recovery: REDO_DATA_INFO
+2016-02-03 22:40:06.759 UTC INFO [admin1] JE recovery: UNDO_DATA_RECORDS
+2016-02-03 22:40:06.762 UTC INFO [admin1] JE recovery: REDO_DATA_RECORDS
+2016-02-03 22:40:06.772 UTC INFO [admin1] JE recovery: POPULATE_UTILIZATION_PROFILE
+2016-02-03 22:40:06.788 UTC INFO [admin1] JE recovery: REMOVE_TEMP_DBS
+2016-02-03 22:40:06.811 UTC INFO [admin1] JE recovery: CKPT
+2016-02-03 22:40:06.837 UTC INFO [admin1] JE recovery: RECOVERY_FINISHED
+2016-02-03 22:40:06.905 UTC INFO [admin1] JE: Started ServiceDispatcher. HostPort=AUS2M-SPERL:5005
+2016-02-03 22:40:06.906 UTC INFO [admin1] JE: DataChannel factory: com.sleepycat.je.rep.utilint.net.SimpleChannelFactory
+2016-02-03 22:40:06.975 UTC INFO [admin1] JE: Current group size: 1
+2016-02-03 22:40:06.975 UTC INFO [admin1] JE: Current group size: 1
+2016-02-03 22:40:06.976 UTC INFO [admin1] JE: Existing node 1 querying for a current master.
+2016-02-03 22:40:06.976 UTC INFO [admin1] JE: Existing node 1 querying for a current master.
+2016-02-03 22:40:07.003 UTC INFO [admin1] JE recovery: BECOME_CONSISTENT
+2016-02-03 22:40:07.003 UTC INFO [admin1] JE: Node 1 started
+2016-02-03 22:40:07.003 UTC INFO [admin1] JE: Node 1 started
+2016-02-03 22:40:07.003 UTC INFO [admin1] JE: Election initiated; election #1
+2016-02-03 22:40:07.003 UTC INFO [admin1] JE: Election initiated; election #1
+2016-02-03 22:40:07.005 UTC INFO [admin1] JE: Started election thread Wed Feb 03 16:40:07 CST 2016
+2016-02-03 22:40:07.005 UTC INFO [admin1] JE: Started election thread Wed Feb 03 16:40:07 CST 2016
+2016-02-03 22:40:09.020 UTC INFO [admin1] JE: Winning proposal: Proposal(00000152a94af932:90bfb03f175e0c6c08425b1a7c60ab41:00000001) Value: Value:AUS2M-SPERL$$$5005$$$1$$$1
+2016-02-03 22:40:09.020 UTC INFO [admin1] JE: Winning proposal: Proposal(00000152a94af932:90bfb03f175e0c6c08425b1a7c60ab41:00000001) Value: Value:AUS2M-SPERL$$$5005$$$1$$$1
+2016-02-03 22:40:09.023 UTC INFO [admin1] JE: Master changed to 1
+2016-02-03 22:40:09.023 UTC INFO [admin1] JE: Master changed to 1
+2016-02-03 22:40:09.024 UTC INFO [admin1] JE: Election finished. Elapsed time: 2021ms
+2016-02-03 22:40:09.024 UTC INFO [admin1] JE: Election finished. Elapsed time: 2021ms
+2016-02-03 22:40:09.024 UTC INFO [admin1] JE: Election thread exited. Group master: 1(1)
+2016-02-03 22:40:09.024 UTC INFO [admin1] JE: Feeder manager accepting requests.
+2016-02-03 22:40:09.024 UTC INFO [admin1] JE: Election thread exited. Group master: 1(1)
+2016-02-03 22:40:09.024 UTC INFO [admin1] JE: Feeder manager accepting requests.
+2016-02-03 22:40:09.030 UTC INFO [admin1] JE: Joining group as master
+2016-02-03 22:40:09.030 UTC INFO [admin1] JE: Joining group as master
+2016-02-03 22:40:09.031 UTC INFO [admin1] JE: Refreshed 0 monitors.
+2016-02-03 22:40:09.032 UTC INFO [admin1] JE: Refreshed 0 monitors.
+2016-02-03 22:40:09.034 UTC INFO [admin1] State change event: Wed Feb 03 16:40:09 CST 2016, State: MASTER, Type: PRIMARY, Master: 1
+2016-02-03 22:40:09.034 UTC INFO [admin1] AdminStateTracker queue added:MASTER
+2016-02-03 22:40:09.218 UTC INFO [admin1] Open Admin entity DB: AdminPlanDatabase
+2016-02-03 22:40:09.218 UTC INFO [admin1] Admin plan database initialized
+2016-02-03 22:40:09.218 UTC INFO [admin1] Initialized plan store to PlanDatabaseStore
+2016-02-03 22:40:09.219 UTC FINE Closing StorewideLoggingView
+2016-02-03 22:40:09.246 UTC INFO [admin1] Using existing Admin database
+2016-02-03 22:40:09.294 UTC INFO [admin1] Monitor collector: adding sn1 to monitoring
+2016-02-03 22:40:09.296 UTC INFO [admin1] Monitor collector: adding rg1-rn1 to monitoring
+2016-02-03 22:40:05.207 UTC INFO [sn1] Starting StorageNodeAgent for kvstore
+2016-02-03 22:40:05.210 UTC INFO [sn1] Creating a Registry on port AUS2M-SPERL:5000 server socket factory:<ClearServerSocketFactory name=registry backlog=1024 port range=0,0>
+2016-02-03 22:40:05.316 UTC INFO [sn1] Using mgmt class oracle.kv.impl.mgmt.NoOpAgent
+2016-02-03 22:40:06.013 UTC INFO [sn1] Started MasterRebalanceThread
+2016-02-03 22:40:06.017 UTC INFO [sn1] rg1-rn1: Starting RepNode
+2016-02-03 22:40:06.019 UTC INFO [sn1] rg1-rn1: Started RepNode
+2016-02-03 22:40:06.023 UTC INFO [sn1] admin1: Starting AdminService
+2016-02-03 22:40:06.024 UTC INFO [sn1] admin1: Started AdminService
+2016-02-03 22:40:06.121 UTC INFO [sn1] Starting MonitorAgent.  Server socket factory:<ClearServerSocketFactory name=main backlog=0 port range=0,0> Client socket factory:<ClientSocketFactory name=kvstore|sn|monitor id=523233713 connectMs=10000 readMs=5000>
+2016-02-03 22:40:06.205 UTC INFO [sn1] Successfully created secure proxy for the storage node agent
+2016-02-03 22:40:06.217 UTC INFO [sn1] Rebound to registry port 5000 using name sn1 with SSF:<ClearServerSocketFactory name=main backlog=0 port range=0,0>
+2016-02-03 22:40:06.217 UTC INFO [sn1] Service status changed from STARTING to RUNNING
+2016-02-03 22:40:09.329 UTC INFO [admin1] [sn1] Service status: RUNNING 2016-02-03 22:40:06 UTC
+2016-02-03 22:40:06.217 UTC INFO [sn1] Started StorageNodeAgent for kvstore
+2016-02-03 22:40:06.184 UTC INFO [rg1-rn1] Thread[KV_rg1-rn1_RepNodeStateUpdateThread,5,main] started
+2016-02-03 22:40:06.238 UTC INFO [rg1-rn1] NoSQL version:12cR1.3.5.2 2015-12-03 08:36:49 UTC  Build id: 0c693aa1a5a0 JE version:6.4.15 Java version:1.8.0_51
+2016-02-03 22:40:06.240 UTC INFO [rg1-rn1] JVM Runtime maxMemory:3,728,384 kB JE cache size:0 kB Max Offheap cache size:0 kB
+2016-02-03 22:40:06.240 UTC INFO [rg1-rn1] Non-default JE properties for environment: {je.rep.vlsn.logCacheSize=128, je.rep.envUnknownStateTimeout=10 s, je.log.faultReadSize=4096, je.rep.vlsn.distance=1000000, je.rep.replicaTimeout=10 s, je.env.runEvictor=true, je.cleaner.minUtilization=40, je.rep.replicaAckTimeout=5 s, je.lock.nLockTables=97, je.cleaner.threads=2, je.rep.replayMaxOpenDbHandles=100, je.log.writeQueueSize=2097152, je.evictor.criticalPercentage=20, je.log.iteratorReadSize=1048576, je.log.numBuffers=16, je.rep.feederTimeout=10 s, je.nodeMaxEntries=128, je.lock.timeout=10 s, je.rep.preHeartbeatTimeoutMs=5000000000, je.rep.consistencyPolicy=NoConsistencyRequiredPolicy, je.checkpointer.bytesInterval=500000000, je.txn.durability=write_no_sync,write_no_sync,simple_majority, je.cleaner.readSize=1048576, je.rep.ignoreSecondaryNodeId=true, je.rep.txnRollbackLimit=10, je.log.fileCacheSize=2000, je.log.fileMax=1073741824}
+2016-02-03 22:40:06.240 UTC INFO [rg1-rn1] DataChannelFactory: basic
+2016-02-03 22:40:06.260 UTC INFO [rg1-rn1] Table manager created
+2016-02-03 22:40:06.289 UTC INFO [rg1-rn1] Partition database cache mode: EVICT_LN
+2016-02-03 22:40:06.311 UTC INFO [rg1-rn1] Thread[KV_rg1-rn1_MetadataUpdateThread,5,main] started
+2016-02-03 22:40:06.322 UTC INFO [rg1-rn1] Starting RepNodeService
+2016-02-03 22:40:06.323 UTC INFO [rg1-rn1] Starting RN MonitorAgent.  Server socket factory:<ClearServerSocketFactory name=monitor backlog=0 port range=0,0> Client socket connect factory: <ClientSocketFactory name=kvstore|rn|monitor id=1033597400 connectMs=10000 readMs=10000>
+2016-02-03 22:40:06.332 UTC INFO [rg1-rn1] Starting MonitorAgent
+2016-02-03 22:40:06.357 UTC INFO [rg1-rn1] Successfully created secure proxy for the repnode admin
+2016-02-03 22:40:06.379 UTC INFO [rg1-rn1] RepNodeAdmin registered
+2016-02-03 22:40:06.650 UTC INFO [rg1-rn1] JE recovery: FIND_END_OF_LOG
+2016-02-03 22:40:06.696 UTC INFO [rg1-rn1] JE recovery: FIND_LAST_CKPT
+2016-02-03 22:40:06.703 UTC INFO [rg1-rn1] JE recovery: READ_DBMAP_INFO
+2016-02-03 22:40:06.742 UTC INFO [rg1-rn1] JE recovery: REDO_DBMAP_INFO
+2016-02-03 22:40:06.745 UTC INFO [rg1-rn1] JE recovery: UNDO_DBMAP_RECORDS
+2016-02-03 22:40:06.750 UTC INFO [rg1-rn1] JE recovery: REDO_DBMAP_RECORDS
+2016-02-03 22:40:06.752 UTC INFO [rg1-rn1] JE recovery: READ_DATA_INFO
+2016-02-03 22:40:06.761 UTC INFO [rg1-rn1] JE recovery: REDO_DATA_INFO
+2016-02-03 22:40:06.765 UTC INFO [rg1-rn1] JE recovery: UNDO_DATA_RECORDS
+2016-02-03 22:40:06.770 UTC INFO [rg1-rn1] JE recovery: REDO_DATA_RECORDS
+2016-02-03 22:40:06.824 UTC INFO [rg1-rn1] JE recovery: POPULATE_UTILIZATION_PROFILE
+2016-02-03 22:40:06.827 UTC INFO [rg1-rn1] JE recovery: REMOVE_TEMP_DBS
+2016-02-03 22:40:06.830 UTC INFO [rg1-rn1] JE recovery: CKPT
+2016-02-03 22:40:06.878 UTC INFO [rg1-rn1] JE recovery: RECOVERY_FINISHED
+2016-02-03 22:40:06.905 UTC INFO [rg1-rn1] JE: Started ServiceDispatcher. HostPort=AUS2M-SPERL:5006
+2016-02-03 22:40:06.905 UTC INFO [rg1-rn1] JE: DataChannel factory: com.sleepycat.je.rep.utilint.net.SimpleChannelFactory
+2016-02-03 22:40:06.975 UTC INFO [rg1-rn1] JE: Current group size: 1
+2016-02-03 22:40:06.975 UTC INFO [rg1-rn1] JE: Current group size: 1
+2016-02-03 22:40:06.975 UTC INFO [rg1-rn1] JE: Existing node rg1-rn1 querying for a current master.
+2016-02-03 22:40:06.975 UTC INFO [rg1-rn1] JE: Existing node rg1-rn1 querying for a current master.
+2016-02-03 22:40:07.003 UTC INFO [rg1-rn1] JE recovery: BECOME_CONSISTENT
+2016-02-03 22:40:07.003 UTC INFO [rg1-rn1] JE: Node rg1-rn1 started
+2016-02-03 22:40:07.003 UTC INFO [rg1-rn1] JE: Node rg1-rn1 started
+2016-02-03 22:40:07.003 UTC INFO [rg1-rn1] JE: Election initiated; election #1
+2016-02-03 22:40:07.003 UTC INFO [rg1-rn1] JE: Election initiated; election #1
+2016-02-03 22:40:07.005 UTC INFO [rg1-rn1] JE: Started election thread Wed Feb 03 16:40:07 CST 2016
+2016-02-03 22:40:07.005 UTC INFO [rg1-rn1] JE: Started election thread Wed Feb 03 16:40:07 CST 2016
+2016-02-03 22:40:09.020 UTC INFO [rg1-rn1] JE: Winning proposal: Proposal(00000152a94af932:90bfb03f175e0c6c08425b1a7c60ab41:00000002) Value: Value:AUS2M-SPERL$$$5006$$$rg1-rn1$$$1
+2016-02-03 22:40:09.020 UTC INFO [rg1-rn1] JE: Winning proposal: Proposal(00000152a94af932:90bfb03f175e0c6c08425b1a7c60ab41:00000002) Value: Value:AUS2M-SPERL$$$5006$$$rg1-rn1$$$1
+2016-02-03 22:40:09.023 UTC INFO [rg1-rn1] JE: Master changed to rg1-rn1
+2016-02-03 22:40:09.023 UTC INFO [rg1-rn1] JE: Master changed to rg1-rn1
+2016-02-03 22:40:09.023 UTC INFO [rg1-rn1] JE: Election finished. Elapsed time: 2020ms
+2016-02-03 22:40:09.024 UTC INFO [rg1-rn1] JE: Election finished. Elapsed time: 2020ms
+2016-02-03 22:40:09.024 UTC INFO [rg1-rn1] JE: Election thread exited. Group master: rg1-rn1(1)
+2016-02-03 22:40:09.024 UTC INFO [rg1-rn1] JE: Election thread exited. Group master: rg1-rn1(1)
+2016-02-03 22:40:09.024 UTC INFO [rg1-rn1] JE: Feeder manager accepting requests.
+2016-02-03 22:40:09.024 UTC INFO [rg1-rn1] JE: Feeder manager accepting requests.
+2016-02-03 22:40:09.030 UTC INFO [rg1-rn1] JE: Joining group as master
+2016-02-03 22:40:09.030 UTC INFO [rg1-rn1] JE: Joining group as master
+2016-02-03 22:40:09.031 UTC INFO [rg1-rn1] JE: Refreshed 0 monitors.
+2016-02-03 22:40:09.032 UTC INFO [rg1-rn1] JE: Refreshed 0 monitors.
+2016-02-03 22:40:09.032 UTC INFO [rg1-rn1] Opened JE environment: 6.4.15 JVM max heap: 3,817,865,216 JE properties: allowCreate=true
+cacheSize=2290719129
+txnNoSync=false
+txnWriteNoSync=false
+{je.lock.timeout=10 s, je.cleaner.readSize=1048576, je.log.faultReadSize=4096, je.rep.consistencyPolicy=NoConsistencyRequiredPolicy, je.log.fileMax=1073741824, je.rep.feederTimeout=10 s, je.rep.nodeName=rg1-rn1, je.nodeMaxEntries=128, je.log.writeQueueSize=2097152, je.evictor.criticalPercentage=20, je.rep.electableGroupSizeOverride=0, je.env.runEvictor=true, je.log.iteratorReadSize=1048576, je.txn.durability=WRITE_NO_SYNC,WRITE_NO_SYNC,SIMPLE_MAJORITY, je.maxOffHeapMemory=0, je.checkpointer.bytesInterval=500000000, je.log.numBuffers=16, je.rep.nodeHostPort=AUS2M-SPERL:5006, je.rep.vlsn.distance=1000000, je.rep.txnRollbackLimit=10, je.rep.replayMaxOpenDbHandles=100, je.rep.ignoreSecondaryNodeId=true, je.maxMemory=0, je.cleaner.minUtilization=40, je.env.isTransactional=true, je.log.fileCacheSize=2000, je.rep.helperHosts=AUS2M-SPERL:5006, je.rep.preHeartbeatTimeoutMs=5000000000, je.rep.vlsn.logCacheSize=128, je.rep.replicaTimeout=10 s, je.lock.nLockTables=97, je.rep.nodeType=ELECTABLE, je.rep.envUnknownStateTimeout=10 s, je.rep.preserveRecordVersion=true, je.rep.groupName=rg1, je.rep.replicaAckTimeout=5 s, je.cleaner.threads=2}
+
+2016-02-03 22:40:09.059 UTC INFO [rg1-rn1] State change event: Wed Feb 03 16:40:09 CST 2016, State: MASTER, Type: ELECTABLE, Master: rg1-rn1
+2016-02-03 22:40:09.059 UTC INFO [rg1-rn1] MigrationStateTracker queue added:MASTER
+2016-02-03 22:40:09.060 UTC INFO [rg1-rn1] TableManagerStateTracker queue added:MASTER
+2016-02-03 22:40:09.060 UTC INFO [rg1-rn1] MasterBalanceStateTracker queue added:MASTER
+2016-02-03 22:40:09.060 UTC INFO [rg1-rn1] Replicated environment handle established. Cache size: 2290719129, State: MASTER
+2016-02-03 22:40:09.295 UTC INFO [rg1-rn1] Topology updated from seq#: 0 to 14
+2016-02-03 22:40:09.313 UTC INFO [rg1-rn1] Open SecurityMetadata DB
+2016-02-03 22:40:09.338 UTC INFO [admin1] [rg1-rn1] Service status: STARTING 2016-02-03 22:40:09 UTC
+2016-02-03 22:40:09.438 UTC INFO [admin1] Replicated environment handle established. Cache size: 2290719129, State: MASTER
+2016-02-03 22:40:09.388 UTC INFO [sn1] noteState called
+2016-02-03 22:40:09.388 UTC INFO [sn1] added:State RN:rg1-rn1 state: MASTER top seq num: 14
+2016-02-03 22:40:09.389 UTC INFO [sn1] sn: sn1 state transition: State RN:rg1-rn1 state: MASTER top seq num: 14 active masters:[rg1-rn1] active replicas:0 replica leases:0
+2016-02-03 22:40:09.390 UTC INFO [sn1] Acquiring initial topology from RNs
+2016-02-03 22:40:09.403 UTC INFO [sn1] Topology acquired from RN: rg1-rn1 Topo seq#: 14
+2016-02-03 22:40:09.322 UTC INFO [rg1-rn1] Open TableMetadata DB
+2016-02-03 22:40:09.415 UTC INFO [sn1] Thread returning for service rg1-rn1
+2016-02-03 22:40:09.328 UTC INFO [rg1-rn1] Established 10 partition database handles, topology seq#: 14
+2016-02-03 22:40:12.738 UTC INFO [sn1] Thread returning for service admin1
+2016-02-03 22:40:09.346 UTC INFO [rg1-rn1] Topology stored seq#: 14
+2016-02-03 22:40:09.351 UTC INFO [rg1-rn1] Found 0 indexes and 0 tables marked for deletion in TableMetadata[0, 0, 0]
+2016-02-03 22:40:09.352 UTC INFO [rg1-rn1] Established 0 secondary database handles
+2016-02-03 22:40:09.352 UTC INFO [rg1-rn1] Topology fetched sequence#: 14, updated topology seq# 14
+2016-02-03 22:40:09.355 UTC INFO [rg1-rn1] MasterBalanceStateTracker thread start: rg1-rn1
+2016-02-03 22:40:09.357 UTC INFO [rg1-rn1] MigrationStateTracker thread start: null
+2016-02-03 22:40:09.357 UTC INFO [rg1-rn1] Migration manager change state to MASTER.
+2016-02-03 22:40:09.359 UTC INFO [rg1-rn1] TableManagerStateTracker thread start: rg1-rn1
+2016-02-03 22:40:09.359 UTC INFO [rg1-rn1] Table manager change state to MASTER
+2016-02-03 22:40:09.371 UTC INFO [rg1-rn1] Migration service accepting requests.
+2016-02-03 22:40:09.389 UTC INFO [rg1-rn1] No RN Login configured. 
+2016-02-03 22:40:09.391 UTC INFO [rg1-rn1] Service status changed from STARTING to RUNNING
+2016-02-03 22:40:29.304 UTC INFO [admin1] [rg1-rn1] Service status: RUNNING 2016-02-03 22:40:09 UTC
+2016-02-03 22:40:09.415 UTC INFO [rg1-rn1] Started RepNodeService
+2016-02-03 22:40:09.444 UTC INFO [rg1-rn1] Establishing RMI connection for admin DDL
+2016-02-03 22:40:09.446 UTC INFO [rg1-rn1] Establishing RMI connection for admin DDL
+2016-02-03 22:40:09.447 UTC INFO [rg1-rn1] Establishing RMI connection for admin DDL
+2016-02-04 11:02:12.669 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.147.242.220 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-02-04 11:02:12.686 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-02-04 11:02:13.319 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.147.242.220,port=53672,localport=54078] timed out and was forcibly closed, timeout: 5000 ms
+2016-02-04 11:02:18.337 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.147.242.220,port=53679,localport=54079] timed out and was forcibly closed, timeout: 10000 ms
+2016-02-04 11:02:12.642 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.147.242.220 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-02-04 11:02:12.681 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:a65e:60ff:fecc:a593%4,localport=5006]
+2016-02-04 14:54:26.655 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.17.244.176
+2016-02-04 14:54:26.658 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-02-04 14:54:26.655 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 10.17.244.176
+2016-02-04 14:54:26.658 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.244.176,localport=5006]
+2016-02-04 15:32:03.794 UTC INFO [admin1] [admin1] sn1: Service status: UNREACHABLE 2016-02-04 15:32:03 UTC
+2016-02-04 19:38:31.827 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.244.176 to fe80:0:0:0:4c2d:a0ff:fe8e:4bbc%9
+2016-02-04 19:38:31.828 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-02-04 19:38:59.912 UTC INFO [admin1] [admin1] rg1-rn1: Service status: UNREACHABLE 2016-02-04 19:38:59 UTC
+2016-02-04 19:39:01.910 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:4c2d:a0ff:fe8e:4bbc%9 to 10.17.244.176
+2016-02-04 19:39:01.910 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-02-04 19:38:31.828 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.244.176 to fe80:0:0:0:4c2d:a0ff:fe8e:4bbc%9
+2016-02-04 19:38:31.828 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:4c2d:a0ff:fe8e:4bbc%9,localport=5006]
+2016-02-04 19:38:32.827 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@8de5913 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@8de5913
+2016-02-04 19:38:56.885 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-02-04 19:38:59.895 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-02-04 19:39:01.910 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:4c2d:a0ff:fe8e:4bbc%9 to 10.17.244.176
+2016-02-04 19:39:01.910 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/10.17.244.176,localport=5006]
+2016-02-04 19:39:02.907 UTC INFO [rg1-rn1] Exception in RefreshRepNodeStateThread when contacting:rg1-rn1 Exception java.rmi.ConnectIOException Problem:java.rmi.ConnectIOException: Exception creating connection to: AUS2M-SPERL; nested exception is: 
+	java.net.SocketTimeoutException: connect timed out
+2016-02-04 19:39:16.917 UTC INFO [admin1] [rg1-rn1] Service status: RUNNING 2016-02-04 19:39:16 UTC
+2016-02-04 20:29:52.301 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.244.176,port=5000,localport=60930] timed out and was forcibly closed, timeout: 10000 ms
+2016-02-04 20:29:51.934 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@6095bf72 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@6095bf72
+2016-02-05 01:53:33.967 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from 10.17.244.176 to fe80:0:0:0:4c2d:a0ff:fe8e:4bbc%9
+2016-02-05 01:53:33.968 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-02-05 02:57:32.952 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:4c2d:a0ff:fe8e:4bbc%9 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-02-05 02:57:33.001 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-02-05 01:53:33.967 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from 10.17.244.176 to fe80:0:0:0:4c2d:a0ff:fe8e:4bbc%9
+2016-02-05 01:53:33.968 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:4c2d:a0ff:fe8e:4bbc%9,localport=5006]
+2016-02-05 02:57:32.953 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:4c2d:a0ff:fe8e:4bbc%9 to fe80:0:0:0:a65e:60ff:fecc:a593%4
+2016-02-05 02:57:32.999 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/fe80:0:0:0:a65e:60ff:fecc:a593%4,localport=5006]
+2016-02-05 02:57:33.492 UTC INFO [rg1-rn1] Task oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@3d981f1 execute() ignored for service rg1-rn1 since it already had an outstanding task: oracle.kv.impl.api.rgstate.RepNodeStateUpdateThread$RefreshRepNodeState@3d981f1
+2016-02-05 02:57:54.447 UTC INFO [admin1] Inactive socket Socket[addr=AUS2M-SPERL/10.17.244.176,port=53696,localport=60928] timed out and was forcibly closed, timeout: 30000 ms
+2016-02-05 02:58:03.063 UTC INFO [admin1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 192.168.1.82
+2016-02-05 02:58:03.063 UTC INFO [admin1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5005]
+2016-02-05 02:58:03.063 UTC INFO [rg1-rn1] JE: ServiceDispatcher IP changed, from fe80:0:0:0:a65e:60ff:fecc:a593%4 to 192.168.1.82
+2016-02-05 02:58:03.063 UTC INFO [rg1-rn1] JE: Rebind ServiceDispatcher socket: ServerSocket[addr=/192.168.1.82,localport=5006]
