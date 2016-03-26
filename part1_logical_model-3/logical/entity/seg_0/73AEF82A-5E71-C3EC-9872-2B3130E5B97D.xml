@@ -1,0 +1,180 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="73AEF82A-5E71-C3EC-9872-2B3130E5B97D" name="Project">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 04:58:25 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="project_no" id="BF77CB61-3DC3-B499-B7EB-B3C4842AED52">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 04:58:39 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="project_title" id="D8C1131F-FAEE-7BD8-92CB-F8C67172A0E2">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 04:59:40 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="type" id="598A81D2-6A8E-7BDF-F8BD-D3074B2CA257">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:03:11 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="project_active" id="2261D666-97B1-186A-6069-96DCFD5C958C">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:04:12 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end_date_month" id="B60ECC61-5B29-8CFC-472D-A62C93ABA2CD">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:05:18 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end_date_day" id="6A0FA3AA-7A26-FE72-ECE3-27CAD1C36BFF">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:05:36 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end_date_year" id="8A19B0B0-2FB0-3E78-1543-E369E6B56C32">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:05:48 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="est_person_hours" id="F0653B75-D2F4-B91D-338C-8082304DE92F">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:06:02 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="project_no1" id="2B471C5E-A506-D957-CE5F-74CFB89CBE53">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:06:40 UTC</createdTime>
+<generatorID>C4678168-5C53-4A70-3D4C-E5EF3E70063F</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>BF77CB61-3DC3-B499-B7EB-B3C4842AED52</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dept_no" id="C4BD066D-72F8-A74C-EC71-533367B48BD5">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:10:10 UTC</createdTime>
+<generatorID>3A538EE9-41C9-8FCF-903E-CE3E7233BE23</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<referedAttribute>7E330084-7991-E63A-FD1B-AE72CA4B528A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="person_id" id="89151E8A-50A8-0B98-91CD-706A3B251263">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:38:14 UTC</createdTime>
+<generatorID>976B96B9-ACB9-1B0B-4A54-AC16DFE1748F</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
+</engineerTo>
+<referedAttribute>9BF92EEC-58AE-0CD3-0641-0749D4DDF058</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9FC79A73-75BE-6399-E9F9-FFFF0B762871" name="Project PK">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 04:59:36 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BF77CB61-3DC3-B499-B7EB-B3C4842AED52</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
