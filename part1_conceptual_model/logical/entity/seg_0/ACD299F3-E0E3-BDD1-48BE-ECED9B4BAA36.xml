@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ACD299F3-E0E3-BDD1-48BE-ECED9B4BAA36" name="Employee">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 03:51:31 UTC</createdTime>
+<ownerDesignName>part1_conceptual_model</ownerDesignName>
+<engineerTo>
+<item key="90A32F63-127B-A27F-785A-BB09F16BD8E2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>B62C82EA-50FA-A6E7-E2B7-727D0FED0953</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="employee_id" id="B2A104C7-A328-243C-9A8B-0B86E143998B">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 03:51:39 UTC</createdTime>
+<ownerDesignName>part1_conceptual_model</ownerDesignName>
+<engineerTo>
+<item key="90A32F63-127B-A27F-785A-BB09F16BD8E2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="salary" id="94D34166-B5EA-1745-DDB1-85C1C1772B70">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 03:51:58 UTC</createdTime>
+<ownerDesignName>part1_conceptual_model</ownerDesignName>
+<engineerTo>
+<item key="90A32F63-127B-A27F-785A-BB09F16BD8E2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="salary_exception" id="D00459CB-8357-8810-2757-FF2847B524F9">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 03:52:13 UTC</createdTime>
+<ownerDesignName>part1_conceptual_model</ownerDesignName>
+<engineerTo>
+<item key="90A32F63-127B-A27F-785A-BB09F16BD8E2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="employee_manager" id="A29F555E-A3AF-7F1F-31D5-BAEADAF1063F">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 03:52:26 UTC</createdTime>
+<ownerDesignName>part1_conceptual_model</ownerDesignName>
+<engineerTo>
+<item key="90A32F63-127B-A27F-785A-BB09F16BD8E2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="employee_id1" id="26C66A50-E8C4-E864-2AA7-4CD34052654A">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 04:41:58 UTC</createdTime>
+<generatorID>3372383E-E442-7E50-F2BF-472DB27A6273</generatorID>
+<ownerDesignName>part1_conceptual_model</ownerDesignName>
+<engineerTo>
+<item key="90A32F63-127B-A27F-785A-BB09F16BD8E2" value="true"/>
+</engineerTo>
+<referedAttribute>B2A104C7-A328-243C-9A8B-0B86E143998B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A2EC3D3D-82F7-83FC-6E4A-1D41DC6BC289" name="Employee PK">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 03:51:57 UTC</createdTime>
+<ownerDesignName>part1_conceptual_model</ownerDesignName>
+<engineerTo>
+<item key="90A32F63-127B-A27F-785A-BB09F16BD8E2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B2A104C7-A328-243C-9A8B-0B86E143998B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
