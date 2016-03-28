@@ -118,21 +118,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="project_no1" id="2B471C5E-A506-D957-CE5F-74CFB89CBE53">
-<createdBy>katherineheyne</createdBy>
-<createdTime>2016-03-25 05:06:40 UTC</createdTime>
-<generatorID>C4678168-5C53-4A70-3D4C-E5EF3E70063F</generatorID>
-<ownerDesignName>part1_logical_model</ownerDesignName>
-<engineerTo>
-<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>BF77CB61-3DC3-B499-B7EB-B3C4842AED52</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="dept_no" id="C4BD066D-72F8-A74C-EC71-533367B48BD5">
 <createdBy>katherineheyne</createdBy>
 <createdTime>2016-03-25 05:10:10 UTC</createdTime>
@@ -147,7 +132,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="person_id" id="89151E8A-50A8-0B98-91CD-706A3B251263">
+<Attribute name="project_manager_id" id="89151E8A-50A8-0B98-91CD-706A3B251263">
 <createdBy>katherineheyne</createdBy>
 <createdTime>2016-03-25 05:38:14 UTC</createdTime>
 <generatorID>976B96B9-ACB9-1B0B-4A54-AC16DFE1748F</generatorID>
@@ -167,9 +152,8 @@
 <createdBy>katherineheyne</createdBy>
 <createdTime>2016-03-25 04:59:36 UTC</createdTime>
 <ownerDesignName>part1_logical_model</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="false"/>
+<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

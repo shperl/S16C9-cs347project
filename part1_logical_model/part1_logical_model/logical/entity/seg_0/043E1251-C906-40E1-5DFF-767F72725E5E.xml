@@ -15,19 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="child_parent_id" id="625BE82F-9AA5-1217-26D7-0A29D655E31F">
-<createdBy>sperl</createdBy>
-<createdTime>2016-03-26 23:27:32 UTC</createdTime>
-<ownerDesignName>part1_logical_model</ownerDesignName>
-<engineerTo>
-<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="person_id" id="2DEBDF47-917C-56B9-C694-3DB28F9474FB">
+<Attribute name="parent_id" id="2DEBDF47-917C-56B9-C694-3DB28F9474FB">
 <createdBy>sperl</createdBy>
 <createdTime>2016-03-26 23:28:16 UTC</createdTime>
 <generatorID>ABCBA8C4-243D-0725-06A6-F7DFF55423F0</generatorID>
@@ -41,7 +29,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="person_id1" id="DF6FC20B-CC3F-4672-B33C-9DA1ED124347">
+<Attribute name="child_id" id="DF6FC20B-CC3F-4672-B33C-9DA1ED124347">
 <createdBy>sperl</createdBy>
 <createdTime>2016-03-26 23:28:27 UTC</createdTime>
 <generatorID>9C45F040-E5F2-43FA-B36B-A694C7D006C2</generatorID>
@@ -56,19 +44,4 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
-<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="DC2960E6-3B3D-BD06-4D51-F2763E0BE9D4" name="child_parent PK">
-<createdBy>sperl</createdBy>
-<createdTime>2016-03-26 23:27:40 UTC</createdTime>
-<ownerDesignName>part1_logical_model</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
-<engineerTo>
-<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="false"/>
-</engineerTo>
-<pk>true</pk>
-<usedAttributes>
-<attributeRef>625BE82F-9AA5-1217-26D7-0A29D655E31F</attributeRef>
-</usedAttributes>
-</identifier>
-</identifiers>
 </Entity>

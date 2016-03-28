@@ -187,35 +187,6 @@
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="person_id1" id="02AF841D-FD63-8680-875A-D0E85C38F35C">
-<createdBy>katherineheyne</createdBy>
-<createdTime>2016-03-25 05:30:49 UTC</createdTime>
-<generatorID>8700AF41-1C02-6145-91F9-D29B2E85E908</generatorID>
-<ownerDesignName>part1_logical_model</ownerDesignName>
-<engineerTo>
-<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>9BF92EEC-58AE-0CD3-0641-0749D4DDF058</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="person_id2" id="0E7AA7E2-2124-7D75-E261-37D40207F199">
-<createdBy>katherineheyne</createdBy>
-<createdTime>2016-03-25 05:37:11 UTC</createdTime>
-<generatorID>B2A920F1-3373-0C3F-D68C-360D125DE38E</generatorID>
-<ownerDesignName>part1_logical_model</ownerDesignName>
-<engineerTo>
-<item key="DE41D297-32A6-9825-4A25-5909FE178CE3" value="true"/>
-</engineerTo>
-<referedAttribute>9BF92EEC-58AE-0CD3-0641-0749D4DDF058</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="dept_no" id="F23ECEA8-D929-7B65-B3A2-D1DBF8E937E9">
 <createdBy>katherineheyne</createdBy>
 <createdTime>2016-03-25 05:38:46 UTC</createdTime>
