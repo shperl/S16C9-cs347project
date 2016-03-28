@@ -1,25 +1,25 @@
-DROP SEQUENCE addresses_seq ; 
-create sequence addresses_seq 
+DROP SEQUENCE Department_seq ; 
+create sequence Department_seq 
 start with 100 
 increment by 1 
 nomaxvalue 
 ;
 
-create or replace trigger addresses_PK_trig 
-before insert on addresses
+create or replace trigger Department_PK_trig 
+before insert on Department
 for each row 
 begin 
-select addresses_seq.nextval into :new.address_id from dual; 
+select Department_seq.nextval into :new.dept_no from dual; 
 end; 
 /
-alter table addresses add created date ; 
-alter table addresses add created_by VARCHAR2 (255) ; 
-alter table addresses add row_version_number integer ; 
-alter table addresses add updated date ; 
-alter table addresses add updated_by VARCHAR2 (255) ; 
+alter table Department add created date ; 
+alter table Department add created_by VARCHAR2 (255) ; 
+alter table Department add row_version_number integer ; 
+alter table Department add updated date ; 
+alter table Department add updated_by VARCHAR2 (255) ; 
 /
-create or replace trigger addresses_AUD_trig 
-before insert or update on addresses 
+create or replace trigger Department_AUD_trig 
+before insert or update on Department 
 for each row 
 begin 
   if inserting then 
@@ -38,28 +38,28 @@ begin
 end; 
 /
 
-DROP SEQUENCE administrators_seq ; 
-create sequence administrators_seq 
+DROP SEQUENCE Project_seq ; 
+create sequence Project_seq 
 start with 100 
 increment by 1 
 nomaxvalue 
 ;
 
-create or replace trigger administrators_PK_trig 
-before insert on administrators
+create or replace trigger Project_PK_trig 
+before insert on Project
 for each row 
 begin 
-select administrators_seq.nextval into :new.admin_id from dual; 
+select Project_seq.nextval into :new.project_no from dual; 
 end; 
 /
-alter table administrators add created date ; 
-alter table administrators add created_by VARCHAR2 (255) ; 
-alter table administrators add row_version_number integer ; 
-alter table administrators add updated date ; 
-alter table administrators add updated_by VARCHAR2 (255) ; 
+alter table Project add created date ; 
+alter table Project add created_by VARCHAR2 (255) ; 
+alter table Project add row_version_number integer ; 
+alter table Project add updated date ; 
+alter table Project add updated_by VARCHAR2 (255) ; 
 /
-create or replace trigger administrators_AUD_trig 
-before insert or update on administrators 
+create or replace trigger Project_AUD_trig 
+before insert or update on Project 
 for each row 
 begin 
   if inserting then 
@@ -78,28 +78,28 @@ begin
 end; 
 /
 
-DROP SEQUENCE categories_seq ; 
-create sequence categories_seq 
+DROP SEQUENCE child_parent_seq ; 
+create sequence child_parent_seq 
 start with 100 
 increment by 1 
 nomaxvalue 
 ;
 
-create or replace trigger categories_PK_trig 
-before insert on categories
+create or replace trigger child_parent_PK_trig 
+before insert on child_parent
 for each row 
 begin 
-select categories_seq.nextval into :new.category_id from dual; 
+select child_parent_seq.nextval into :new.child_parent_id from dual; 
 end; 
 /
-alter table categories add created date ; 
-alter table categories add created_by VARCHAR2 (255) ; 
-alter table categories add row_version_number integer ; 
-alter table categories add updated date ; 
-alter table categories add updated_by VARCHAR2 (255) ; 
+alter table child_parent add created date ; 
+alter table child_parent add created_by VARCHAR2 (255) ; 
+alter table child_parent add row_version_number integer ; 
+alter table child_parent add updated date ; 
+alter table child_parent add updated_by VARCHAR2 (255) ; 
 /
-create or replace trigger categories_AUD_trig 
-before insert or update on categories 
+create or replace trigger child_parent_AUD_trig 
+before insert or update on child_parent 
 for each row 
 begin 
   if inserting then 
@@ -118,28 +118,28 @@ begin
 end; 
 /
 
-DROP SEQUENCE customers_seq ; 
-create sequence customers_seq 
+DROP SEQUENCE project_employees_seq ; 
+create sequence project_employees_seq 
 start with 100 
 increment by 1 
 nomaxvalue 
 ;
 
-create or replace trigger customers_PK_trig 
-before insert on customers
+create or replace trigger project_employees_PK_trig 
+before insert on project_employees
 for each row 
 begin 
-select customers_seq.nextval into :new.customer_id from dual; 
+select project_employees_seq.nextval into :new.project_employee_id from dual; 
 end; 
 /
-alter table customers add created date ; 
-alter table customers add created_by VARCHAR2 (255) ; 
-alter table customers add row_version_number integer ; 
-alter table customers add updated date ; 
-alter table customers add updated_by VARCHAR2 (255) ; 
+alter table project_employees add created date ; 
+alter table project_employees add created_by VARCHAR2 (255) ; 
+alter table project_employees add row_version_number integer ; 
+alter table project_employees add updated date ; 
+alter table project_employees add updated_by VARCHAR2 (255) ; 
 /
-create or replace trigger customers_AUD_trig 
-before insert or update on customers 
+create or replace trigger project_employees_AUD_trig 
+before insert or update on project_employees 
 for each row 
 begin 
   if inserting then 
@@ -158,133 +158,25 @@ begin
 end; 
 /
 
-DROP SEQUENCE order_items_seq ; 
-create sequence order_items_seq 
-start with 100 
-increment by 1 
-nomaxvalue 
-;
-
-create or replace trigger order_items_PK_trig 
-before insert on order_items
-for each row 
-begin 
-select order_items_seq.nextval into :new.item_id from dual; 
-end; 
-/
-alter table order_items add created date ; 
-alter table order_items add created_by VARCHAR2 (255) ; 
-alter table order_items add row_version_number integer ; 
-alter table order_items add updated date ; 
-alter table order_items add updated_by VARCHAR2 (255) ; 
-/
-create or replace trigger order_items_AUD_trig 
-before insert or update on order_items 
-for each row 
-begin 
-  if inserting then 
-    :new.created := localtimestamp; 
-    :new.created_by := nvl(wwv_flow.g_user,user); 
-    :new.updated := localtimestamp; 
-    :new.updated_by := nvl(wwv_flow.g_user,user); 
-    :new.row_version_number := 1; 
-  elsif updating then 
-    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
-  end if; 
-  if inserting or updating then 
-    :new.updated := localtimestamp; 
-    :new.updated_by := nvl(wwv_flow.g_user,user); 
-  end if; 
-end; 
-/
-
-DROP SEQUENCE orders_seq ; 
-create sequence orders_seq 
-start with 100 
-increment by 1 
-nomaxvalue 
-;
-
-create or replace trigger orders_PK_trig 
-before insert on orders
-for each row 
-begin 
-select orders_seq.nextval into :new.order_id from dual; 
-end; 
-/
-alter table orders add created date ; 
-alter table orders add created_by VARCHAR2 (255) ; 
-alter table orders add row_version_number integer ; 
-alter table orders add updated date ; 
-alter table orders add updated_by VARCHAR2 (255) ; 
-/
-create or replace trigger orders_AUD_trig 
-before insert or update on orders 
-for each row 
-begin 
-  if inserting then 
-    :new.created := localtimestamp; 
-    :new.created_by := nvl(wwv_flow.g_user,user); 
-    :new.updated := localtimestamp; 
-    :new.updated_by := nvl(wwv_flow.g_user,user); 
-    :new.row_version_number := 1; 
-  elsif updating then 
-    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
-  end if; 
-  if inserting or updating then 
-    :new.updated := localtimestamp; 
-    :new.updated_by := nvl(wwv_flow.g_user,user); 
-  end if; 
-end; 
-/
-
-DROP SEQUENCE products_seq ; 
-create sequence products_seq 
-start with 100 
-increment by 1 
-nomaxvalue 
-;
-
-create or replace trigger products_PK_trig 
-before insert on products
-for each row 
-begin 
-select products_seq.nextval into :new.product_id from dual; 
-end; 
-/
-alter table products add created date ; 
-alter table products add created_by VARCHAR2 (255) ; 
-alter table products add row_version_number integer ; 
-alter table products add updated date ; 
-alter table products add updated_by VARCHAR2 (255) ; 
-/
-create or replace trigger products_AUD_trig 
-before insert or update on products 
-for each row 
-begin 
-  if inserting then 
-    :new.created := localtimestamp; 
-    :new.created_by := nvl(wwv_flow.g_user,user); 
-    :new.updated := localtimestamp; 
-    :new.updated_by := nvl(wwv_flow.g_user,user); 
-    :new.row_version_number := 1; 
-  elsif updating then 
-    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
-  end if; 
-  if inserting or updating then 
-    :new.updated := localtimestamp; 
-    :new.updated_by := nvl(wwv_flow.g_user,user); 
-  end if; 
-end; 
-/
-
-DROP INDEX category_id_FK_0 ;
-CREATE INDEX category_id_FK_0 ON products(category_id) ;
-DROP INDEX customer_id_FK_1 ;
-CREATE INDEX customer_id_FK_1 ON addresses(customer_id) ;
-DROP INDEX customer_id_FK_2 ;
-CREATE INDEX customer_id_FK_2 ON orders(customer_id) ;
-DROP INDEX order_id_FK_3 ;
-CREATE INDEX order_id_FK_3 ON order_items(order_id) ;
-DROP INDEX product_id_FK_4 ;
-CREATE INDEX product_id_FK_4 ON order_items(product_id) ;
+DROP INDEX Department_dept_no_FK_0 ;
+CREATE INDEX Department_dept_no_FK_0 ON Person(Department_dept_no) ;
+DROP INDEX Person_person_id21_FK_1 ;
+CREATE INDEX Person_person_id21_FK_1 ON Person(Person_person_id21) ;
+DROP INDEX Person_person_id2_FK_2 ;
+CREATE INDEX Person_person_id2_FK_2 ON Person(Person_person_id2) ;
+DROP INDEX Person_Person_ID_FK_3 ;
+CREATE INDEX Person_Person_ID_FK_3 ON Person(Person_Person_ID) ;
+DROP INDEX Department_dept_no_FK_4 ;
+CREATE INDEX Department_dept_no_FK_4 ON Project(Department_dept_no) ;
+DROP INDEX Person_person_id2_FK_5 ;
+CREATE INDEX Person_person_id2_FK_5 ON Project(Person_person_id2) ;
+DROP INDEX Project_project_no_FK_6 ;
+CREATE INDEX Project_project_no_FK_6 ON Project(Project_project_no) ;
+DROP INDEX Person_person_id21_FK_7 ;
+CREATE INDEX Person_person_id21_FK_7 ON child_parent(Person_person_id21) ;
+DROP INDEX Person_person_id2_FK_8 ;
+CREATE INDEX Person_person_id2_FK_8 ON child_parent(Person_person_id2) ;
+DROP INDEX Person_person_id2_FK_9 ;
+CREATE INDEX Person_person_id2_FK_9 ON project_employees(Person_person_id2) ;
+DROP INDEX Project_project_no_FK_10 ;
+CREATE INDEX Project_project_no_FK_10 ON project_employees(Project_project_no) ;

@@ -1,0 +1,322 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="83361077-CAF3-47A7-CE01-BC0638CCBAD6" name="Person">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>2606AA74-8A7A-E4A3-9C92-9DAD0BC1C702</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Person_ID" id="7406E4B3-02B8-83FF-0362-5C5A2B52A3A6">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:11 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="person_id1" id="9B82AB74-7B30-DA55-723E-CCA63297F934">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>9BF92EEC-58AE-0CD3-0641-0749D4DDF058</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="type" id="AF21C999-7EAF-07D1-275C-0DAD4F41881F">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>F22AA281-50F7-0656-111A-21DD900544DB</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="first_name" id="C4E351F6-C585-4938-1202-C2D014E1954D">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>56ADF5DB-33CD-05C0-F2D1-D505EA0D0AFB</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_name" id="F4FDDD40-AEC6-85BA-858B-3559D36A46FE">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>79B022A4-BFEE-D824-448B-47F53467CCF4</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="home_address" id="23D69DC1-8802-79BC-0670-09A5246BBFDD">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>291C2029-39E2-2042-DCA2-8112DA40763E</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="zipcode" id="0903090A-5EE2-F520-FB50-7A81C5A13EC5">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>B16CCF1F-D81A-4C12-2483-45920A05198B</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="home_phone" id="F09346B7-5DB2-1093-B3C5-B5E33B57A1F5">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>122DCCC1-C380-7999-5F2D-FC0DD68E3C8E</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="us_citizen" id="1DCA91C3-9967-6423-2415-41A32E023019">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>4A7306FC-49E3-2164-FE41-56AFAA4192BC</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="employee_id" id="1D631920-ECB1-FDBD-15DA-36A3D3D0C493">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>4FAFD7C7-CC3C-E041-7E40-7FB2749C54AF</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="salary" id="31EEC4B2-D20C-5C41-9673-5D57C8D0FFFD">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>2A81E622-05FE-8747-47D8-CB27C50B128B</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="salary_exception" id="3DA407B6-D8BA-2779-542E-CFEB9CBC65DE">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>5BB8A5BB-A7E7-3389-E079-78D14E541FA0</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bonus" id="04321A82-6DF7-35AB-4750-E1109D6BC79C">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>EE5AD443-7A98-ACE3-F222-49D8285459F1</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="isFired" id="4AC7C75F-E17D-8DCA-0FAF-EE47FD9E7616">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>6ED2B7CE-6865-09EE-7191-62D79F04CD46</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Person_person_id2" id="DDED4C8A-92C1-953E-0425-021C17CE93F6">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>02AF841D-FD63-8680-875A-D0E85C38F35C</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D22FC12C-0C16-3F20-425B-4672C22A74E9" referredColumn="9B82AB74-7B30-DA55-723E-CCA63297F934"/>
+</associations>
+</Column>
+<Column name="Person_person_id21" id="14B1D4A6-89F2-06B4-302F-9C171260D64F">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>0E7AA7E2-2124-7D75-E261-37D40207F199</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4342CFF3-7B83-882C-766E-566A38D58A9D" referredColumn="9B82AB74-7B30-DA55-723E-CCA63297F934"/>
+</associations>
+</Column>
+<Column name="Department_dept_no" id="C5E1FFB9-C628-A242-D415-65512F5E912B">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>F23ECEA8-D929-7B65-B3A2-D1DBF8E937E9</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9190ECB0-10A8-0B7A-0D76-79ACA0093C84" referredColumn="96D927E1-AED3-9984-8D83-39AB2E7F2C25"/>
+</associations>
+</Column>
+<Column name="Person_Person_ID" id="6BE95D39-72B9-766D-A785-DF16B2D1D252">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:11 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="50219B14-D3D1-0EA0-7F2E-28AE5F6930EE" referredColumn="7406E4B3-02B8-83FF-0362-5C5A2B52A3A6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="76CF1E8D-5CCB-5D86-7239-C75F0395AE0D" name="Person_PK">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:11 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="7406E4B3-02B8-83FF-0362-5C5A2B52A3A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C01456BF-30BE-E4BA-E693-56F558AE38DB" name="Person_person_id1_UN">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:10 UTC</createdTime>
+<generatorID>92E58334-E487-7C73-5E0F-F88FFB4517ED</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B82AB74-7B30-DA55-723E-CCA63297F934"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1756FCD0-DCF5-A2C8-B39D-3B40A39780D5" name="Person__IDX">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:11 UTC</createdTime>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>8700AF41-1C02-6145-91F9-D29B2E85E908</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="DDED4C8A-92C1-953E-0425-021C17CE93F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05DF0A10-C67F-6911-AFEB-8F8A423D28AB" name="Person_Person_FK">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:11 UTC</createdTime>
+<generatorID>B2A920F1-3373-0C3F-D68C-360D125DE38E</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14B1D4A6-89F2-06B4-302F-9C171260D64F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4115CDF4-6237-0CE9-A3A5-F35710889EC6" name="Person_Person_FKv3">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:11 UTC</createdTime>
+<generatorID>8A055F9B-3911-5D37-2D6D-86FE0C6FD025</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BE95D39-72B9-766D-A785-DF16B2D1D252"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D4199439-3955-D9F7-34D6-5E9443CB58AB" name="Person_Department_FK">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:11 UTC</createdTime>
+<generatorID>A42302D3-493F-E968-E3B4-6901A27303DC</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5E1FFB9-C628-A242-D415-65512F5E912B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F9D4696C-2943-EB01-2404-14D87DB793DF" name="Person_Person_FKv1">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 05:41:11 UTC</createdTime>
+<generatorID>8700AF41-1C02-6145-91F9-D29B2E85E908</generatorID>
+<ownerDesignName>part1_logical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDED4C8A-92C1-953E-0425-021C17CE93F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
