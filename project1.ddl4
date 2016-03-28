@@ -1,0 +1,150 @@
+drop view S16_person_view ;
+drop view S16_employee_view ;
+drop view S16_previous_employee_view ;
+drop view S16_project_employee_view ;
+drop view S16_manager_view ;
+drop view S16_interim_manager_view ;
+drop view S16_president_view ;
+drop view S16_project_view ;
+drop view S16_current_project_view ;
+drop view S16_previous_project_view ;
+drop view S16_department_view ;
+
+create view S16_employee_view as
+SELECT 
+    person_id1,
+    type,
+    first_name,
+    last_name,
+    home_address,
+    zipcode,
+    home_phone,
+    us_citizen,
+    spouse,
+    employee_id,
+    salary,
+    salary_exception,
+    manager_id
+
+FROM Person where type = 'Employee' ;
+
+create or replace TRIGGER S16_employee_trigger
+     INSTEAD OF insert ON S16_employee_view
+     FOR EACH ROW
+BEGIN
+    insert into Person( 
+		    person_id1,
+		    type,
+		    first_name,
+		    last_name,
+		    home_address,
+		    zipcode,
+		    home_phone,
+		    us_citizen,
+		    spouse,
+		    employee_id,
+		    salary,
+		    salary_exception,
+		    manager_id)
+		 VALUES ( 
+			:NEW.person_id1,
+			'Employee',
+			:NEW.first_name,
+			:NEW.last_name,
+			:NEW.home_address,
+			:NEW.zipcode,
+			:NEW.home_phone,
+			:NEW.us_citizen,
+			:NEW.spouse,
+			:NEW.employee_id,
+			:NEW.salary,
+			:NEW.salary_exception,
+			:NEW.manager_id
+			) ;
+END;
+/
+
+create view F15_foreignS_view as
+SELECT 
+    student_id,
+    type,
+    sname,
+    gpa,
+    country
+FROM F15_student where type = 'Foreign Student' ;
+
+create or replace TRIGGER F15_foreignS_trigger
+     INSTEAD OF insert ON F15_foreignS_view
+     FOR EACH ROW
+BEGIN
+    insert into F15_student( 
+		student_id,
+		type,
+        sname,
+        gpa,
+		country)
+		 VALUES ( 
+		:NEW.student_id,
+		'Foreign Student',
+        :NEW.sname,
+        :NEW.gpa,
+		:NEW.country) ;
+END;
+/
+
+create view F15_domesticS_view as
+SELECT 
+    student_id,
+    type,
+    sname,
+    gpa,
+    state,
+    ssn
+FROM F15_student where type = 'Domestic Student' ;
+
+create or replace TRIGGER F15_domesticS_trigger
+     INSTEAD OF insert ON F15_domesticS_view
+     FOR EACH ROW
+BEGIN
+    insert into F15_student( 
+		student_id,
+		type,
+        sname,
+        gpa,
+		state,
+		ssn)
+		 VALUES ( 
+		:NEW.student_id,
+		'Domestic Student',
+        :NEW.sname,
+        :NEW.gpa,
+		:NEW.state,
+		:NEW.ssn) ;
+END;
+/
+
+create view F15_APstudent_view as
+SELECT 
+    student_id,
+    type,
+    sname,
+    gpa
+FROM F15_student where type = 'AP Student' ;
+
+create or replace TRIGGER F15_APstudent_trigger
+     INSTEAD OF insert ON F15_APstudent_view
+     FOR EACH ROW
+BEGIN
+    insert into F15_student( 
+		student_id,
+		type,
+        sname,
+        gpa)
+		 VALUES ( 
+		:NEW.student_id,
+		'AP Student',
+        :NEW.sname,
+        :NEW.gpa) ;
+END;
+/
+
