@@ -1,0 +1,9 @@
+Questions for Cannata:
+
+1. When defining relationships in the logical / relational model, we have a unique and required field created "person_id2".
+	- Is it safe to rename these?
+	- How can we see why this is being generated?
+
+
+
+
