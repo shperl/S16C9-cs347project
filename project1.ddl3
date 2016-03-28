@@ -1,0 +1,290 @@
+DROP SEQUENCE addresses_seq ; 
+create sequence addresses_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger addresses_PK_trig 
+before insert on addresses
+for each row 
+begin 
+select addresses_seq.nextval into :new.address_id from dual; 
+end; 
+/
+alter table addresses add created date ; 
+alter table addresses add created_by VARCHAR2 (255) ; 
+alter table addresses add row_version_number integer ; 
+alter table addresses add updated date ; 
+alter table addresses add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger addresses_AUD_trig 
+before insert or update on addresses 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE administrators_seq ; 
+create sequence administrators_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger administrators_PK_trig 
+before insert on administrators
+for each row 
+begin 
+select administrators_seq.nextval into :new.admin_id from dual; 
+end; 
+/
+alter table administrators add created date ; 
+alter table administrators add created_by VARCHAR2 (255) ; 
+alter table administrators add row_version_number integer ; 
+alter table administrators add updated date ; 
+alter table administrators add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger administrators_AUD_trig 
+before insert or update on administrators 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE categories_seq ; 
+create sequence categories_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger categories_PK_trig 
+before insert on categories
+for each row 
+begin 
+select categories_seq.nextval into :new.category_id from dual; 
+end; 
+/
+alter table categories add created date ; 
+alter table categories add created_by VARCHAR2 (255) ; 
+alter table categories add row_version_number integer ; 
+alter table categories add updated date ; 
+alter table categories add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger categories_AUD_trig 
+before insert or update on categories 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE customers_seq ; 
+create sequence customers_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger customers_PK_trig 
+before insert on customers
+for each row 
+begin 
+select customers_seq.nextval into :new.customer_id from dual; 
+end; 
+/
+alter table customers add created date ; 
+alter table customers add created_by VARCHAR2 (255) ; 
+alter table customers add row_version_number integer ; 
+alter table customers add updated date ; 
+alter table customers add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger customers_AUD_trig 
+before insert or update on customers 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE order_items_seq ; 
+create sequence order_items_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger order_items_PK_trig 
+before insert on order_items
+for each row 
+begin 
+select order_items_seq.nextval into :new.item_id from dual; 
+end; 
+/
+alter table order_items add created date ; 
+alter table order_items add created_by VARCHAR2 (255) ; 
+alter table order_items add row_version_number integer ; 
+alter table order_items add updated date ; 
+alter table order_items add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger order_items_AUD_trig 
+before insert or update on order_items 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE orders_seq ; 
+create sequence orders_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger orders_PK_trig 
+before insert on orders
+for each row 
+begin 
+select orders_seq.nextval into :new.order_id from dual; 
+end; 
+/
+alter table orders add created date ; 
+alter table orders add created_by VARCHAR2 (255) ; 
+alter table orders add row_version_number integer ; 
+alter table orders add updated date ; 
+alter table orders add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger orders_AUD_trig 
+before insert or update on orders 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE products_seq ; 
+create sequence products_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger products_PK_trig 
+before insert on products
+for each row 
+begin 
+select products_seq.nextval into :new.product_id from dual; 
+end; 
+/
+alter table products add created date ; 
+alter table products add created_by VARCHAR2 (255) ; 
+alter table products add row_version_number integer ; 
+alter table products add updated date ; 
+alter table products add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger products_AUD_trig 
+before insert or update on products 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP INDEX category_id_FK_0 ;
+CREATE INDEX category_id_FK_0 ON products(category_id) ;
+DROP INDEX customer_id_FK_1 ;
+CREATE INDEX customer_id_FK_1 ON addresses(customer_id) ;
+DROP INDEX customer_id_FK_2 ;
+CREATE INDEX customer_id_FK_2 ON orders(customer_id) ;
+DROP INDEX order_id_FK_3 ;
+CREATE INDEX order_id_FK_3 ON order_items(order_id) ;
+DROP INDEX product_id_FK_4 ;
+CREATE INDEX product_id_FK_4 ON order_items(product_id) ;

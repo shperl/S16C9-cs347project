@@ -1,0 +1,129 @@
+DROP SEQUENCE addresses_seq ; 
+create sequence addresses_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER addresses_PK_trig 
+; 
+
+create or replace trigger addresses_PK_trig 
+before insert on addresses
+for each row 
+begin 
+select addresses_seq.nextval into :new.address_id from dual; 
+end; 
+/
+
+DROP SEQUENCE administrators_seq ; 
+create sequence administrators_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER administrators_PK_trig 
+; 
+
+create or replace trigger administrators_PK_trig 
+before insert on administrators
+for each row 
+begin 
+select administrators_seq.nextval into :new.admin_id from dual; 
+end; 
+/
+
+DROP SEQUENCE categories_seq ; 
+create sequence categories_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER categories_PK_trig 
+; 
+
+create or replace trigger categories_PK_trig 
+before insert on categories
+for each row 
+begin 
+select categories_seq.nextval into :new.category_id from dual; 
+end; 
+/
+
+DROP SEQUENCE customers_seq ; 
+create sequence customers_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER customers_PK_trig 
+; 
+
+create or replace trigger customers_PK_trig 
+before insert on customers
+for each row 
+begin 
+select customers_seq.nextval into :new.customer_id from dual; 
+end; 
+/
+
+DROP SEQUENCE order_items_seq ; 
+create sequence order_items_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER order_items_PK_trig 
+; 
+
+create or replace trigger order_items_PK_trig 
+before insert on order_items
+for each row 
+begin 
+select order_items_seq.nextval into :new.item_id from dual; 
+end; 
+/
+
+DROP SEQUENCE orders_seq ; 
+create sequence orders_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER orders_PK_trig 
+; 
+
+create or replace trigger orders_PK_trig 
+before insert on orders
+for each row 
+begin 
+select orders_seq.nextval into :new.order_id from dual; 
+end; 
+/
+
+DROP SEQUENCE products_seq ; 
+create sequence products_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER products_PK_trig 
+; 
+
+create or replace trigger products_PK_trig 
+before insert on products
+for each row 
+begin 
+select products_seq.nextval into :new.product_id from dual; 
+end; 
+/
+
+DROP INDEX category_id_FK_0 ;
+CREATE INDEX category_id_FK_0 ON products(category_id) ;
+DROP INDEX customer_id_FK_1 ;
+CREATE INDEX customer_id_FK_1 ON addresses(customer_id) ;
+DROP INDEX customer_id_FK_2 ;
+CREATE INDEX customer_id_FK_2 ON orders(customer_id) ;
+DROP INDEX order_id_FK_3 ;
+CREATE INDEX order_id_FK_3 ON order_items(order_id) ;
+DROP INDEX product_id_FK_4 ;
+CREATE INDEX product_id_FK_4 ON order_items(product_id) ;
