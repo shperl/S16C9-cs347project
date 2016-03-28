@@ -127,3 +127,54 @@ DROP INDEX order_id_FK_3 ;
 CREATE INDEX order_id_FK_3 ON order_items(order_id) ;
 DROP INDEX product_id_FK_4 ;
 CREATE INDEX product_id_FK_4 ON order_items(product_id) ;
+DROP SEQUENCE Department_seq ; 
+create sequence Department_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER Department_PK_trig 
+; 
+
+create or replace trigger Department_PK_trig 
+before insert on Department
+for each row 
+begin 
+select Department_seq.nextval into :new.dept_no from dual; 
+end; 
+/
+
+DROP SEQUENCE Project_seq ; 
+create sequence Project_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER Project_PK_trig 
+; 
+
+create or replace trigger Project_PK_trig 
+before insert on Project
+for each row 
+begin 
+select Project_seq.nextval into :new.project_no from dual; 
+end; 
+/
+
+DROP SEQUENCE child_parent_seq ; 
+create sequence child_parent_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER child_parent_PK_trig 
+; 
+
+create or replace trigger child_parent_PK_trig 
+before insert on child_parent
+for each row 
+begin 
+select child_parent_seq.nextval into :new.child_parent_id from dual; 
+end; 
+/
+
