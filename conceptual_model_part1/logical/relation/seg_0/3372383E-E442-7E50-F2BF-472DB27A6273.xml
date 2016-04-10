@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="employees_managing" directorySegmentName="seg_0" id="3372383E-E442-7E50-F2BF-472DB27A6273">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-03-25 04:41:58 UTC</createdTime>
+<ownerDesignName>conceptual_model_part1</ownerDesignName>
+<engineerTo>
+<item key="90A32F63-127B-A27F-785A-BB09F16BD8E2" value="true"/>
+</engineerTo>
+<sourcePk>A2EC3D3D-82F7-83FC-6E4A-1D41DC6BC289</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>69388653-114D-3212-68FC-7B44D9852BAB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>ACD299F3-E0E3-BDD1-48BE-ECED9B4BAA36</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
