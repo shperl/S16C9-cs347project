@@ -97,7 +97,7 @@
 <lineWidth>1</lineWidth>
 <points>
 <point x="571" y="508"/>
-<point x="307" y="350"/>
+<point x="447" y="441"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="3919556E-EF10-F583-23B4-93AC585DF1F4" otype="Relation" vid_source="C77FDBDD-80D2-265C-89CD-82037D80EA1C" vid_target="C77FDBDD-80D2-265C-89CD-82037D80EA1C">

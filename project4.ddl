@@ -1,18 +1,15 @@
-drop view S16_person_view ;
 drop view S16_employee_view ;
-drop view S16_previous_employee_view ;
-drop view S16_project_employee_view ;
+drop view S16_previous_emp_view ;
 drop view S16_manager_view ;
-drop view S16_interim_manager_view ;
+drop view S16_interim_man_view ;
 drop view S16_president_view ;
-drop view S16_project_view ;
-drop view S16_current_project_view ;
-drop view S16_previous_project_view ;
+drop view S16_current_proj_view ;
+drop view S16_previous_proj_view ;
 drop view S16_department_view ;
 
 create view S16_employee_view as
 SELECT 
-    person_id1,
+    person_id,
     type,
     first_name,
     last_name,
@@ -20,12 +17,11 @@ SELECT
     zipcode,
     home_phone,
     us_citizen,
-    spouse,
+    person_id1,
     employee_id,
     salary,
     salary_exception,
-    manager_id
-
+    person_id3
 FROM Person where type = 'Employee' ;
 
 create or replace TRIGGER S16_employee_trigger
@@ -33,7 +29,7 @@ create or replace TRIGGER S16_employee_trigger
      FOR EACH ROW
 BEGIN
     insert into Person( 
-            person_id1,
+            person_id,
             type,
             first_name,
             last_name,
@@ -41,13 +37,13 @@ BEGIN
             zipcode,
             home_phone,
             us_citizen,
-            spouse,
+            person_id1,
             employee_id,
             salary,
             salary_exception,
-            manager_id)
+            person_id3)
          VALUES ( 
-            :NEW.person_id1,
+            :NEW.person_id,
             'Employee',
             :NEW.first_name,
             :NEW.last_name,
@@ -55,16 +51,16 @@ BEGIN
             :NEW.zipcode,
             :NEW.home_phone,
             :NEW.us_citizen,
-            :NEW.spouse,
+            :NEW.person_id1,
             :NEW.employee_id,
             :NEW.salary,
             :NEW.salary_exception,
-            :NEW.manager_id
+            :NEW.person_id3
             ) ;
 END;
 /
 
-create view s16_previous_employee_view as
+create view S16_previous_emp_view as
 SELECT
     person_id,
     type,
@@ -74,13 +70,13 @@ SELECT
     zipcode,
     home_phone,
     us_citizen,
-    spouse,
+    person_id1,
     isFired,
     salary
 FROM Person WHERE type = 'Previous_Employee' ;
 
-create or replace TRIGGER s16_previous_employee_trigger
-     INSTEAD OF insert ON s16_previous_employee_view
+create or replace TRIGGER S16_previous_emp_trigger
+     INSTEAD OF insert ON S16_previous_emp_view
      FOR EACH ROW
 BEGIN
     insert into Person( 
@@ -92,7 +88,7 @@ BEGIN
         zipcode,
         home_phone,
         us_citizen,
-        spouse,
+        person_id1,
         isFired,
         salary)
     VALUES ( 
@@ -104,63 +100,12 @@ BEGIN
             :NEW.zipcode,
             :NEW.home_phone,
             :NEW.us_citizen,
-            :NEW.spouse,
+            :NEW.person_id1,
             :NEW.isFired,
             :NEW.salary) ;
 END;
 /
 
-create view s16_project_employee_view as
-SELECT
-    person_id,
-    type,
-    first_name,
-    last_name,
-    home_address,
-    zipcode,
-    home_phone,
-    us_citizen,
-    spouse,
-    employee_id,
-    salary,
-    salary_exception,
-    manager_id
-FROM Person WHERE type = 'Project_Employee' ;
-
-create or replace TRIGGER s16_project_employee_trigger
-     INSTEAD OF insert ON s16_project_employee_view
-     FOR EACH ROW
-BEGIN
-    insert into Person( 
-        person_id,
-        type,
-        first_name,
-        last_name,
-        home_address,
-        zipcode,
-        home_phone,
-        us_citizen,
-        spouse,
-        employee_id,
-        salary,
-        salary_exception,
-        manager_id)
-    VALUES ( 
-            :NEW.person_id,
-            'Project_Employee',
-            :NEW.first_name,
-            :NEW.last_name,
-            :NEW.home_address,
-            :NEW.zipcode,
-            :NEW.home_phone,
-            :NEW.us_citizen,
-            :NEW.spouse,
-            :NEW.employee_id,
-            :NEW.salary,
-            :NEW.salary_exception,
-            :NEW.manager_id) ;
-END;
-/
 
 create view s16_manager_view as
 SELECT
@@ -172,11 +117,11 @@ SELECT
     zipcode,
     home_phone,
     us_citizen,
-    spouse,
+    person_id1,
     employee_id,
     salary,
     salary_exception,
-    manager_id,
+    person_id3,
     bonus,
     dept_no
 FROM Person WHERE type = 'Manager' ;
@@ -194,11 +139,11 @@ BEGIN
         zipcode,
         home_phone,
         us_citizen,
-        spouse,
+        person_id1,
         employee_id,
         salary,
         salary_exception,
-        manager_id,
+        person_id3,
         bonus,
         dept_no)
     VALUES ( 
@@ -210,18 +155,18 @@ BEGIN
             :NEW.zipcode,
             :NEW.home_phone,
             :NEW.us_citizen,
-            :NEW.spouse,
+            :NEW.person_id1,
             :NEW.employee_id,
             :NEW.salary,
             :NEW.salary_exception,
-            :NEW.manager_id,
+            :NEW.person_id3,
             :NEW.bonus,
             :NEW.dept_no) ;
 END;
 /
 
 
-create view s16_interim_manager_view as
+create view S16_interim_man_view as
 SELECT
     person_id,
     type,
@@ -231,17 +176,17 @@ SELECT
     zipcode,
     home_phone,
     us_citizen,
-    spouse,
+    person_id1,
     employee_id,
     salary,
     salary_exception,
-    manager_id,
+    person_id3,
     bonus,
     dept_no
 FROM Person WHERE type = 'Interim_Manager' ;
 
-create or replace TRIGGER s16_interim_manager_trigger
-     INSTEAD OF insert ON s16_interim_manager_view
+create or replace TRIGGER S16_interim_man_trigger
+     INSTEAD OF insert ON S16_interim_man_view
      FOR EACH ROW
 BEGIN
     insert into Person( 
@@ -253,11 +198,11 @@ BEGIN
         zipcode,
         home_phone,
         us_citizen,
-        spouse,
+        person_id1,
         employee_id,
         salary,
         salary_exception,
-        manager_id,
+        person_id3,
         bonus,
         dept_no)
     VALUES ( 
@@ -269,11 +214,11 @@ BEGIN
             :NEW.zipcode,
             :NEW.home_phone,
             :NEW.us_citizen,
-            :NEW.spouse,
+            :NEW.person_id1,
             :NEW.employee_id,
             :NEW.salary,
             :NEW.salary_exception,
-            :NEW.manager_id,
+            :NEW.person_id3,
             :NEW.bonus,
             :NEW.dept_no) ;
 END;
@@ -289,11 +234,11 @@ SELECT
     zipcode,
     home_phone,
     us_citizen,
-    spouse,
+    person_id1,
     employee_id,
     salary,
     salary_exception,
-    manager_id,
+    person_id3,
     bonus,
     dept_no
 FROM Person WHERE type = 'President' ;
@@ -311,11 +256,11 @@ BEGIN
         zipcode,
         home_phone,
         us_citizen,
-        spouse,
+        person_id1,
         employee_id,
         salary,
         salary_exception,
-        manager_id,
+        person_id3,
         bonus,
         dept_no)
     VALUES ( 
@@ -327,57 +272,51 @@ BEGIN
             :NEW.zipcode,
             :NEW.home_phone,
             :NEW.us_citizen,
-            :NEW.spouse,
+            :NEW.person_id1,
             :NEW.employee_id,
             :NEW.salary,
             :NEW.salary_exception,
-            :NEW.manager_id,
+            :NEW.person_id3,
             :NEW.bonus,
             :NEW.dept_no) ;
 END;
 /
 
-create view s16_current_project_view as
+create view S16_current_proj_view as
 SELECT
     project_no,
     type,
     project_title,
-    project_manager,
-    dept_assigned,
-    project_manager_id,
+    person_id,
     dept_no,
-    parent_project,
+    project_no1,
     project_active
 FROM Project WHERE type = 'Current_Project' ;
 
-create or replace TRIGGER s16_current_project_trigger
-     INSTEAD OF insert ON s16_current_project_view
+create or replace TRIGGER S16_current_proj_trigger
+     INSTEAD OF insert ON S16_current_proj_view
      FOR EACH ROW
 BEGIN
     insert into Project( 
         project_no,
         type,
         project_title,
-        project_manager,
-        dept_assigned,
-        project_manager_id,
+        person_id,
         dept_no,
-        parent_project,
+        project_no1,
         project_active)
     VALUES ( 
             :NEW.project_no,
             'Current_Project',
             :NEW.project_title,
-            :NEW.project_manager,
-            :NEW.dept_assigned,
-            :NEW.project_manager_id,
+            :NEW.person_id,
             :NEW.dept_no,
-            :NEW.parent_project,
+            :NEW.project_no1,
             :NEW.project_active) ;
 END;
 /
 
-create view S16_previous_project_view as
+create view S16_previous_proj_view as
 SELECT
     project_no,
     project_title,
@@ -388,17 +327,15 @@ SELECT
     end_date_year,
     est_person_hours,
     dept_no,
-    project_manager_id,
-    Project_ID,
-    parent_project
-FROM
-    Project where type = "Previous Project";
+    person_id,
+    project_no1
+FROM Project WHERE type = 'Previous_Project';
 
-create or replace TRIGGER S16_previous_project_trigger
-    INSTEAD OF inster ON S16_previous_project_view
-    FOR EACH ROW
+create or replace TRIGGER S16_previous_proj_trigger
+     INSTEAD OF insert ON S16_previous_proj_view
+     FOR EACH ROW
 BEGIN
-    instert into Project{
+    insert into Project(
     project_no,
     project_title,
     type,
@@ -408,20 +345,38 @@ BEGIN
     end_date_year,
     est_person_hours,
     dept_no,
-    project_manager_id,
-    parent_project}
-     VALUES {
+    person_id,
+    project_no1)
+     VALUES (
             :NEW.project_no,
             :NEW.project_title,
-            'Previous Project',
+            'Previous_Project',
             :NEW.project_active,
             :NEW.end_date_month,
             :NEW.end_date_day,
             :NEW.end_date_year,
             :NEW.est_person_hours,
             :NEW.dept_no,
-            :NEW.project_manager_id,
-            :NEW.parent_project} ; 
+            :NEW.person_id,
+            :NEW.project_no1) ; 
 END;
 /
 
+create view S16_department_view as
+SELECT
+    dept_no,
+    dept_name
+FROM Department;
+
+create or replace TRIGGER S16_department_trigger
+    INSTEAD OF insert ON S16_department_view
+    FOR EACH ROW
+BEGIN
+    insert into Department(
+    dept_no,
+    dept_name)
+     VALUES (
+            :NEW.dept_no,
+            :NEW.dept_name) ; 
+END;
+/

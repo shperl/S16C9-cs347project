@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F861754F-ED87-B8D3-1103-EDA3F1284CFA" name="Department">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 23:01:08 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="dept_no" id="F7D0984B-E3CD-63E3-34F3-072E8C852A6D">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 23:01:12 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dept_name" id="B4B590FD-0839-38E5-C222-183F6FFAAA1A">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 23:01:19 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4AA74284-5455-9108-C511-6B2CF81C16C0" name="Department PK">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 23:01:15 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F7D0984B-E3CD-63E3-34F3-072E8C852A6D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

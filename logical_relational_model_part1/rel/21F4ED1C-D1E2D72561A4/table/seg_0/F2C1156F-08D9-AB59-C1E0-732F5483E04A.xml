@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F2C1156F-08D9-AB59-C1E0-732F5483E04A" name="Department">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 23:03:58 UTC</createdTime>
+<generatorID>F861754F-ED87-B8D3-1103-EDA3F1284CFA</generatorID>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="dept_no" id="9201556D-887D-460D-FEC4-1610A8A80C66">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 23:03:58 UTC</createdTime>
+<generatorID>F7D0984B-E3CD-63E3-34F3-072E8C852A6D</generatorID>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dept_name" id="2F2724F7-36BE-048F-BD40-FED6F28AEB43">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 23:03:58 UTC</createdTime>
+<generatorID>B4B590FD-0839-38E5-C222-183F6FFAAA1A</generatorID>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5936C065-3D58-BFD1-0B73-02D930A9BEB9" name="Department_PK">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 23:03:58 UTC</createdTime>
+<generatorID>4AA74284-5455-9108-C511-6B2CF81C16C0</generatorID>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9201556D-887D-460D-FEC4-1610A8A80C66"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

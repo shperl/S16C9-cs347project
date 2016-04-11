@@ -1,0 +1,267 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DE4FB9CB-25DC-1BCF-251E-A564F46BE97A" name="Person">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:53:29 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>Person</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="person_id" id="49465A62-9C1E-EBB9-11F0-663C5ED2EB7D">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:53:54 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="type" id="19D88408-3D8B-0579-6A0E-CB09B7D8CFF7">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:54:08 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="first_name" id="527ED03A-831C-C44C-EB52-A8D8257632F0">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:54:13 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="last_name" id="001553ED-708F-140E-A413-D14CF95BA912">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:54:19 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="home_address" id="779DFA13-8794-44FE-4835-9B43C91116C4">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:54:27 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="zipcode" id="26AAC758-33E5-CF4E-AF0E-1BBC5C75CAF2">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:54:32 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="home_phone" id="BEA692AB-2800-0E67-B8B1-D3651343C87F">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:54:42 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="us_citizen" id="E6012E69-5FDF-8863-E779-4D34EA1A8C02">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:54:48 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="employee_id" id="BF956EB8-FC7E-1432-179C-34756FDB26F9">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:54:54 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="salary" id="763FC905-3717-287B-CBA0-7C2CCB890EAE">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:55:04 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="salary_exception" id="67500665-7942-9437-9BD0-CF5985DA0789">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:55:09 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bonus" id="2875E1D4-01EA-1AB6-03D9-868CC8682446">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:55:16 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="isFired" id="4526C092-A3CB-D81E-9DDD-950C895B8162">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:55:22 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="person_id1" id="179A3D35-8C6F-770A-F66A-38FA00DD171F">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:56:45 UTC</createdTime>
+<generatorID>37FE6556-856C-4680-DEB3-CFF52E95D1A6</generatorID>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>49465A62-9C1E-EBB9-11F0-663C5ED2EB7D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="person_id2" id="DC1B6227-6502-4901-DE4E-F7CAAF74D649">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:57:28 UTC</createdTime>
+<generatorID>2BAFE5C1-720A-EE85-9052-705949343250</generatorID>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>49465A62-9C1E-EBB9-11F0-663C5ED2EB7D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="person_id3" id="9C5A0685-A85B-FAEE-F853-9E12348BB8FF">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:57:46 UTC</createdTime>
+<generatorID>F383A794-9956-D5B0-5665-5857E6139CB4</generatorID>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>49465A62-9C1E-EBB9-11F0-663C5ED2EB7D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dept_no" id="2C9BA25B-DE55-3EDF-9CBD-3350445CC81C">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-11 00:17:54 UTC</createdTime>
+<generatorID>886DA5D4-00B3-0FCA-64A1-D088CC728C6C</generatorID>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>F7D0984B-E3CD-63E3-34F3-072E8C852A6D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D642D98B-5264-F3C3-F1A5-5A6143C02867" name="Person PK">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:53:58 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>49465A62-9C1E-EBB9-11F0-663C5ED2EB7D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

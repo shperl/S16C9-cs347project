@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A5906282-0E12-F5A7-9C92-6AE98F1401F1" name="child_parent">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:56:02 UTC</createdTime>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>child_parent</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="person_id" id="5E93411C-E0DD-0B23-76F0-D7D406179C1E">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:56:13 UTC</createdTime>
+<generatorID>E7BFAFA8-8737-D577-12D7-257EB1EF47E2</generatorID>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<referedAttribute>49465A62-9C1E-EBB9-11F0-663C5ED2EB7D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="person_id1" id="AB008BC7-1B94-378A-ACC9-FB2924F3425C">
+<createdBy>katherineheyne</createdBy>
+<createdTime>2016-04-10 22:56:33 UTC</createdTime>
+<generatorID>33452299-620D-9E45-BDC9-D6B22EC3D09A</generatorID>
+<ownerDesignName>logical_relational_model_part1</ownerDesignName>
+<engineerTo>
+<item key="21F4ED1C-43BF-FB0E-7BED-D1E2D72561A4" value="true"/>
+</engineerTo>
+<referedAttribute>49465A62-9C1E-EBB9-11F0-663C5ED2EB7D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
