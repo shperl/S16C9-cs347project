@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="manager_of_employees" directorySegmentName="seg_0" id="F383A794-9956-D5B0-5665-5857E6139CB4">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="manager_of_employee" directorySegmentName="seg_0" id="F383A794-9956-D5B0-5665-5857E6139CB4">
 <createdBy>katherineheyne</createdBy>
 <createdTime>2016-04-10 22:57:46 UTC</createdTime>
 <ownerDesignName>logical_relational_model_part1</ownerDesignName>

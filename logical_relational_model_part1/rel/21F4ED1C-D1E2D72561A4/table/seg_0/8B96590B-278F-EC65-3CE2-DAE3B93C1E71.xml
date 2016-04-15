@@ -184,22 +184,6 @@
 <colAssociation fkAssociation="243DC7D7-7BCC-05A2-31EA-8169B6C45869" referredColumn="2A41DFCB-EF5A-55FB-848E-10CE0F875504"/>
 </associations>
 </Column>
-<Column name="person_id2" id="D9F6908F-DF2A-24DF-0739-B9A60E59DE32">
-<createdBy>katherineheyne</createdBy>
-<createdTime>2016-04-10 23:03:58 UTC</createdTime>
-<generatorID>DC1B6227-6502-4901-DE4E-F7CAAF74D649</generatorID>
-<ownerDesignName>logical_relational_model_part1</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="98E6289C-6D45-7340-346B-4F8511A15746" referredColumn="2A41DFCB-EF5A-55FB-848E-10CE0F875504"/>
-</associations>
-</Column>
 <Column name="person_id3" id="BF555027-2960-5366-F20E-81F118920E90">
 <createdBy>katherineheyne</createdBy>
 <createdTime>2016-04-10 23:03:58 UTC</createdTime>
@@ -257,18 +241,7 @@
 <colUsage columnID="8E1B3A57-CA16-65F8-7006-319D3EC759EC"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="14ECAC67-2EC5-E341-DBED-9790B5B022B1" name="employees_managing">
-<createdBy>katherineheyne</createdBy>
-<createdTime>2016-04-10 23:03:58 UTC</createdTime>
-<generatorID>2BAFE5C1-720A-EE85-9052-705949343250</generatorID>
-<ownerDesignName>logical_relational_model_part1</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="D9F6908F-DF2A-24DF-0739-B9A60E59DE32"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="3A225DEC-1F5D-7ED3-4745-D757ED97FF39" name="manager_of_employees">
+<ind_PK_UK id="3A225DEC-1F5D-7ED3-4745-D757ED97FF39" name="manager_of_employee">
 <createdBy>katherineheyne</createdBy>
 <createdTime>2016-04-10 23:03:58 UTC</createdTime>
 <generatorID>F383A794-9956-D5B0-5665-5857E6139CB4</generatorID>
