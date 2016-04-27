@@ -1,0 +1,467 @@
+PL/SQL CODE IN APEX, PART 1:
+
+pg. 55:
+BEGIN
+UPDATE project
+SET subproject=:P55_SUBPROJECT
+WHERE project_no=:P55_PROJECT_NO;
+END;
+
+pg. 59:
+BEGIN
+UPDATE person
+SET spouse=:P59_PERSON_ID
+WHERE person_id=:P59_SPOUSE;
+UPDATE person
+SET spouse=:P59_SPOUSE
+WHERE person_id=:P59_PERSON_ID;
+END;
+
+pg. 118: PL/SQL FUNCTION BODY (for setting logged in user's type):
+DECLARE
+max_user_id NUMBER;
+current_type VARCHAR2(255);
+BEGIN
+select MAX(USER_ID)
+into max_user_id
+from Users;
+select USER_TYPE
+into current_type
+from USERS
+where MY_USERNAME = :APP_USER and USER_ID = max_user_id;
+return current_type;
+END;
+
+pg. 101: (to login and check authentication):
+apex_authentication.login(
+    p_username => :P101_USERNAME,
+    p_password => :P101_PASSWORD );
+
+pg. 101: (to set username cookie):
+apex_authentication.send_login_username_cookie (
+    p_username => lower(:P101_USERNAME) );
+
+**authentication scheme: PL/SQL code:
+function validate_user_from_db(p_username in varchar2, p_password in varchar2)
+return Boolean
+as
+    v_pw_check varchar2(1);
+    new_user_type varchar2(255);
+    max_user_id NUMBER;
+    current_username varchar2(255);
+begin
+    select 'x'
+    into v_pw_check
+    from Person
+    where upper(username) = upper(p_username)
+    and user_password = p_password;
+    apex_util.set_authentication_result(0);
+    return true;
+exception when no_data_found then
+    apex_util.set_authentication_result(4);
+    return false;
+end validate_user_from_db;
+
+
+
+
+
+SQL QUERY CODE IN APEX, PART 1:
+
+pg 1:
+select "PERSON_ID", 
+"TYPE",
+"FIRST_NAME",
+"LAST_NAME",
+"HOME_ADDRESS",
+"ZIPCODE",
+"HOME_PHONE",
+"US_CITIZEN",
+"EMPLOYEE_ID",
+"SALARY",
+"SALARY_EXCEPTION",
+"BONUS",
+"MANAGER_ID",
+"DEPT_NO",
+"USERNAME",
+"USER_PASSWORD"
+from "#OWNER#"."PERSON"
+where upper(USERNAME) = :APP_USER
+
+pg. 2:
+select "DEPT_NO", 
+"DEPT_NAME"
+from "#OWNER#"."DEPARTMENT" 
+
+pg. 4:
+select "PERSON_ID", 
+"TYPE",
+"FIRST_NAME",
+"LAST_NAME",
+"HOME_ADDRESS",
+"ZIPCODE",
+"HOME_PHONE",
+"US_CITIZEN",
+"EMPLOYEE_ID",
+"SALARY",
+"SALARY_EXCEPTION",
+"MANAGER_ID",
+"BONUS",
+"DEPT_NO",
+'Employees_Managed' AS "Employees Managed",
+'Managers_Projects' AS "Manager's Projects",
+'Edit_Manager' AS "Edit Manager"
+from "#OWNER#"."S16_MANAGER_VIEW" 
+
+pg. 6:
+select "PERSON_ID", 
+"FIRST_NAME",
+"LAST_NAME",
+"HOME_ADDRESS",
+"ZIPCODE",
+"HOME_PHONE",
+"US_CITIZEN",
+"EMPLOYEE_ID",
+"SALARY",
+"SALARY_EXCEPTION",
+"MANAGER_ID"
+from "#OWNER#"."S16_EMPLOYEE_VIEW" 
+
+pg. 8:
+select "PERSON_ID", 
+"FIRST_NAME",
+"LAST_NAME",
+"HOME_ADDRESS",
+"ZIPCODE",
+"HOME_PHONE",
+"US_CITIZEN",
+"EMPLOYEE_ID",
+"MANAGER_ID"
+from "#OWNER#".PERSON 
+WHERE MANAGER_ID = :P8_EMPLOYEES_OF_MANAGER
+
+pg. 30:
+select * from (
+SELECT e.person_id, e.type, e.last_name, e.first_name, e.home_address, e.zipcode, e.home_phone, e.us_citizen, e.employee_id, e.manager_id, m.dept_no
+FROM Person e INNER JOIN (SELECT p2.* FROM Person p2 WHERE lower(p2.Type) IN ('manager', 'interim manager', 'president')) m ON e.manager_id = m.person_id INNER JOIN Department d ON m.dept_no = d.dept_no
+WHERE lower(e.Type)='employee' and e.ISFIRED IS NULL
+ORDER BY last_name, person_id
+) where (
+ instr(upper("LAST_NAME"),upper(nvl(:P30_REPORT_SEARCH,"LAST_NAME"))) > 0 
+)
+
+pg. 31:
+select * from (
+select DEPT_NO,
+       DEPT_NAME,
+       'View Dept Managers' AS "Managers",
+       'View Dept Employees' AS "Employees"
+  from DEPARTMENT
+) where (
+ instr(upper("DEPT_NAME"),upper(nvl(:P31_REPORT_SEARCH,"DEPT_NAME"))) > 0 
+)
+
+pg. 32:
+select * from (
+    SELECT e.Type as Position, e.last_name, e.first_name, e.Home_Address, e.Zipcode, e.Home_Phone, e.US_Citizen
+    FROM Person e INNER JOIN (SELECT p2.* FROM Person p2 WHERE p2.Type = 'Manager') m ON e.manager_id = m.person_id INNER JOIN Department d ON m.dept_no = d.dept_no
+WHERE e.type IN ('Employee', 'Manager', 'Interim Manager') and d.dept_no = :P32_DEPT_FILTER
+ORDER BY d.dept_name, e.last_name
+) where (
+ instr(upper("LAST_NAME"),upper(nvl(:P32_REPORT_SEARCH,"LAST_NAME"))) > 0 
+)
+
+pg. 33:
+select * from (
+select PERSON_ID,
+       TYPE,
+       FIRST_NAME,
+       LAST_NAME,
+       HOME_ADDRESS,
+       ZIPCODE,
+       HOME_PHONE,
+       US_CITIZEN,
+       EMPLOYEE_ID,
+       MANAGER_ID,
+       DEPT_NO,
+       'Employees_Managed' AS "Employees Managed",
+       'Managers_Projects' AS "Manager's Projects"
+  from S16_MANAGER_VIEW
+) where (
+ instr(upper("LAST_NAME"),upper(nvl(:P33_REPORT_SEARCH,"LAST_NAME"))) > 0 
+)
+
+pg. 34:
+select * from (
+SELECT d.dept_name, m.person_id, m.type, m.first_name, m.last_name, m.home_address, m.zipcode, m.home_phone, m.us_citizen, m.employee_id, m.manager_id
+FROM Person m INNER JOIN Department d ON m.dept_no = d.dept_no
+WHERE m.type IN ('Manager', 'Interim Manager') and d.dept_no = :P34_FILTER_BY_DEPT
+ORDER BY dept_name, last_name
+) where (
+ instr(upper("LAST_NAME"),upper(nvl(:P34_REPORT_SEARCH,"LAST_NAME"))) > 0 
+)
+
+pg. 36:
+SELECT e.person_id, e.type, e.first_name, e.last_name, e.home_address, e.zipcode, e.home_phone, e.us_citizen, e.employee_id, e.salary, e.salary_exception, e.manager_id, e.isFired, p.project_no, p.project_title, p.project_active, p.end_date_month, p.end_date_day, p.end_date_year, p.est_person_hours, p.project_manager_id, p.subproject, p.dept_no
+FROM Person e INNER JOIN project_employees pe ON e.person_id = pe.person_id INNER JOIN Project p ON pe.project_no = p.project_no
+WHERE e.type = 'Employee' AND p.project_no = :P36_FILTER_BY_PROJECT
+ORDER BY p.project_no, e.last_name;
+
+PG. 37:
+select * from (
+select PROJECT_NO,
+       'Project_Details' as "Project Details",
+       TYPE,
+       PROJECT_TITLE,
+       PROJECT_ACTIVE,
+       END_DATE_MONTH,
+       END_DATE_DAY,
+       END_DATE_YEAR,
+       EST_PERSON_HOURS,
+       PROJECT_MANAGER_ID,
+       SUBPROJECT,
+       DEPT_NO
+  from PROJECT
+) where (
+ instr(upper("PROJECT_TITLE"),upper(nvl(:P37_REPORT_SEARCH,"PROJECT_TITLE"))) > 0 
+)
+
+pg. 42:
+select PROJECT_NO,
+       TYPE,
+       PROJECT_TITLE,
+       PROJECT_ACTIVE,
+       END_DATE_MONTH,
+       END_DATE_DAY,
+       END_DATE_YEAR,
+       EST_PERSON_HOURS,
+       PROJECT_MANAGER_ID,
+       SUBPROJECT,
+       DEPT_NO
+from PROJECT
+WHERE lower(type) IN ('previous', 'previous project')
+
+pg. 43:
+select * from (
+select PROJECT_NO,
+       'Project_Details' AS "Project Details",
+       TYPE,
+       PROJECT_TITLE,
+       PROJECT_ACTIVE,
+       PROJECT_MANAGER_ID,
+       SUBPROJECT,
+       DEPT_NO
+  from PROJECT
+  WHERE lower(type) IN ('current', 'current project')
+) where (
+ instr(upper("PROJECT_TITLE"),upper(nvl(:P43_REPORT_SEARCH,"PROJECT_TITLE"))) > 0 
+)
+
+pg. 44:
+select PROJECT_NO,
+       TYPE,
+       PROJECT_TITLE,
+       PROJECT_ACTIVE,
+       END_DATE_MONTH,
+       END_DATE_DAY,
+       END_DATE_YEAR,
+       EST_PERSON_HOURS,
+       PROJECT_MANAGER_ID,
+       SUBPROJECT,
+       DEPT_NO
+from PROJECT
+WHERE PROJECT_MANAGER_ID = :P44_MANAGER_OF_PROJECT
+
+pg. 47:
+select "PROJECT_NO", 
+"TYPE",
+"PROJECT_TITLE",
+"PROJECT_ACTIVE",
+"END_DATE_MONTH",
+"END_DATE_DAY",
+"END_DATE_YEAR",
+"EST_PERSON_HOURS",
+"PROJECT_MANAGER_ID",
+"SUBPROJECT",
+"DEPT_NO"
+from "#OWNER#"."PROJECT" 
+where TYPE = 'Previous' 
+
+pg. 49:
+select PERSON_ID,
+       TYPE,
+       FIRST_NAME,
+       LAST_NAME,
+       HOME_ADDRESS,
+       ZIPCODE,
+       HOME_PHONE,
+       US_CITIZEN,
+       MANAGER_ID,
+       DEPT_NO
+from PERSON
+where PERSON_ID = (select MANAGER_ID from PERSON WHERE upper(USERNAME) = :APP_USER)
+
+pg. 50:
+select PERSON_ID,
+       TYPE,
+       FIRST_NAME,
+       LAST_NAME,
+       HOME_ADDRESS,
+       ZIPCODE,
+       HOME_PHONE,
+       US_CITIZEN,
+       EMPLOYEE_ID,
+       MANAGER_ID,
+       DEPT_NO
+from PERSON
+where lower(TYPE) IN ('employee', 'manager', 'interim manager', 'president')
+
+pg. 51:
+select * from (
+select PERSON_ID,
+       TYPE,
+       FIRST_NAME,
+       LAST_NAME,
+       HOME_ADDRESS,
+       ZIPCODE,
+       HOME_PHONE,
+       US_CITIZEN,
+       SALARY,
+       ISFIRED
+from PERSON
+where ISFIRED IS NOT NULL
+) where (
+ instr(upper("LAST_NAME"),upper(nvl(:P51_REPORT_SEARCH,"LAST_NAME"))) > 0 
+)
+
+pg. 52:
+select proj.PROJECT_NO,
+       'Project_Details' AS "Project Details",
+       proj.TYPE,
+       PROJECT_TITLE,
+       PROJECT_ACTIVE,
+       END_DATE_MONTH,
+       END_DATE_DAY,
+       END_DATE_YEAR,
+       EST_PERSON_HOURS,
+       proj.PROJECT_MANAGER_ID,
+       SUBPROJECT,
+       proj.DEPT_NO
+from PROJECT proj INNER JOIN PROJECT_EMPLOYEES pe ON proj.PROJECT_NO = pe.PROJECT_NO INNER JOIN PERSON per ON pe.PERSON_ID = per.PERSON_ID
+where lower(per.USERNAME) = lower(:APP_USER)
+
+pg. 53:
+select PROJECT_NO,
+       TYPE,
+       PROJECT_TITLE,
+       PROJECT_ACTIVE,
+       END_DATE_MONTH,
+       END_DATE_DAY,
+       END_DATE_YEAR,
+       EST_PERSON_HOURS,
+       PROJECT_MANAGER_ID,
+       SUBPROJECT,
+       DEPT_NO
+from PROJECT
+where PROJECT_NO = :P53_THIS_PROJECT_NO
+
+pg. 53:
+select person_id
+from project_employees
+where project_no = :P53_THIS_PROJECT_NO 
+
+pg. 53:
+select PROJECT_NO,
+       TYPE,
+       PROJECT_TITLE,
+       PROJECT_ACTIVE,
+       END_DATE_MONTH,
+       END_DATE_DAY,
+       END_DATE_YEAR,
+       EST_PERSON_HOURS,
+       PROJECT_MANAGER_ID,
+       SUBPROJECT,
+       DEPT_NO
+from PROJECT
+where SUBPROJECT = :P53_THIS_PROJECT_NO
+
+pg. 56:
+select "PROJECT_NO", 
+'Project_Details' AS "Project Details", 
+"TYPE",
+"PROJECT_TITLE",
+"PROJECT_ACTIVE",
+"END_DATE_MONTH",
+"END_DATE_DAY",
+"END_DATE_YEAR",
+"EST_PERSON_HOURS",
+"PROJECT_MANAGER_ID",
+"SUBPROJECT",
+"DEPT_NO"
+from "#OWNER#"."PROJECT" 
+where lower(TYPE) = 'current' 
+
+pg. 58:
+select PERSON_ID,
+       TYPE,
+       FIRST_NAME,
+       LAST_NAME,
+       HOME_ADDRESS,
+       ZIPCODE,
+       HOME_PHONE,
+       US_CITIZEN,
+       SPOUSE
+from PERSON
+where SPOUSE=:P58_LOGGEDIN_PERSON_ID
+
+pg. 58:
+SQL QUERY:
+SELECT person_id
+FROM person
+WHERE lower(username)=lower(:APP_USER)
+
+pg. 60:
+SELECT cp.child_id, p.first_name, p.last_name, p.home_address, p.zipcode, p.home_phone, p.us_citizen, 'Edit_Info' AS "Edit Info"
+FROM child_parent cp INNER JOIN person p ON p.person_id=cp.child_id
+WHERE parent_id=(SELECT person_id from person where lower(username)=lower(:APP_USER))
+
+pg. 60:
+SELECT person_id
+FROM person
+WHERE lower(username)=lower(:APP_USER)
+
+pg. 64:
+select PERSON_ID,
+       TYPE,
+       FIRST_NAME,
+       LAST_NAME,
+       HOME_ADDRESS,
+       ZIPCODE,
+       HOME_PHONE,
+       US_CITIZEN,
+       SPOUSE,
+       'Edit_Info' AS "Edit Info"
+from PERSON
+where SPOUSE=:P64_LOGGEDIN_PERSON_ID
+
+pg. 64:
+SELECT person_id
+FROM person
+WHERE lower(username)=lower(:APP_USER)
+
+pg. 118:
+select USER_TYPE
+from USERS
+where MY_USERNAME = :APP_USER and USER_ID = (select MAX(USER_ID) from USERS)
+
+pg. 101: (to set value of application item APP_USER_TEST):
+SELECT type
+FROM person
+WHERE username = :APP_USER
+
+
+**application computation:
+SQL QUERY (APP_USER_TEST):
+select lower(type)
+from person
+where lower(username)=lower(:APP_USER)
