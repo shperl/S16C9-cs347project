@@ -27,7 +27,7 @@ prompt APPLICATION 676 - cs347project
 -- Application Export:
 --   Application:     676
 --   Name:            cs347project
---   Date and Time:   01:59 Wednesday April 27, 2016
+--   Date and Time:   02:57 Wednesday April 27, 2016
 --   Exported By:     KKFH12@YAHOO.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -116,7 +116,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160427010149'
+,p_last_upd_yyyymmddhh24miss=>'20160427025715'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -774,7 +774,7 @@ wwv_flow_api.create_list_of_values(
 wwv_flow_api.create_list_of_values(
  p_id=>wwv_flow_api.id(30651081745010131931)
 ,p_lov_name=>'DEPT NAMES'
-,p_lov_query=>'Select dept_name d, dept_no r from DEPARTMENT'
+,p_lov_query=>'Select dept_name d, dept_no r from Department'
 );
 wwv_flow_api.create_list_of_values(
  p_id=>wwv_flow_api.id(30967041018421226537)
@@ -868,7 +868,7 @@ wwv_flow_api.create_list_of_values(
 'select first_name || '' '' || last_name || '', '' || person_id as d,',
 '       person_id as r',
 'from person',
-'where type IN (''Manager'', ''Interim Manager'', ''President'')',
+'where lower(type) IN (''manager'', ''interim manager'', ''interim_manager'', ''president'')',
 'order by 1;'))
 );
 wwv_flow_api.create_list_of_values(
@@ -11154,7 +11154,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160423001444'
+,p_last_upd_yyyymmddhh24miss=>'20160427024841'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(30661221027484263904)
@@ -11464,7 +11464,7 @@ wwv_flow_api.create_page_item(
 'select first_name || '' '' || last_name || '', '' || person_id as d,',
 '       person_id as r',
 'from person',
-'where type IN (''Manager'', ''Interim Manager'', ''President'')',
+'where lower(type) IN (''manager'', ''interim manager'', ''interim_manager'', ''president'')',
 'order by 1;'))
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
@@ -13503,7 +13503,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424094404'
+,p_last_upd_yyyymmddhh24miss=>'20160427025138'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(31210960008762910292)
@@ -13670,7 +13670,7 @@ wwv_flow_api.create_report_columns(
 ,p_use_as_row_header=>'N'
 ,p_disable_sort_column=>'N'
 ,p_display_as=>'TEXT_FROM_LOV'
-,p_named_lov=>wwv_flow_api.id(30734435142438846796)
+,p_named_lov=>wwv_flow_api.id(31726733980760934239)
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -13875,7 +13875,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424023607'
+,p_last_upd_yyyymmddhh24miss=>'20160427025230'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(31143138822380233035)
@@ -14013,7 +14013,7 @@ wwv_flow_api.create_report_columns(
 ,p_column_heading=>'Project Manager'
 ,p_use_as_row_header=>'N'
 ,p_display_as=>'TEXT_FROM_LOV'
-,p_named_lov=>wwv_flow_api.id(30734435142438846796)
+,p_named_lov=>wwv_flow_api.id(31726733980760934239)
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -14162,7 +14162,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424023619'
+,p_last_upd_yyyymmddhh24miss=>'20160427025248'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(31211328175121582344)
@@ -14282,7 +14282,7 @@ wwv_flow_api.create_report_columns(
 ,p_use_as_row_header=>'N'
 ,p_disable_sort_column=>'N'
 ,p_display_as=>'TEXT_FROM_LOV'
-,p_named_lov=>wwv_flow_api.id(30734435142438846796)
+,p_named_lov=>wwv_flow_api.id(31726733980760934239)
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -14447,7 +14447,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424081305'
+,p_last_upd_yyyymmddhh24miss=>'20160427025301'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(31335950835466325723)
@@ -14597,7 +14597,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_column_type=>'NUMBER'
 ,p_display_text_as=>'LOV_ESCAPE_SC'
 ,p_column_alignment=>'RIGHT'
-,p_rpt_named_lov=>wwv_flow_api.id(30734435142438846796)
+,p_rpt_named_lov=>wwv_flow_api.id(31726733980760934239)
 ,p_rpt_show_filter_lov=>'1'
 );
 wwv_flow_api.create_worksheet_column(
@@ -14662,7 +14662,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424094600'
+,p_last_upd_yyyymmddhh24miss=>'20160427025317'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(31337247130137537466)
@@ -14792,7 +14792,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_column_label=>'Project Manager'
 ,p_column_type=>'NUMBER'
 ,p_display_text_as=>'LOV_ESCAPE_SC'
-,p_rpt_named_lov=>wwv_flow_api.id(30734435142438846796)
+,p_rpt_named_lov=>wwv_flow_api.id(31726733980760934239)
 ,p_rpt_show_filter_lov=>'1'
 );
 wwv_flow_api.create_worksheet_column(
@@ -14955,7 +14955,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424023654'
+,p_last_upd_yyyymmddhh24miss=>'20160427025338'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(31337235559086532387)
@@ -15220,13 +15220,13 @@ wwv_flow_api.create_page_item(
 ,p_source=>'PROJECT_MANAGER_ID'
 ,p_source_type=>'DB_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
-,p_named_lov=>'PROJECT MANAGER NAME'
+,p_named_lov=>'MANAGER_AND_INTERIM_NAMES'
 ,p_lov=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
-'select last_name || '', '' || first_name || '', '' || person_id as d,',
+'select first_name || '' '' || last_name || '', '' || person_id as d,',
 '       person_id as r',
 'from person',
-'where type IN (''Manager'', ''Interim Manager'', ''President'')',
-'order by 1;'))
+'where lower(type) IN (''manager'', ''interim_manager'', ''interim manager'')',
+'order by first_name'))
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
 ,p_field_template=>wwv_flow_api.id(28812280144493369494)
@@ -15271,7 +15271,7 @@ wwv_flow_api.create_page_item(
 ,p_source_type=>'DB_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_named_lov=>'DEPT NAMES'
-,p_lov=>'Select dept_name d, dept_no r from DEPARTMENT'
+,p_lov=>'Select dept_name d, dept_no r from Department'
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
 ,p_field_template=>wwv_flow_api.id(28812280144493369494)
@@ -15531,7 +15531,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424080756'
+,p_last_upd_yyyymmddhh24miss=>'20160427024912'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(31338432685975756189)
@@ -16022,7 +16022,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424024111'
+,p_last_upd_yyyymmddhh24miss=>'20160427025418'
 );
 wwv_flow_api.create_report_region(
  p_id=>wwv_flow_api.id(31367541030355911330)
@@ -16173,7 +16173,7 @@ wwv_flow_api.create_report_columns(
 ,p_use_as_row_header=>'N'
 ,p_disable_sort_column=>'N'
 ,p_display_as=>'TEXT_FROM_LOV'
-,p_named_lov=>wwv_flow_api.id(30734435142438846796)
+,p_named_lov=>wwv_flow_api.id(31726733980760934239)
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -16237,7 +16237,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424084507'
+,p_last_upd_yyyymmddhh24miss=>'20160427025450'
 );
 wwv_flow_api.create_report_region(
  p_id=>wwv_flow_api.id(31383501761874496910)
@@ -16417,7 +16417,7 @@ wwv_flow_api.create_report_columns(
 ,p_use_as_row_header=>'N'
 ,p_disable_sort_column=>'N'
 ,p_display_as=>'TEXT_FROM_LOV'
-,p_named_lov=>wwv_flow_api.id(30734435142438846796)
+,p_named_lov=>wwv_flow_api.id(31726733980760934239)
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -16565,7 +16565,7 @@ wwv_flow_api.create_report_columns(
 ,p_use_as_row_header=>'N'
 ,p_disable_sort_column=>'N'
 ,p_display_as=>'TEXT_FROM_LOV'
-,p_named_lov=>wwv_flow_api.id(30734435142438846796)
+,p_named_lov=>wwv_flow_api.id(31726733980760934239)
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -17065,7 +17065,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424094653'
+,p_last_upd_yyyymmddhh24miss=>'20160427025656'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(31373721491317594330)
@@ -17202,7 +17202,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_column_label=>'Project Manager'
 ,p_column_type=>'NUMBER'
 ,p_display_text_as=>'LOV_ESCAPE_SC'
-,p_rpt_named_lov=>wwv_flow_api.id(30734435142438846796)
+,p_rpt_named_lov=>wwv_flow_api.id(31726733980760934239)
 ,p_rpt_show_filter_lov=>'1'
 );
 wwv_flow_api.create_worksheet_column(
@@ -17366,7 +17366,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424023803'
+,p_last_upd_yyyymmddhh24miss=>'20160427025715'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(31373715302206229150)
@@ -17631,13 +17631,13 @@ wwv_flow_api.create_page_item(
 ,p_source=>'PROJECT_MANAGER_ID'
 ,p_source_type=>'DB_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
-,p_named_lov=>'PROJECT MANAGER NAME'
+,p_named_lov=>'MANAGER_AND_INTERIM_NAMES'
 ,p_lov=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
-'select last_name || '', '' || first_name || '', '' || person_id as d,',
+'select first_name || '' '' || last_name || '', '' || person_id as d,',
 '       person_id as r',
 'from person',
-'where type IN (''Manager'', ''Interim Manager'', ''President'')',
-'order by 1;'))
+'where lower(type) IN (''manager'', ''interim_manager'', ''interim manager'')',
+'order by first_name'))
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
 ,p_field_template=>wwv_flow_api.id(28812280144493369494)
@@ -17682,7 +17682,7 @@ wwv_flow_api.create_page_item(
 ,p_source_type=>'DB_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_named_lov=>'DEPT NAMES'
-,p_lov=>'Select dept_name d, dept_no r from DEPARTMENT'
+,p_lov=>'Select dept_name d, dept_no r from Department'
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
 ,p_field_template=>wwv_flow_api.id(28812280144493369494)
@@ -20232,7 +20232,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'KKFH12@YAHOO.COM'
-,p_last_upd_yyyymmddhh24miss=>'20160424091137'
+,p_last_upd_yyyymmddhh24miss=>'20160427024841'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(31388256154406748091)
@@ -20599,7 +20599,7 @@ wwv_flow_api.create_page_item(
 'select first_name || '' '' || last_name || '', '' || person_id as d,',
 '       person_id as r',
 'from person',
-'where type IN (''Manager'', ''Interim Manager'', ''President'')',
+'where lower(type) IN (''manager'', ''interim manager'', ''interim_manager'', ''president'')',
 'order by 1;'))
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
@@ -20620,7 +20620,7 @@ wwv_flow_api.create_page_item(
 ,p_source_type=>'DB_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_named_lov=>'DEPT NAMES'
-,p_lov=>'Select dept_name d, dept_no r from DEPARTMENT'
+,p_lov=>'Select dept_name d, dept_no r from Department'
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
 ,p_field_template=>wwv_flow_api.id(28812279934812369494)

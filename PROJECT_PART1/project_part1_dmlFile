@@ -1,3 +1,12 @@
+alter trigger EMPLOYEE_ID_TRIG disable;
+alter trigger PERSON_AUD_TRIG disable;
+alter trigger PERSON_PK_TRIG disable;
+alter trigger PROJECT_AUD_TRIG disable;
+alter trigger PROJECT_PK_TRIG disable;
+alter trigger DEPARTMENT_AUD_TRIG disable;
+alter trigger DEPARTMENT_PK_TRIG disable;
+
+
 
 ALTER TABLE Person
 DISABLE PRIMARY KEY CASCADE;
@@ -318,6 +327,17 @@ INSERT INTO child_parent (child_id, parent_id)
 VALUES (57, 55);
 INSERT INTO child_parent (child_id, parent_id)
 VALUES (64, 62);
+
+
+
+
+alter trigger EMPLOYEE_ID_TRIG enable;
+alter trigger PERSON_AUD_TRIG enable;
+alter trigger PERSON_PK_TRIG enable;
+alter trigger PROJECT_AUD_TRIG enable;
+alter trigger PROJECT_PK_TRIG enable;
+alter trigger DEPARTMENT_AUD_TRIG enable;
+alter trigger DEPARTMENT_PK_TRIG enable;
 
 
 ALTER TABLE Person
