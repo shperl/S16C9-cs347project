@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="logicalmodel_part2" id="1AE6F1B3-2217-E5FC-6879-CACCDA8A54D3" version="3.5">
-<createdBy>sperl</createdBy>
-<createdTime>2016-04-15 02:20:38 UTC</createdTime>
-<ownerDesignName>logicalmodel_part2</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>1AE6F1B3-2217-E5FC-6879-CACCDA8A54D3</designId>
-</OSDM_Design>
