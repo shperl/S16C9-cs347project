@@ -1,0 +1,395 @@
+
+ALTER TABLE Person
+DISABLE PRIMARY KEY CASCADE;
+ALTER TABLE Person
+DISABLE CONSTRAINT username_con;
+ALTER TABLE Person
+DISABLE CONSTRAINT SYS_C0044777797;
+ALTER TABLE Person
+DISABLE CONSTRAINT SYS_C0044777798;
+ALTER TABLE Person
+DISABLE CONSTRAINT SYS_C0044777799;
+ALTER TABLE Person
+DISABLE CONSTRAINT SYS_C0044777800;
+ALTER TABLE Person
+DISABLE CONSTRAINT spouse;
+ALTER TABLE Person
+DISABLE CONSTRAINT manager_dept;
+ALTER TABLE Person
+DISABLE CONSTRAINT manager_of_employee;
+TRUNCATE TABLE Person;
+
+ALTER TABLE Project
+DISABLE PRIMARY KEY CASCADE;
+ALTER TABLE Project
+DISABLE CONSTRAINT SYS_C0044777804;
+ALTER TABLE Project
+DISABLE CONSTRAINT SYS_C0044777805;
+ALTER TABLE Project
+DISABLE CONSTRAINT SYS_C0044777806;
+ALTER TABLE Project
+DISABLE CONSTRAINT SYS_C0044777807;
+ALTER TABLE Project
+DISABLE CONSTRAINT SYS_C0044777808;
+ALTER TABLE Project
+DISABLE CONSTRAINT sub_project;
+ALTER TABLE Project
+DISABLE CONSTRAINT dept_projects;
+ALTER TABLE Project
+DISABLE CONSTRAINT projects_managing;
+TRUNCATE TABLE Project;
+
+ALTER TABLE Department
+DISABLE PRIMARY KEY CASCADE;
+ALTER TABLE Department
+DISABLE CONSTRAINT SYS_C0044777794;
+ALTER TABLE Department
+DISABLE CONSTRAINT SYS_C0044777795;
+TRUNCATE TABLE Department;
+
+ALTER TABLE child_parent
+DISABLE CONSTRAINT SYS_C0044777810;
+ALTER TABLE child_parent
+DISABLE CONSTRAINT SYS_C0044777811;
+ALTER TABLE child_parent
+DISABLE CONSTRAINT child;
+ALTER TABLE child_parent
+DISABLE CONSTRAINT parent_of_child;
+TRUNCATE TABLE child_parent;
+
+ALTER TABLE project_employees
+DISABLE CONSTRAINT SYS_C0044777812;
+ALTER TABLE project_employees
+DISABLE CONSTRAINT SYS_C0044777813;
+ALTER TABLE project_employees
+DISABLE CONSTRAINT employees_of_project;
+ALTER TABLE project_employees
+DISABLE CONSTRAINT project_to_employees;
+TRUNCATE TABLE project_employees;
+
+
+
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, bonus, spouse, username, user_password)
+VALUES (1, 'President', 'Phil', 'Cannata', '500 Bear Creek Rd', 78705, 5123334444, '1', 1, 200000, '1', 50000, 2, 'pcannata', 'president');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (2, 'Person', 'Mary', 'Cannata', '500 Bear Creek Rd', 78705, 5123334444, '1', 1);
+
+
+INSERT INTO Department (dept_no, dept_name)
+VALUES (1, 'Finance');
+INSERT INTO Department (dept_no, dept_name)
+VALUES (2, 'HR');
+INSERT INTO Department (dept_no, dept_name)
+VALUES (3, 'IT');
+
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, bonus, spouse, manager_id, dept_no, username, user_password)
+VALUES (3, 'Manager', 'Katherine', 'Heyne', '2300 Nueces St', 78705, 7132223333, '1', 3, 100000, '0', 0, 4, 1, 1, 'kheyne', 'heyne');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (4, 'Person', 'John', 'Smith', '2300 Nueces St', 78705, 7132223333, '1', 3);
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, bonus, manager_id, dept_no, username, user_password)
+VALUES (5, 'Manager', 'Stephen', 'Perl', '2215 Rio Grande', 78705, 5124445555, '1', 5, 100000, '0', 0, 1, 2, 'shperl', 'perl');
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, bonus, manager_id, dept_no, username, user_password)
+VALUES (6, 'Manager', 'Adam', 'Alloy', '2000 Nueces St', 78705, 5125556666, '1', 6, 100000, '0', 0, 1, 3, 'aalloy', 'alloy');
+
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, spouse, manager_id, username, user_password)
+VALUES (7, 'Employee', 'Benjamin', 'Hoffman', '2100 Chimney Rock', 77057, 7138889999, '1', 7, 80000, '0', 8, 3, 'bhoffman', 'hoffman');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (8, 'Person', 'Cindy', 'Hoffman', '2100 Chimney Rock', 77057, 7138889999, '1', 7);
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (9, 'Person', 'Thomas', 'Hoffman', '2100 Chimney Rock', 77057, 7138889999, '1');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (10, 'Person', 'Katherine', 'Hoffman', '2100 Chimney Rock', 77057, 7138889999, '1');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (11, 'Person', 'Rachel', 'Hoffman', '2100 Chimney Rock', 77057, 7138889999, '1');
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, manager_id, username, user_password)
+VALUES (12, 'Employee', 'Leonardo', 'DiCaprio', '500 Lovers Ln', 75229, 2149293848, '1', 12, 70000, '0', 3, 'ldicaprio', 'dicaprio');
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, spouse, manager_id, username, user_password)
+VALUES (13, 'Employee', 'Julia', 'Roberts', '555 Windy Rd', 74728, 2108384758, '1', 13, 70000, '0', 14, 3, 'jroberts', 'roberts');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (14, 'Person', 'Walker', 'Roberts', '555 Windy Rd', 74728, 2108384758, '1', 13);
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (15, 'Person', 'Patrick', 'Roberts', '555 Windy Rd', 74728, 2108384758, '1');
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, manager_id, username, user_password)
+VALUES (16, 'Employee', 'Jack', 'Nicholson', '100 Square Rd', 10102, 2003948274, '1', 16, 65000, '0', 3, 'jnicholson', 'nicholson');
+
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, spouse, manager_id, username, user_password)
+VALUES (17, 'Employee', 'Thomas', 'Campbell', '4500 Avenue B', 78705, 5124938294, '1', 17, 60000, '0', 18, 5, 'tcampbell', 'campbell');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (18, 'Person', 'Kate', 'Campbell', '4500 Avenue B', 78705, 5124938294, '1', 17);
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (19, 'Person', 'Natalie', 'Campbell', '4500 Avenue B', 78705, 5124938294, '1');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (20, 'Person', 'Sandy', 'Campbell', '4500 Avenue B', 78705, 5124938294, '1');
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, spouse, manager_id, username, user_password)
+VALUES (21, 'Employee', 'Bill', 'Folly', '100 Briar Forest', 77024, 7139998841, '1', 21, 65000, '0', 22, 5, 'bfolly', 'folly');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (22, 'Person', 'Jan', 'Folly', '100 Briar Forest', 77024, 7139998841, '1', 21);
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (23, 'Person', 'Anne', 'Folly', '100 Briar Forest', 77024, 7139998841, '1');
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, spouse, manager_id, username, user_password)
+VALUES (24, 'Employee', 'Amy', 'Richards', '12 Forest Ln', 75229, 2145543827, '1', 24, 55000, '0', 25, 5, 'arichards', 'richards');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (25, 'Person', 'Andrew', 'Richards', '12 Forest Ln', 75229, 2145543827, '1', 24);
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (26, 'Person', 'Katie', 'Richards', '12 Forest Ln', 75229, 2145543827, '1');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (27, 'Person', 'Edward', 'Richards', '12 Forest Ln', 75229, 2145543827, '1');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (28, 'Person', 'Sean', 'Richards', '12 Forest Ln', 75229, 2145543827, '1');
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, spouse, manager_id, username, user_password)
+VALUES (29, 'Employee', 'Amanda', 'Poling', '1212 Briar Grove', 77024, 7132857777, '1', 29, 55000, '0', 30, 5, 'apoling', 'poling');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (30, 'Person', 'Buddy', 'Poling', '1212 Briar Grove', 77024, 7132857777, '1', 29);
+
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, manager_id, username, user_password)
+VALUES (31, 'Employee', 'Austin', 'Pratt', '500 Leisure Ln', 77024, 7138874533, '1', 31, 70000, '0', 6, 'apratt', 'pratt');
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, spouse, manager_id, username, user_password)
+VALUES (32, 'Employee', 'Travis', 'Prichard', '4545 Sunshine Rd.', 92841, 8273928484, '1', 32, 70000, '0', 33, 6, 'tprichard', 'prichard');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (33, 'Person', 'Alexandra', 'Prichard', '4545 Sunshine Rd.', 92841, 8273928484, '1', 32);
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, spouse, manager_id, username, user_password)
+VALUES (34, 'Employee', 'Timothy', 'Turner', '13 Windsor', 78744, 5123389009, '1', 34, 75000, '0', 35, 6, 'tturner', 'turner');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (35, 'Person', 'Adelaide', 'Turner', '13 Windsor', 78744, 5123389009, '1', 34);
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, spouse, manager_id, username, user_password)
+VALUES (36, 'Employee', 'William', 'Witmer', '404 Dallas St.', 77056, 8324755543, '1', 36, 72000, '0', 37, 6, 'wwitmer', 'witmer');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (37, 'Person', 'Kathleen', 'Witmer', '404 Dallas St.', 77056, 8324755543, '1', 36);
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (38, 'Person', 'Chloe', 'Witmer', '404 Dallas St.', 77056, 8324755543, '1');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (39, 'Person', 'Lauren', 'Witmer', '404 Dallas St.', 77056, 8324755543, '1');
+
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, salary, isFired)
+VALUES (40, 'Employee', 'Andrew', 'Kutner', '500 Sorrow Ln', 78705, 5126647364, '1', 45000, '1');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, salary, isFired)
+VALUES (41, 'Employee', 'Garrett', 'Linen', '47421 Augusta', 77024, 2817478333, '1', 50000, '0');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, salary, isFired)
+VALUES (42, 'Employee', 'Linda', 'Brown', '500 Wimberley Ln', 78774, 5129930212, '1', 55000, '0');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, salary, isFired)
+VALUES (43, 'Employee', 'Nicole', 'Barth', '2222 Peach St', 92831, 4419302282, '1', 50000, '1');
+
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, bonus, manager_id, dept_no, username, user_password)
+VALUES (44, 'Interim_Manager', 'Olivia', 'Tesla', '3331 Lively Rd', 88473, 2103938848, '1', 44, 45000, '0', 0, 3, 1, 'otesla', 'tesla');
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, bonus, spouse, manager_id, dept_no, username, user_password)
+VALUES (45, 'Interim_Manager', 'Richard', 'Simmons', '42 Guadalupe St', 78755, 5129998484, '1', 45, 47000, '0', 0, 46, 5, 2, 'rsimmons', 'simmons');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (46, 'Person', 'Lilly', 'Simmons', '42 Guadalupe St', 78755, 5129998484, '1', 45);
+
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, employee_id, salary, salary_exception, bonus, spouse, manager_id, dept_no, username, user_password)
+VALUES (47, 'Interim_Manager', 'Lorelai', 'Gilmore', '500 Grady St', 10100, 1003929990, '1', 47, 50000, '0', 0, 48, 6, 3, 'lgilmore', 'gilmore');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse)
+VALUES (48, 'Person', 'Luke', 'Gilmore', '500 Grady St', 10100, 1003929990, '1', 47);
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (49, 'Person', 'Rory', 'Gilmore', '500 Grady St', 10100, 1003929990, '1');
+INSERT INTO Person (person_id, type, first_name, last_name, home_address, zipcode, home_phone, us_citizen)
+VALUES (50, 'Person', 'Ceci', 'Gilmore', '500 Grady St', 10100, 1003929990, '1');
+
+
+INSERT INTO Project (project_no, type, project_title, project_active, project_manager_id, subproject, dept_no)
+VALUES (1, 'Current', 'Asset Recount', '1', 3, 2, 1);
+INSERT INTO Project (project_no, type, project_title, project_active, project_manager_id, dept_no)
+VALUES (2, 'Current', 'Asset Analysis', '1', 3, 1);
+INSERT INTO Project (project_no, type, project_title, project_active, end_date_month, end_date_day, end_date_year, est_person_hours, project_manager_id, dept_no)
+VALUES (3, 'Previous', 'Financial Analysis', '0', 06, 10, 2015, 300, 44, 1);
+
+INSERT INTO Project (project_no, type, project_title, project_active, project_manager_id, subproject, dept_no)
+VALUES (4, 'Current', 'Recruiting Strategy', '1', 5, 5, 2);
+INSERT INTO Project (project_no, type, project_title, project_active, project_manager_id, dept_no)
+VALUES (5, 'Current', 'Improve Recruiting', '1', 5, 2);
+INSERT INTO Project (project_no, type, project_title, project_active, end_date_month, end_date_day, end_date_year, est_person_hours, project_manager_id, dept_no)
+VALUES (6, 'Previous', 'Selection Process', '0', 11, 15, 2015, 200, 45, 2);
+
+INSERT INTO Project (project_no, type, project_title, project_active, project_manager_id, subproject, dept_no)
+VALUES (7, 'Current', 'IT Change Software', '1', 6, 8, 3);
+INSERT INTO Project (project_no, type, project_title, project_active, project_manager_id, dept_no)
+VALUES (8, 'Current', 'Improve Help Desk', '1', 47, 3);
+INSERT INTO Project (project_no, type, project_title, project_active, end_date_month, end_date_day, end_date_year, est_person_hours, project_manager_id, dept_no)
+VALUES (9, 'Previous', 'Test New Software', '0', 02, 17, 2016, 100, 6, 3);
+
+
+INSERT INTO project_employees (person_id, project_no)
+VALUES (7, 1);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (7, 3);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (12, 1);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (12, 3);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (13, 2);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (16, 2);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (16, 3);
+
+INSERT INTO project_employees (person_id, project_no)
+VALUES (17, 4);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (17, 5);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (17, 6);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (21, 4);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (21, 6);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (24, 5);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (29, 5);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (29, 6);
+
+INSERT INTO project_employees (person_id, project_no)
+VALUES (31, 7);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (31, 9);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (32, 8);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (34, 8);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (34, 9);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (36, 9);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (36, 8);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (36, 7);
+
+INSERT INTO project_employees (person_id, project_no)
+VALUES (40, 3);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (41, 3);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (42, 6);
+INSERT INTO project_employees (person_id, project_no)
+VALUES (43, 9);
+
+
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (10, 8);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (11, 8);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (12, 8);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (16, 14);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (20, 18);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (21, 18);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (24, 22);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (27, 25);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (28, 25);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (29, 25);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (38, 36);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (39, 36);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (49, 47);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (50, 47);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (57, 55);
+INSERT INTO child_parent (child_id, parent_id)
+VALUES (64, 62);
+
+
+ALTER TABLE Person
+ENABLE PRIMARY KEY;
+ALTER TABLE Project
+ENABLE PRIMARY KEY;
+ALTER TABLE Department
+ENABLE PRIMARY KEY;
+
+ALTER TABLE Person
+ENABLE NOVALIDATE CONSTRAINT spouse;
+
+ALTER TABLE Person
+ENABLE NOVALIDATE CONSTRAINT manager_dept;
+
+ALTER TABLE Person
+ENABLE NOVALIDATE CONSTRAINT manager_of_employee;
+
+ALTER TABLE Person
+ENABLE CONSTRAINT username_con;
+ALTER TABLE Person
+ENABLE CONSTRAINT SYS_C0044777797;
+ALTER TABLE Person
+ENABLE CONSTRAINT SYS_C0044777798;
+ALTER TABLE Person
+ENABLE CONSTRAINT SYS_C0044777799;
+ALTER TABLE Person
+ENABLE CONSTRAINT SYS_C0044777800;
+
+ALTER TABLE Project
+ENABLE NOVALIDATE CONSTRAINT sub_project;
+
+ALTER TABLE Project
+ENABLE NOVALIDATE CONSTRAINT dept_projects;
+
+ALTER TABLE Project
+ENABLE NOVALIDATE CONSTRAINT projects_managing;
+
+ALTER TABLE Project
+ENABLE CONSTRAINT SYS_C0044777804;
+ALTER TABLE Project
+ENABLE CONSTRAINT SYS_C0044777805;
+ALTER TABLE Project
+ENABLE CONSTRAINT SYS_C0044777806;
+ALTER TABLE Project
+ENABLE CONSTRAINT SYS_C0044777807;
+ALTER TABLE Project
+ENABLE CONSTRAINT SYS_C0044777808;
+
+ALTER TABLE Department
+ENABLE CONSTRAINT SYS_C0044777794;
+ALTER TABLE Department
+ENABLE CONSTRAINT SYS_C0044777795;
+
+ALTER TABLE child_parent
+ENABLE NOVALIDATE CONSTRAINT child;
+
+ALTER TABLE child_parent
+ENABLE NOVALIDATE CONSTRAINT parent_of_child;
+
+ALTER TABLE child_parent
+ENABLE CONSTRAINT SYS_C0044777810;
+ALTER TABLE child_parent
+ENABLE CONSTRAINT SYS_C0044777811;
+
+ALTER TABLE project_employees
+ENABLE NOVALIDATE CONSTRAINT employees_of_project;
+
+ALTER TABLE project_employees
+ENABLE NOVALIDATE CONSTRAINT project_to_employees;
+
+ALTER TABLE project_employees
+ENABLE CONSTRAINT SYS_C0044777812;
+ALTER TABLE project_employees
+ENABLE CONSTRAINT SYS_C0044777813;
